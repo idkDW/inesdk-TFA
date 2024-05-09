@@ -1,2 +1,28 @@
 @import 'utils/variables';
 @import 'components/type';
+
+
+body {
+background-color: #FAFAF9;
+}
+
+.header {
+    height: 100vh; /* Prend toute la hauteur de la fenêtre */
+    background-image: url('../assets/images/test_bg.png');
+    background-size: cover; /* Pour s'assurer que l'image de fond couvre toute la zone */
+    background-position: center;
+    transition: background-size 0.5s; /* Ajoute une transition fluide */
+  
+    .header__titre {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #ffffff; /* Couleur du texte */
+    }
+  
+    &.scrolled {
+      background-size: auto 70%; /* Taille réduite de l'image au scroll */
+    }
+  }
+  
