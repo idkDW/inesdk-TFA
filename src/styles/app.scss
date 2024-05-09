@@ -21,3 +21,47 @@ background-color: #FAFAF9;
     }
   }
   
+
+  .projets {
+    .projets__titre {
+      list-style-type: none;
+      margin-bottom: 20px; // Marge entre les titres et les boutons
+      padding: 0;
+  
+      li {
+        margin: 0 10px;
+        cursor: pointer;
+        transition: color 0.3s; // Transition de couleur fluide
+  
+        &:hover {
+          color: #000; // Couleur des titres au survol
+        }
+      }
+    }
+  
+    .projets__proj-btn,
+    .projets__theme-btn {
+      margin-bottom: 20px; // Marge entre les groupes de boutons
+      
+    }
+  
+    .proj-btn,
+    .theme-btn {
+      margin: 5px; // Marge entre les boutons
+      padding: 10px 20px;
+      border: 2px dotted #000; // Bordure en pointillés
+      border-radius: 11px; // Bords arrondis
+      background-color: transparent; // Fond transparent
+      color: #000; // Couleur du texte
+      text-decoration: none; // Supprime le soulignement par défaut des liens
+      transition: background-color 0.3s, color 0.3s, border-color 0.3s; 
+      cursor: pointer;
+  
+      &:hover {
+        background-color: #000; // Fond noir au survol
+        color: #fff; // Texte blanc au survol
+        border-color: #fff; // Bordure blanche au survol
+      }
+    }
+  }
+  
