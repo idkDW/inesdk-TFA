@@ -1,10 +1,28 @@
 @import 'utils/variables';
 @import 'components/type';
 
+@font-face {
+    font-family: "Satoshi";
+    src: url("src/assets/font/Satoshi-Variable.ttf") format("truetype");
+  }
+  
+  @font-face {
+    font-family: "Jura";
+    src: url("src/assets/font/Jura-VariableFont_wght.ttf") format("truetype");
+  }
+  
+  @font-face {
+    font-family: "PPTalisman";
+    src: url("src/assets/font/PPTalisman-Compact-Regular.otf") format("opentype");
+  }
+
+
 
 body {
 background-color: #FAFAF9;
+font-family: "Satoshi", sans-serif;
 }
+
 
 .header {
     height: 100vh;
@@ -41,6 +59,7 @@ background-color: #FAFAF9;
   
     .projets__proj-btn,
     .projets__theme-btn {
+        font-family: "Jura", sans-serif ;
       margin-bottom: 20px; // Marge entre les groupes de boutons
       display: none;
     }

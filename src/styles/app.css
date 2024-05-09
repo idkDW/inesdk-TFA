@@ -7,4 +7,73 @@ body {
 
 .title {
   color: #e41612;
+}
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("src/assets/font/Satoshi-Variable.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Jura";
+  src: url("src/assets/font/Jura-VariableFont_wght.ttf") format("truetype");
+}
+@font-face {
+  font-family: "PPTalisman";
+  src: url("src/assets/font/PPTalisman-Compact-Regular.otf") format("opentype");
+}
+body {
+  background-color: #FAFAF9;
+  font-family: "Satoshi", sans-serif;
+}
+
+.header {
+  height: 100vh;
+  background-image: url("../assets/images/test_bg.png");
+  background-size: cover;
+  background-position: center;
+  transition: background-size 0.5s;
+}
+.header .header__titre {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #FAFAF9;
+}
+
+.projets .projets__titre {
+  list-style-type: none;
+  margin-bottom: 20px;
+  padding: 0;
+}
+.projets .projets__titre li {
+  margin: 0 10px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+.projets .projets__titre li:hover {
+  color: #000;
+}
+.projets .projets__proj-btn,
+.projets .projets__theme-btn {
+  font-family: "Jura", sans-serif;
+  margin-bottom: 20px;
+  display: none;
+}
+.projets .proj-btn,
+.projets .theme-btn {
+  margin: 5px;
+  padding: 10px 20px;
+  border: 2px dotted #000;
+  border-radius: 11px;
+  background-color: transparent;
+  color: #000;
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+  cursor: pointer;
+}
+.projets .proj-btn:hover,
+.projets .theme-btn:hover {
+  background-color: #000;
+  color: #fff;
+  border-color: #fff;
 }/*# sourceMappingURL=app.css.map */
