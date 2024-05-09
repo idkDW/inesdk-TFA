@@ -39,6 +39,27 @@ font-family: "Satoshi", sans-serif;
     }
   }
   
+  .a-propos {
+    position: relative; // Assure que les éléments enfants positionnés absolument sont positionnés par rapport à ce conteneur
+  
+    &__img {
+      position: relative; // Assure que les images sont positionnées relativement à ce conteneur
+      width: 100%; // Ajuste la largeur pour s'adapter au conteneur
+    }
+  
+    &__img-hover {
+      position: absolute; // Positionne l'image en négatif absolument par rapport à son conteneur parent
+      top: 0;
+      left: 0;
+      display: none; // Cacher l'image en négatif par défaut
+    }
+  
+    // Styles pour afficher l'image en négatif au survol de l'image en noir et blanc
+    &__img-normal:hover + &__img-hover {
+      display: block; // Afficher l'image en négatif
+    }
+  }
+  
 
   .projets {
     .projets__titre {

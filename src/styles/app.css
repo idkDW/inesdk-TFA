@@ -40,6 +40,23 @@ body {
   color: #FAFAF9;
 }
 
+.a-propos {
+  position: relative;
+}
+.a-propos__img {
+  position: relative;
+  width: 100%;
+}
+.a-propos__img-hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+}
+.a-propos__img-normal:hover + .a-propos__img-hover {
+  display: block;
+}
+
 .projets .projets__titre {
   list-style-type: none;
   margin-bottom: 20px;
