@@ -1,1 +1,2 @@
-console.info('Hello world');
+'use strict'
+
