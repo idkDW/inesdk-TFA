@@ -54,6 +54,7 @@ font-size: 16px;
     background-image: url('../assets/images/test_bg.png');
     background-size: cover; 
     background-position: center;
+    border-radius: 11px;
     transition: background-size 0.5s; 
   
     &__titre {
@@ -67,21 +68,27 @@ font-size: 16px;
 
 
   .a-propos {
-    position: relative; // Assure que les éléments enfants positionnés absolument sont positionnés par rapport à ce conteneur
+    position: relative;
+
+
+   
+    &__titre {
+      font-family: "Jura", sans-serif;
+    }
   
     &__img {
-      position: relative; // Assure que les images sont positionnées relativement à ce conteneur
+      position: relative; 
       width: 100%; 
     }
-  0
+  
     &__img-hover {
-      position: absolute; // Positionne l'image en négatif absolument par rapport à son conteneur parent
+      position: absolute; 
       top: 0;
       left: 0;
-      display: none; // Cacher l'image en négatif par défaut
+      display: none;
     }
   
-    // Styles pour afficher l'image en négatif au survol de l'image en noir et blanc
+    
     &__img-normal:hover + &__img-hover {
       display: block; 
     }
@@ -93,27 +100,33 @@ font-size: 16px;
       list-style-type: none;
       margin-bottom: 20px; 
       padding: 0;
+
+      img{
+        width: 15px;
+      }
   
       li {
-        margin: 0 10px;
+      
         cursor: pointer;
         transition: color 0.3s; 
   
         &:hover {
           color: #000;
         }
+
       }
     }
   
+   
     .projets__proj-btn,
     .projets__theme-btn {
-        font-family: "Jura", sans-serif ;
       margin-bottom: 20px; 
       display: none;
     }
   
     .proj-btn,
     .theme-btn {
+      font-family: "Jura", sans-serif;
       margin: 5px;
       padding: 10px 20px;
       border: 2px dotted #000; 
@@ -131,4 +144,35 @@ font-size: 16px;
       }
     }
   }
+  
+
+  .footer {
+    display: flex;
+    justify-content: space-between; 
+    align-items: flex-start;
+    font-size: 12px; 
+    font-family: "Jura", sans-serif;
+  
+    &__gauche {
+      display: flex;
+      flex-direction: column; 
+      justify-content: flex-start; 
+    }
+  
+    &__droite {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end; 
+    }
+  
+    &__el {
+      margin-top: 5px; 
+    }
+
+    &__socials .footer__el + .footer__el {
+      margin-left: 10px;
+    }
+  }
+  
+  
   

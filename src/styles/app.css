@@ -24,6 +24,26 @@ body {
 body {
   background-color: #FAFAF9;
   font-family: "Satoshi", sans-serif;
+  font-size: 16px;
+}
+
+.navigation {
+  font-family: "Jura", sans-serif;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navigation__icone {
+  width: 45px;
+}
+.navigation__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.navigation__list li {
+  display: block;
+  margin-top: 5px;
 }
 
 .header {
@@ -31,9 +51,10 @@ body {
   background-image: url("../assets/images/test_bg.png");
   background-size: cover;
   background-position: center;
+  border-radius: 11px;
   transition: background-size 0.5s;
 }
-.header .header__titre {
+.header__titre {
   position: absolute;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -42,6 +63,9 @@ body {
 
 .a-propos {
   position: relative;
+}
+.a-propos__titre {
+  font-family: "Jura", sans-serif;
 }
 .a-propos__img {
   position: relative;
@@ -62,8 +86,10 @@ body {
   margin-bottom: 20px;
   padding: 0;
 }
+.projets .projets__titre img {
+  width: 15px;
+}
 .projets .projets__titre li {
-  margin: 0 10px;
   cursor: pointer;
   transition: color 0.3s;
 }
@@ -72,12 +98,12 @@ body {
 }
 .projets .projets__proj-btn,
 .projets .projets__theme-btn {
-  font-family: "Jura", sans-serif;
   margin-bottom: 20px;
   display: none;
 }
 .projets .proj-btn,
 .projets .theme-btn {
+  font-family: "Jura", sans-serif;
   margin: 5px;
   padding: 10px 20px;
   border: 2px dotted #000;
@@ -93,4 +119,28 @@ body {
   background-color: #000;
   color: #fff;
   border-color: #fff;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  font-size: 12px;
+  font-family: "Jura", sans-serif;
+}
+.footer__gauche {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.footer__droite {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.footer__el {
+  margin-top: 5px;
+}
+.footer__socials .footer__el + .footer__el {
+  margin-left: 10px;
 }/*# sourceMappingURL=app.css.map */
