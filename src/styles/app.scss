@@ -21,8 +21,33 @@
 body {
 background-color: #FAFAF9;
 font-family: "Satoshi", sans-serif;
+font-size: 16px;
 }
 
+.navigation {
+  font-family: "Jura", sans-serif;
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  
+
+  &__icone {
+    width: 45px;
+  }
+
+  &__list {
+    list-style: none; 
+    padding: 0; 
+    margin: 0; 
+     
+  }
+
+  &__list li {
+    display: block;
+    margin-top: 5px;
+    
+  }
+}
 
 .header {
     height: 100vh;
@@ -31,7 +56,7 @@ font-family: "Satoshi", sans-serif;
     background-position: center;
     transition: background-size 0.5s; 
   
-    .header__titre {
+    &__titre {
       position: absolute;
       left: 50%;
       transform: translate(-50%, -50%);
@@ -39,14 +64,16 @@ font-family: "Satoshi", sans-serif;
     }
   }
   
+
+
   .a-propos {
     position: relative; // Assure que les éléments enfants positionnés absolument sont positionnés par rapport à ce conteneur
   
     &__img {
       position: relative; // Assure que les images sont positionnées relativement à ce conteneur
-      width: 100%; // Ajuste la largeur pour s'adapter au conteneur
+      width: 100%; 
     }
-  
+  0
     &__img-hover {
       position: absolute; // Positionne l'image en négatif absolument par rapport à son conteneur parent
       top: 0;
@@ -56,7 +83,7 @@ font-family: "Satoshi", sans-serif;
   
     // Styles pour afficher l'image en négatif au survol de l'image en noir et blanc
     &__img-normal:hover + &__img-hover {
-      display: block; // Afficher l'image en négatif
+      display: block; 
     }
   }
   
@@ -64,16 +91,16 @@ font-family: "Satoshi", sans-serif;
   .projets {
     .projets__titre {
       list-style-type: none;
-      margin-bottom: 20px; // Marge entre les titres et les boutons
+      margin-bottom: 20px; 
       padding: 0;
   
       li {
         margin: 0 10px;
         cursor: pointer;
-        transition: color 0.3s; // Transition de couleur fluide
+        transition: color 0.3s; 
   
         &:hover {
-          color: #000; // Couleur des titres au survol
+          color: #000;
         }
       }
     }
@@ -81,19 +108,19 @@ font-family: "Satoshi", sans-serif;
     .projets__proj-btn,
     .projets__theme-btn {
         font-family: "Jura", sans-serif ;
-      margin-bottom: 20px; // Marge entre les groupes de boutons
+      margin-bottom: 20px; 
       display: none;
     }
   
     .proj-btn,
     .theme-btn {
-      margin: 5px; // Marge entre les boutons
+      margin: 5px;
       padding: 10px 20px;
-      border: 2px dotted #000; // Bordure en pointillés
-      border-radius: 11px; // Bords arrondis
-      background-color: transparent; // Fond transparent
-      color: #000; // Couleur du texte
-      text-decoration: none; // Supprime le soulignement par défaut des liens
+      border: 2px dotted #000; 
+      border-radius: 11px;
+      background-color: transparent;
+      color: #000; 
+      text-decoration: none;
       transition: background-color 0.3s, color 0.3s, border-color 0.3s; 
       cursor: pointer;
   
