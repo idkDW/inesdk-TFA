@@ -52,7 +52,7 @@ font-size: 16px;
 
 .header {
     height: 100vh;
-    background-image: url('../assets/images/test_bg.png');
+    background-image: url('../assets/images/décoration/test_bg.png');
     background-size: cover; 
     background-position: center;
     border-radius: 11px;
@@ -77,7 +77,7 @@ font-size: 16px;
       font-family: "Jura", sans-serif;
     }
   
-    &__img {
+    &__img-normal {
       position: relative; 
       width: 130px; 
     }
@@ -87,12 +87,23 @@ font-size: 16px;
       top: 0;
       left: 0;
       display: none;
+      width: 130px; 
     }
   
     
     &__img-normal:hover + &__img-hover {
       display: block; 
     }
+
+    &__droite {
+      margin-right: 20px; 
+      text-align: right; 
+    }
+
+    
+  
+    
+   
   }
   
 
@@ -139,9 +150,9 @@ font-size: 16px;
       cursor: pointer;
   
       &:hover {
-        background-color: #000; // Fond noir au survol
-        color: #fff; // Texte blanc au survol
-        border-color: #fff; // Bordure blanche au survol
+        background-color: #000; 
+        color: #fff;
+        border-color: #fff; 
       }
     }
 
