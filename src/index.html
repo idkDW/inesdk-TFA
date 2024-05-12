@@ -22,6 +22,8 @@
 
 <body>
 
+
+  <div class="content">
   
 
   <nav class="navigation">
@@ -64,27 +66,70 @@
   
 
   <section class="projets" id="projets">
-      <ul class="projets__titre">
-        <li class="projets__el-tous"> <img src="assets/images/arrow-proj.svg" alt="icône de flèche pointant en diagonale vers le bas."> TOUS</li>
-        <li class="projets__el-projets"> <img src="assets/images/arrow-proj.svg" alt="icône de flèche pointant en diagonale vers le bas."> PROJETS</li>
-        <li class="projets__el-themes"> <img src="assets/images/arrow-proj.svg" alt="icône de flèche pointant en diagonale vers le bas."> THÈMES</li>
-      </ul>
-
-      <div class="projets__proj-btn">
-        <button class="proj-btn">web design [6]</button>
-        <button class="proj-btn">objets [4]</button>
-        <button class="proj-btn">photographie [4]</button> 
-        <button class="proj-btn">dessins [2]</button>
-        
+    <ul class="projets__catégories">
+      <li class="projets__el-tous"> <img src="assets/images/arrow-proj.svg" alt="icône de flèche pointant en diagonale vers le bas."> TOUS</li>
+      <li class="projets__el-projets"> <img src="assets/images/arrow-proj.svg" alt="icône de flèche pointant en diagonale vers le bas."> PROJETS</li>
+      <li class="projets__el-themes"> <img src="assets/images/arrow-proj.svg" alt="icône de flèche pointant en diagonale vers le bas."> THÈMES</li>
+    </ul>
+  
+    <div class="projets__proj-btn">
+      <button class="proj-btn" data-target="web-design">web design [6]</button>
+      <button class="proj-btn" data-target="objets">objets [4]</button>
+      <button class="proj-btn" data-target="photographie">photographie [4]</button> 
+      <button class="proj-btn" data-target="dessins">dessins [2]</button>
+    </div>
+  
+    <div class="projets__theme-btn">
+      <button class="theme-btn" data-target="observer-reel">observer le réel [5]</button>
+      <button class="theme-btn" data-target="etat-limite">état limite [4]</button>
+      <button class="theme-btn" data-target="faits-main">faits main [4]</button>
+      <button class="theme-btn" data-target="dans-peau">dans la peau de [3]</button>
+    </div>
+  
+    <div class="projets__contenu">
+      <div id="web-design" class="projets__contenu-item">
+        <h2>Web Design</h2>
+        <p><small>3</small>Description du contenu pour Web Design</p>
       </div>
 
-      <div class="projets__theme-btn">
-        <button class="theme-btn">observer le réel [5]</button>
-        <button class="theme-btn">état limite [4]</button>
-        <button class="theme-btn">faits main [4]</button>
-        <button class="theme-btn">dans la peau de [3]</button>
+      <div id="objets" class="projets__contenu-item">
+        <h2>Objets</h2>
+        <p><small>3</small>Description du contenu pour Objets</p>
       </div>
+
+      <div id="photographie" class="projets__contenu-item">
+        <h2>Photographie</h2>
+        <p><small>3</small>Description du contenu pour photo</p>
+      </div>
+
+      <div id="dessins" class="projets__contenu-item">
+        <h2>Dessins</h2>
+        <p><small>3</small>Description du contenu pour dessins</p>
+      </div>
+
+      <div id="observer-reel" class="projets__contenu-item">
+        <h2>Observer le réel</h2>
+        <p><small>3</small>Description du contenu pour observer-reel</p>
+      </div>
+
+      <div id="etat-limite" class="projets__contenu-item">
+        <h2>État limite</h2>
+        <p><small>3</small>Description du contenu pour etat-limite</p>
+      </div>
+
+      <div id="faits-main" class="projets__contenu-item">
+        <h2>Faits-main</h2>
+        <p><small>3</small>Description du contenu pour faits-main</p>
+      </div>
+
+      <div id="dans-peau" class="projets__contenu-item">
+        <h2>Dans la peau de</h2>
+        <p><small>3</small>Description du contenu pour dans-peau</p>
+      </div>
+
+    </div>
   </section>
+  
   
 
   
@@ -103,6 +148,6 @@
     </div>
   </footer>
   
-
+</div>
 </body>
 </html>

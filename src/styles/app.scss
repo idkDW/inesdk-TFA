@@ -26,6 +26,7 @@ font-size: 16px;
 
 .navigation {
   font-family: "Jura", sans-serif;
+  font-size: 12px;
   display: flex;
   justify-content: space-between; 
   align-items: center;
@@ -78,7 +79,7 @@ font-size: 16px;
   
     &__img {
       position: relative; 
-      width: 100%; 
+      width: 130px; 
     }
   
     &__img-hover {
@@ -96,7 +97,7 @@ font-size: 16px;
   
 
   .projets {
-    .projets__titre {
+    .projets__catégories {
       list-style-type: none;
       margin-bottom: 20px; 
       padding: 0;
@@ -109,7 +110,7 @@ font-size: 16px;
       
         cursor: pointer;
         transition: color 0.3s; 
-  
+
         &:hover {
           color: #000;
         }
@@ -143,6 +144,12 @@ font-size: 16px;
         border-color: #fff; // Bordure blanche au survol
       }
     }
+
+    /*
+    .projets__contenu {
+      display: none; 
+    }*/
+      
   }
   
 

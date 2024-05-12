@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body {
   font-family: sans-serif;
   font-size: 18px;
@@ -29,6 +30,7 @@ body {
 
 .navigation {
   font-family: "Jura", sans-serif;
+  font-size: 12px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -69,7 +71,7 @@ body {
 }
 .a-propos__img {
   position: relative;
-  width: 100%;
+  width: 130px;
 }
 .a-propos__img-hover {
   position: absolute;
@@ -81,19 +83,25 @@ body {
   display: block;
 }
 
-.projets .projets__titre {
+.projets {
+  /*
+  .projets__contenu {
+    display: none; 
+  }*/
+}
+.projets .projets__catégories {
   list-style-type: none;
   margin-bottom: 20px;
   padding: 0;
 }
-.projets .projets__titre img {
+.projets .projets__catégories img {
   width: 15px;
 }
-.projets .projets__titre li {
+.projets .projets__catégories li {
   cursor: pointer;
   transition: color 0.3s;
 }
-.projets .projets__titre li:hover {
+.projets .projets__catégories li:hover {
   color: #000;
 }
 .projets .projets__proj-btn,
