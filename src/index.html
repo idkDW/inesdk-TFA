@@ -11,7 +11,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <link rel="stylesheet" href="styles/app.css">
-
+  <link rel="stylesheet" href="styles/components/navigation.scss">
+  <link rel="stylesheet" href="styles/components/header.scss">
+  <link rel="stylesheet" href="styles/components/sections.scss">
+  <link rel="stylesheet" href="styles/components/footer.scss">
   <script src="scripts/app.js" defer></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,13 +26,13 @@
 <body>
 
 
-  <div class="content">
-  
+  <main class="main">
+
 
   <nav class="navigation">
-    <div class="navigation__icone">
+    <span class="navigation__icone">
       <img src="assets/images/contenu/grosnez.svg" alt="dessin de tête de personnage ">
-    </div>
+    </span>
     <ul class="navigation__list">
       <li><a href="#a-propos">À propos</a></li>
       <li><a href="#projets">Projets</a></li>
@@ -47,9 +50,9 @@
 
 
   <section class="a-propos" id="a-propos">
-    <h3 class="a-propos__titre">JE M’APPELLE INES DALSBAEK,
-      JE SUIS ETUDIANTE EN MENTION DESIGN WEB EN BELGIQUE.</h3>
-      <div class="a-propos__droite">
+    <h2 class="a-propos__titre">JE M’APPELLE INES DALSBAEK,
+      JE SUIS ETUDIANTE EN MENTION DESIGN WEB EN BELGIQUE.</h2>
+      <div class="a-propos__container">
       <div class="a-propos__img"> 
         <img src="assets/images/contenu/ines-tête.png" alt="photo d'identité de mon visage en noir et blanc." class="a-propos__img-normal">
         <img src="assets/images/contenu/moi-negatif.jpg" alt="photo d'identité de mon visage en négatif." class="a-propos__img-hover">
@@ -87,42 +90,42 @@
     </div>
   
     <div class="projets__contenu">
-      <div id="web-design" class="projets__contenu-item">
+      <div class="web-design projets__contenu-item">
         <h2>Web Design</h2>
         <p><small>3</small>Description du contenu pour Web Design</p>
       </div>
 
-      <div id="objets" class="projets__contenu-item">
+      <div class="objets projets__contenu-item">
         <h2>Objets</h2>
         <p><small>3</small>Description du contenu pour Objets</p>
       </div>
 
-      <div id="photographie" class="projets__contenu-item">
+      <div class="photographie projets__contenu-item">
         <h2>Photographie</h2>
         <p><small>3</small>Description du contenu pour photo</p>
       </div>
 
-      <div id="dessins" class="projets__contenu-item">
+      <div class="dessins projets__contenu-item">
         <h2>Dessins</h2>
         <p><small>3</small>Description du contenu pour dessins</p>
       </div>
 
-      <div id="observer-reel" class="projets__contenu-item">
+      <div class="observer-reel projets__contenu-item">
         <h2>Observer le réel</h2>
         <p><small>3</small>Description du contenu pour observer-reel</p>
       </div>
 
-      <div id="etat-limite" class="projets__contenu-item">
+      <div class="etat-limite projets__contenu-item">
         <h2>État limite</h2>
         <p><small>3</small>Description du contenu pour etat-limite</p>
       </div>
 
-      <div id="faits-main" class="projets__contenu-item">
+      <div class="faits-main projets__contenu-item">
         <h2>Faits-main</h2>
         <p><small>3</small>Description du contenu pour faits-main</p>
       </div>
 
-      <div id="dans-peau" class="projets__contenu-item">
+      <div class="dans-peau projets__contenu-item">
         <h2>Dans la peau de</h2>
         <p><small>3</small>Description du contenu pour dans-peau</p>
       </div>
@@ -141,7 +144,7 @@
   </section>
   
   
-
+</main>
   
   <footer class="footer">
     <div class="footer__gauche">
@@ -158,6 +161,6 @@
     </div>
   </footer>
   
-</div>
+
 </body>
 </html>

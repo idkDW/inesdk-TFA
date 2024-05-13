@@ -1,0 +1,30 @@
+.footer {
+    display: flex;
+    justify-content: space-between; 
+    align-items: flex-start;
+    font-size: 12px; 
+    font-family: "Jura", sans-serif;
+  
+    &__gauche {
+      display: flex;
+      flex-direction: column; 
+      justify-content: flex-start; 
+    }
+  
+    &__droite {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end; 
+    }
+  
+    &__el {
+      margin-top: 5px; 
+    }
+
+    &__socials .footer__el + .footer__el {
+      margin-left: 10px;
+    }
+  }
+  
+  
+  

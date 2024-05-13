@@ -24,48 +24,8 @@ font-family: "Satoshi", sans-serif;
 font-size: 16px;
 }
 
-.navigation {
-  font-family: "Jura", sans-serif;
-  font-size: 12px;
-  display: flex;
-  justify-content: space-between; 
-  align-items: center;
-  
 
-  &__icone {
-    width: 45px;
-  }
 
-  &__list {
-    list-style: none; 
-    padding: 0; 
-    margin: 0; 
-     
-  }
-
-  &__list li {
-    display: block;
-    margin-top: 5px;
-    
-  }
-}
-
-.header {
-    height: 100vh;
-    background-image: url('../assets/images/décoration/test_bg.png');
-    background-size: cover; 
-    background-position: center;
-    border-radius: 11px;
-    transition: background-size 0.5s; 
-  
-    &__titre {
-      position: absolute;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      color: #FAFAF9;
-    }
-  }
-  
 
 
   .a-propos {
@@ -94,13 +54,13 @@ font-size: 16px;
     &__img-normal:hover + &__img-hover {
       display: block; 
     }
-
-    &__droite {
+/*
+    &__container {
       margin-right: 20px; 
       text-align: right; 
     }
 
-    
+    */
   
     
    
@@ -164,33 +124,3 @@ font-size: 16px;
   }
   
 
-  .footer {
-    display: flex;
-    justify-content: space-between; 
-    align-items: flex-start;
-    font-size: 12px; 
-    font-family: "Jura", sans-serif;
-  
-    &__gauche {
-      display: flex;
-      flex-direction: column; 
-      justify-content: flex-start; 
-    }
-  
-    &__droite {
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end; 
-    }
-  
-    &__el {
-      margin-top: 5px; 
-    }
-
-    &__socials .footer__el + .footer__el {
-      margin-left: 10px;
-    }
-  }
-  
-  
-  
