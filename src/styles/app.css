@@ -1,31 +1,26 @@
 @charset "UTF-8";
-body {
-  font-family: sans-serif;
-  font-size: 18px;
-  line-height: 1.5;
-  color: #444;
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  font-size: 12px;
+  font-family: "Jura", sans-serif;
 }
-
-.title {
-  color: #e41612;
+.footer__gauche {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
-
-@font-face {
-  font-family: "Satoshi";
-  src: url("src/assets/font/Satoshi-Variable.ttf") format("truetype");
+.footer__droite {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
-@font-face {
-  font-family: "Jura";
-  src: url("src/assets/font/Jura-VariableFont_wght.ttf") format("truetype");
+.footer__el {
+  margin-top: 5px;
 }
-@font-face {
-  font-family: "PPTalisman";
-  src: url("src/assets/font/PPTalisman-Compact-Regular.otf") format("opentype");
-}
-body {
-  background-color: #FAFAF9;
-  font-family: "Satoshi", sans-serif;
-  font-size: 16px;
+.footer__socials .footer__el + .footer__el {
+  margin-left: 10px;
 }
 
 .navigation {
@@ -50,7 +45,7 @@ body {
 
 .header {
   height: 100vh;
-  background-image: url("../assets/images/test_bg.png");
+  background-image: url("../assets/images/décoration/test_bg.png");
   background-size: cover;
   background-position: center;
   border-radius: 11px;
@@ -69,39 +64,37 @@ body {
 .a-propos__titre {
   font-family: "Jura", sans-serif;
 }
-.a-propos__img {
+.a-propos__img-normal {
   position: relative;
   width: 130px;
 }
-.a-propos__img-hover {
+.a-propos:hover + .a-propos__container::before {
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
-  display: none;
+  background-image: url("../assets/images/décoration/moi-negatif.jpg");
+  background-size: cover;
+  z-index: -1;
 }
-.a-propos__img-normal:hover + .a-propos__img-hover {
-  display: block;
+.a-propos__container {
+  margin-right: 20px;
+  text-align: right;
 }
 
-.projets {
-  /*
-  .projets__contenu {
-    display: none; 
-  }*/
-}
-.projets .projets__catégories {
+.projets .projets__categories {
   list-style-type: none;
   margin-bottom: 20px;
   padding: 0;
 }
-.projets .projets__catégories img {
+.projets .projets__categories img {
   width: 15px;
 }
-.projets .projets__catégories li {
+.projets .projets__categories li {
   cursor: pointer;
   transition: color 0.3s;
 }
-.projets .projets__catégories li:hover {
+.projets .projets__categories li:hover {
   color: #000;
 }
 .projets .projets__proj-btn,
@@ -128,27 +121,24 @@ body {
   color: #fff;
   border-color: #fff;
 }
+.projets .projets__contenu {
+  display: none;
+}
 
-.footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  font-size: 12px;
-  font-family: "Jura", sans-serif;
+@font-face {
+  font-family: "Satoshi";
+  src: url("src/assets/font/Satoshi-Variable.ttf");
 }
-.footer__gauche {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+@font-face {
+  font-family: "Jura";
+  src: url("src/assets/font/Jura-VariableFont_wght.ttf");
 }
-.footer__droite {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
+@font-face {
+  font-family: "PPTalisman";
+  src: url("src/assets/font/PPTalisman-Compact-Regular.otf");
 }
-.footer__el {
-  margin-top: 5px;
-}
-.footer__socials .footer__el + .footer__el {
-  margin-left: 10px;
+body {
+  background-color: #FAFAF9;
+  font-family: "Satoshi", sans-serif;
+  font-size: 16px;
 }/*# sourceMappingURL=app.css.map */

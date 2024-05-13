@@ -1,0 +1,91 @@
+
+.a-propos {
+    position: relative;
+
+
+   
+    &__titre {
+      font-family: "Jura", sans-serif;
+      text-transform: uppercase;
+    }
+  
+    &__img-normal {
+      position: relative; 
+      width: 130px; 
+    }
+  
+    &:hover {
+        & + .a-propos__container::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          background-image: url('../assets/images/décoration/moi-negatif.jpg');
+          background-size: cover;
+          z-index: -1;
+        }
+      }
+  
+
+    &__container {
+      margin-right: 20px; 
+      text-align: right; 
+    }
+
+    
+  
+    
+   
+  }
+  
+
+  .projets {
+    &__categories {
+      list-style-type: none;
+      margin-bottom: 20px; 
+      padding: 0;
+
+      img{
+        width: 15px;
+      }
+  
+      li {
+        text-transform: uppercase;
+        cursor: pointer;
+        transition: color 0.3s; 
+
+        &:hover {
+          color: #000;
+        }
+
+      }
+    }
+  
+   
+    &__type-btn,
+    &__theme-btn {
+      margin-bottom: 20px; 
+      display: none;
+    }
+  
+    .type-btn,
+    .theme-btn {
+      font-family: "Jura", sans-serif;
+      margin: 5px;
+      padding: 10px 20px;
+      border: 2px dotted #000; 
+      border-radius: 11px;
+      background-color: transparent;
+      color: #000; 
+      text-decoration: none;
+      transition: background-color 0.3s, color 0.3s, border-color 0.3s; 
+      cursor: pointer;
+  
+      &:hover {
+        background-color: #000; 
+        color: #fff;
+        border-color: #fff; 
+      }
+    }
+   
+  }

@@ -1,20 +1,10 @@
 @import 'utils/variables';
-@import 'components/type';
+@import 'components/footer';
+@import 'components/navigation';
+@import 'components/header';
+@import 'components/sections';
+@import 'components/font';
 
-@font-face {
-    font-family: "Satoshi";
-    src: url("src/assets/font/Satoshi-Variable.ttf");
-  }
-  
-  @font-face {
-    font-family: "Jura";
-    src: url("src/assets/font/Jura-VariableFont_wght.ttf") ;
-  }
-  
-  @font-face {
-    font-family: "PPTalisman";
-    src: url("src/assets/font/PPTalisman-Compact-Regular.otf") ;
-  }
 
 
 
@@ -23,104 +13,4 @@ background-color: #FAFAF9;
 font-family: "Satoshi", sans-serif;
 font-size: 16px;
 }
-
-
-
-
-
-  .a-propos {
-    position: relative;
-
-
-   
-    &__titre {
-      font-family: "Jura", sans-serif;
-    }
-  
-    &__img-normal {
-      position: relative; 
-      width: 130px; 
-    }
-  
-    &__img-hover {
-      position: absolute; 
-      top: 0;
-      left: 0;
-      display: none;
-      width: 130px; 
-    }
-  
-    
-    &__img-normal:hover + &__img-hover {
-      display: block; 
-    }
-/*
-    &__container {
-      margin-right: 20px; 
-      text-align: right; 
-    }
-
-    */
-  
-    
-   
-  }
-  
-
-  .projets {
-    .projets__catégories {
-      list-style-type: none;
-      margin-bottom: 20px; 
-      padding: 0;
-
-      img{
-        width: 15px;
-      }
-  
-      li {
-      
-        cursor: pointer;
-        transition: color 0.3s; 
-
-        &:hover {
-          color: #000;
-        }
-
-      }
-    }
-  
-   
-    .projets__proj-btn,
-    .projets__theme-btn {
-      margin-bottom: 20px; 
-      display: none;
-    }
-  
-    .proj-btn,
-    .theme-btn {
-      font-family: "Jura", sans-serif;
-      margin: 5px;
-      padding: 10px 20px;
-      border: 2px dotted #000; 
-      border-radius: 11px;
-      background-color: transparent;
-      color: #000; 
-      text-decoration: none;
-      transition: background-color 0.3s, color 0.3s, border-color 0.3s; 
-      cursor: pointer;
-  
-      &:hover {
-        background-color: #000; 
-        color: #fff;
-        border-color: #fff; 
-      }
-    }
-
-  
-    .projets__contenu {
-      display: none; 
-    }
-      
-  }
-  
 

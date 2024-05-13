@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function() {
 */
 
 document.addEventListener("DOMContentLoaded", function() {
-    const projBtns = document.querySelectorAll('.proj-btn');
+    const typeBtns = document.querySelectorAll('.type-btn');
     const themeBtns = document.querySelectorAll('.theme-btn');
     const contenuItems = document.querySelectorAll('.projets__contenu-item');
 
@@ -45,15 +45,15 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 
-    function afficherContenu(contenuId) {
+    function afficherContenu(contenuClass) {
         masquerContenus();
-        const contenu = document.getElementById(contenuId);
+        const contenu = document.querySelector(`.projets__contenu-item.${contenuClass}`);
         if (contenu) {
             contenu.style.display = 'block';
         }
     }
 
-    projBtns.forEach(btn => {
+    typeBtns.forEach(btn => {
         btn.addEventListener('click', function() {
             const target = btn.getAttribute('data-target');
             afficherContenu(target);
@@ -68,31 +68,36 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     const tousEl = document.querySelector('.projets__el-tous');
-    const projetsEl = document.querySelector('.projets__el-projets');
+    const typesEl = document.querySelector('.projets__el-types');
     const themesEl = document.querySelector('.projets__el-themes');
-    const projBtnsContainer = document.querySelector('.projets__proj-btn');
+    const typeBtnsContainer = document.querySelector('.projets__type-btn');
     const themeBtnsContainer = document.querySelector('.projets__theme-btn');
 
     function masquerBoutons() {
-        projBtnsContainer.style.display = 'none';
+        typeBtnsContainer.style.display = 'none';
         themeBtnsContainer.style.display = 'none';
     }
 
     tousEl.addEventListener('click', function() {
         masquerBoutons();
+        masquerContenus();
     });
 
-    projetsEl.addEventListener('click', function() {
-        projBtnsContainer.style.display = 'flex';
+    typesEl.addEventListener('click', function() {
+        typeBtnsContainer.style.display = 'flex';
         themeBtnsContainer.style.display = 'none';
         masquerContenus();
     });
 
     themesEl.addEventListener('click', function() {
-        projBtnsContainer.style.display = 'none';
+        typeBtnsContainer.style.display = 'none';
         themeBtnsContainer.style.display = 'flex';
         masquerContenus();
     });
 
     masquerBoutons();
+    masquerContenus();
 });
+
+
+
