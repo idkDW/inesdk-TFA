@@ -22,14 +22,14 @@
 
 <body>
 
+  <!--
 
-  <main class="main">
-
+    header
+    p portfolio etc
+    a + img logo
 
   <nav class="navigation">
-    <span class="navigation__icone">
-      <img src="assets/images/contenu/grosnez.svg" alt="dessin de tête de personnage ">
-    </span>
+    
     <ul class="navigation__list">
       <li><a href="#a-propos">À propos</a></li>
       <li><a href="#projets">Projets</a></li>
@@ -37,36 +37,73 @@
 
   </nav>
 
+  main
+  <h1 class="header__titre">Bienvenue sur mon portfolio</h1>
+  
 
-  <section class="header">
-    <h1 class="header__titre">Bienvenue sur mon portfolio</h1>
+
+POUR LES NOTES
+
+ajouter des asides dans les sections
+section
+  div.container 80%
+  aside 20%
+
+EN CSS
+
+
+  -->
+
+<header class="header">
+  <p class="header__texte">portfolio 2024</p>
+  <a href="./index.html" class="header__icone">
+    <img src="assets/images/contenu/grosnez.svg" alt="dessin de tête de personnage">
+  </a>
+</header>
+
+
+  <nav class="navigation">
+    <ul class="navigation__list">
+      <li><a href="#a-propos">À propos</a></li>
+      <li><a href="#projets">Projets</a></li>
+    </ul>
+  </nav>
+
+
+  <section class="intro">
+    <h1 class="intro__titre">Bienvenue sur mon portfolio</h1>
   </section>
 
   
 
+  <main class="main">
 
 
+<!-- section en grid-->
   <section class="a-propos" id="a-propos">
     <h2 class="a-propos__titre">Je m'appelle Ines Dalsbaek je suis étudiante en design web à la heaj en Belgique.</h2>
-      <div class="a-propos__container">
-      <div class="a-propos__img"> 
-        <img src="assets/images/contenu/ines-tête.png" alt="photo d'identité de mon visage en noir et blanc." class="a-propos__img-normal">
-      </div>
-      <p class="a-propos__texte">
+     
+    
+      
+    <img src="assets/images/contenu/ines-tête.png" alt="photo d'identité de mon visage en noir et blanc." class="a-propos__img-normal">
+    <div><!-- classe pour aligner à droite-->
+      <p>
         Ma curiosité pour de nombreux médias artistiques m'a permis de développer un profil polyvalent
       </p>
-      <p class="a-propos__texte">
+      <p>
         Ma curiosité pour de nombreux médias artistiques m'a permis de développer un profil polyvalent
       </p>
-   
     </div>
+    
   </section>
   
 
   <section class="projets" id="projets">
     <ul class="projets__categories">
       <li class="projets__el-tous">
-        <img src="assets/images/contenu/arrow-proj.svg" alt="icône de flèche pointant en diagonale vers le bas." class="projets__icone"> tous
+        <!-- mettre l'image de la fleche en décoration-->
+        <img src="assets/images/contenu/arrow-proj.svg" alt="icône de flèche pointant en diagonale vers le bas." class="projets__icone"> 
+        <button>tous</button>
       </li>
       <li class="projets__el-types">
         <img src="assets/images/contenu/arrow-proj.svg" alt="icône de flèche pointant en diagonale vers le bas." class="projets__icone"> types
@@ -76,6 +113,8 @@
     </li>
     </ul>
   
+
+    <!-- liste -->
     <div class="projets__type-btn">
       <button class="type-btn" data-target="web-design">web design [6]</button>
       <button class="type-btn" data-target="objets">objets [4]</button>
@@ -90,6 +129,8 @@
       <button class="theme-btn" data-target="dans-peau">dans la peau de [3]</button>
     </div>
   
+
+    <!-- liste -->
     <div class="projets__contenu">
       <div class="projets__contenu-item web-design">
         <h2>Web Design</h2>
@@ -137,6 +178,10 @@
 
     </div>
 
+
+    <!-- ajouter la liste d'image ici la gallerie-->
+
+
   </section>
 
   
@@ -145,6 +190,16 @@
 
       <!--faire différentes div en fonction du type/têmes de projet ?-->
       
+
+<ul class="grid">
+  <li class="gridY-self-end gridX-self-start"></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+</ul>
+
   <div class="images__grid">
     <div class="images__grid-wrapper">
 
@@ -157,8 +212,8 @@
 
       <div class="image__grid-box2">
         <figure class="images__item">
-          <img src="assets/images/contenu/dakodak.png" alt="dakodak">
-          <figcaption class="images__caption">dakodak</figcaption>
+          <img src="assets/images/contenu/dakodak.png" alt="readimade">
+          <figcaption class="images__caption">readimade</figcaption>
         </figure>
       </div>
   
@@ -204,7 +259,9 @@
       <small class="footer__el">© I.DK 2024</small>
     </div>
     <div class="footer__follow">
-      <small class="footer__el">Follow me on</small>
+      <small class="footer__el">Follow me on</small> header__titre
+
+      liste
       <div class="footer__socials">
         <a href="https://www.instagram.com/idk_dwt/" target="_blank" class="footer__el">Instagram</a>
       <a href="https://github.com/idkDW" target="_blank" class="footer__el">Github</a>

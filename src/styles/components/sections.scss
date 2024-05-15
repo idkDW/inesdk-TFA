@@ -109,4 +109,23 @@
     margin-top: 27px;
     grid-row-gap: 27px;
     }
+
+    
+  }
+
+  .grid{
+
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(10, 10vh);
+
+  }
+
+  .grid-self-start{
+    align-self: start;
+  }
+  .grid-self-center{
+    align-self: center;
+  }
+  .grid-self-end{
+    align-self: end;
   }
