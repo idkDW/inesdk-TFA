@@ -30,44 +30,40 @@
     &__container {
       margin-right: 20px; 
       text-align: right; 
-    }
-
-    
-  
-    
+    } 
    
   }
-  
 
+
+  
+  
   .projets {
     &__categories {
       list-style-type: none;
-      margin-bottom: 20px; 
+      margin-bottom: 20px;
       padding: 0;
-
-      
   
-      &__el-tous {
-        
+      .projets__btn {
+        text-transform: uppercase;
         cursor: pointer;
-        transition: color 0.3s; 
-
-        &__btn {
-          text-transform: uppercase;
-          cursor: pointer;
-        }
-
+        padding-left: 20px;
+        background: url('../assets/images/décoration/arrow-proj.svg') left center no-repeat;
+        background-size: 15px; 
+      }
+  
+      .projets__el-types,
+      .projets__el-themes {
+        cursor: pointer;
+        transition: color 0.3s;
+  
         &:hover {
           color: #000;
-         
         }
-
       }
-
-      
-
-      
     }
+  
+  
+  
   
    
     &__type-btn,

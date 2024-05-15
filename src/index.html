@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
   <title>TFA Ines</title>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
   <meta name="description" content="">
@@ -24,24 +24,6 @@
 
   <!--
 
-    header
-    p portfolio etc
-    a + img logo
-
-  <nav class="navigation">
-    
-    <ul class="navigation__list">
-      <li><a href="#a-propos">À propos</a></li>
-      <li><a href="#projets">Projets</a></li>
-    </ul>
-
-  </nav>
-
-  main
-  <h1 class="header__titre">Bienvenue sur mon portfolio</h1>
-  
-
-
 POUR LES NOTES
 
 ajouter des asides dans les sections
@@ -50,7 +32,6 @@ section
   aside 20%
 
 EN CSS
-
 
   -->
 
@@ -100,161 +81,152 @@ EN CSS
     </div>
     
   </section>
+
+
   
 
   <section class="projets" id="projets">
+
     <ul class="projets__categories">
       <li class="projets__el-tous">
-        <!-- mettre l'image de la fleche en décoration-->
-        <img src="assets/images/contenu/arrow-proj.svg" alt="icône de flèche pointant en diagonale vers le bas." class="projets__icone"> 
         <button class="projets__btn">tous</button>
       </li>
       <li class="projets__el-types">
-        <img src="assets/images/contenu/arrow-proj.svg" alt="icône de flèche pointant en diagonale vers le bas." class="projets__icone">
         <button class="projets__btn">types</button>
       </li>
-      <li class="projets__el-themes"
-      ><img src="assets/images/contenu/arrow-proj.svg" alt="icône de flèche pointant en diagonale vers le bas." class="projets__icone"> 
+      <li class="projets__el-themes">
       <button class="projets__btn">thèmes</button>
     </li>
     </ul>
   
 
-    <!-- liste -->
     <ul class="projets__type-btn">
-      <button class="type-btn" data-target="web-design">web design [6]</button>
-      <button class="type-btn" data-target="objets">objets [4]</button>
-      <button class="type-btn" data-target="photographie">photographie [4]</button> 
-      <button class="type-btn" data-target="dessins">dessins [2]</button>
+      <li class="type-btn">
+        <button data-target="web-design">web design [6]</button>
+      </li>
+      <li class="type-btn">
+        <button data-target="objets">objets [4]</button>
+      </li>
+      <li class="type-btn">
+        <button data-target="photographie">photographie [4]</button>
+      </li>
+      <li class="type-btn">
+        <button data-target="dessins">dessins [2]</button>
+      </li>
     </ul>
   
     <ul class="projets__theme-btn">
-      <button class="theme-btn" data-target="observer-reel">observer le réel [5]</button>
-      <button class="theme-btn" data-target="etat-limite">état limite [4]</button>
-      <button class="theme-btn" data-target="faits-main">faits main [4]</button>
-      <button class="theme-btn" data-target="dans-peau">dans la peau de [3]</button>
+      <li class="theme-btn">
+        <button data-target="observer-reel">observer le réel [5]</button>
+      </li>
+      <li class="theme-btn">
+        <button  data-target="etat-limite">état limite [4]</button>
+      </li>
+      <li class="theme-btn">
+        <button data-target="faits-main">faits main [4]</button>
+      </li>
+      <li class="theme-btn">
+        <button data-target="dans-peau">dans la peau de [3]</button>
+      </li>  
     </ul>
   
 
-    <!-- liste -->
-    <div class="projets__contenu">
-      <div class="projets__contenu-item web-design">
+
+    <ul class="projets__contenu">
+      <li class="projets__contenu-item web-design">
         <h2>Web Design</h2>
         <p><span>3</span>Description du contenu pour Web Design</p>
-      </div>
+      </li>
 
-      <div class="projets__contenu-item objets">
+      <li class="projets__contenu-item objets">
         <h2>Objets</h2>
         <p><span>3</span>Description du contenu pour Objets</p>
-      </div>
+      </li>
 
-      <div class="projets__contenu-item photographie">
+      <li class="projets__contenu-item photographie">
         <h2>Photographie</h2>
         <p><span>3</span>Description du contenu pour photo</p>
-      </div>
+      </li>
 
-      <div class="projets__contenu-item dessins">
+      <li class="projets__contenu-item dessins">
         <h2>Dessins</h2>
         <p><span>3</span>Description du contenu pour dessins</p>
-      </div>
+      </li>
 
-      <div class="projets__contenu-item observer-reel">
+      <li class="projets__contenu-item observer-reel">
         <h2>Observer le réel</h2>
         <p><span>3</span>Description du contenu pour observer-reel</p>
-      </div>
+      </li>
 
-      <div class="projets__contenu-item etat-limite">
+      <li class="projets__contenu-item etat-limite">
         <h2>État limite</h2>
         <p><span>3</span> ETAT LIMITE:
           une situation entre le bon fonctionnement et la défaillance
           instabilité, dualité
           limite (cnrtl): Ligne qui détermine une étendue, une chose ayant un développement spatial; 
           ligne qui sépare deux étendues OU Ce qui ne peut ou ne doit être dépassé OU le point ultime à atteindre</p>
-      </div>
+      </li>
 
-      <div class="projets__contenu-item faits-main">
+      <li class="projets__contenu-item faits-main">
         <h2>Faits-main</h2>
         <p><span>3</span>Description du contenu pour faits-main</p>
-      </div>
+      </li>
 
-      <div class="projets__contenu-item dans-peau">
+      <li class="projets__contenu-item dans-peau">
         <h2>Dans la peau de</h2>
         <p><span>3</span>Description du contenu pour dans-peau</p>
-      </div>
+      </li>
 
-    </div>
-
-
-    <!-- ajouter la liste d'image ici la gallerie-->
+    </ul>
 
 
-  </section>
+    <ul class="grid">
 
-  
-
-<section class="images">
-
-      <!--faire différentes div en fonction du type/têmes de projet ?-->
-      
-
-<ul class="grid">
-  <li class="gridY-self-end gridX-self-start"></li>
-  <li></li>
-  <li></li>
-  <li></li>
-  <li></li>
-  <li></li>
-</ul>
-
-  <div class="images__grid">
-    <div class="images__grid-wrapper">
-
-      <div class="images__grid-box1">
+      <li class="gridY-self-end gridX-self-start">
         <figure class="images__item">
           <img src="assets/images/contenu/liminal.jpg" alt="liminal">
           <figcaption class="images__caption">liminal</figcaption>
         </figure>
-      </div>
+      </li>
 
-      <div class="image__grid-box2">
+      <li class="gridY-self-end gridX-self-start">
         <figure class="images__item">
           <img src="assets/images/contenu/dakodak.png" alt="readimade">
           <figcaption class="images__caption">readimade</figcaption>
         </figure>
-      </div>
-  
-      <div class="image__grid-box3">
+      </li>
+
+      <li class="gridY-self-end gridX-self-start">
         <figure class="images__item">
           <img src="assets/images/contenu/insect.jpg" alt="insect">
           <figcaption class="images__caption">insect</figcaption>
         </figure>
-      </div>
-  
-      <div class="image__grid-box4">
+      </li>
+
+      <li class="gridY-self-end gridX-self-start">
         <figure class="images__item">
           <img src="assets/images/contenu/this-man.jpg" alt="this-man">
           <figcaption class="images__caption">this man</figcaption>
         </figure>
-      </div>
+      </li>
 
-      <div class="image__grid-box5">
+      <li class="gridY-self-end gridX-self-start">
         <figure class="images__item">
           <img src="assets/images/contenu/tambouille.jpg" alt="tambouille">
           <figcaption class="images__caption">la tambouille</figcaption>
         </figure>
-      </div>
+      </li>
 
-      <div class="image__grid-box6">
+      <li class="gridY-self-end gridX-self-start">
         <figure class="images__item">
           <img src="assets/images/contenu/decembre.jpg" alt="decembre">
           <figcaption class="images__caption">Décembre</figcaption>
         </figure>
-      </div>
+      </li>
+    </ul>
 
 
-    </div>
-  </div>
-</section>
+  </section>
   
   
 </main>
@@ -265,13 +237,16 @@ EN CSS
       <small class="footer__el">© I.DK 2024</small>
     </div>
     <div class="footer__follow">
-      <small class="footer__el">Follow me on</small> header__titre
+      <p class="header__texte">Follow me on</p>
 
-      liste
-      <div class="footer__socials">
-        <a href="https://www.instagram.com/idk_dwt/" target="_blank" class="footer__el">Instagram</a>
-      <a href="https://github.com/idkDW" target="_blank" class="footer__el">Github</a>
-      </div>
+      <ul class="footer__socials">
+        <li class="footer__el">
+          <a href="https://www.instagram.com/idk_dwt/" target="_blank">Instagram</a>
+        </li>
+        <li class="footer__el">
+          <a href="https://github.com/idkDW" target="_blank">Github</a>
+        </li>
+      </ul>
       
     </div>
   </footer>
