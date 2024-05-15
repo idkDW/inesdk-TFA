@@ -55,19 +55,22 @@ EN CSS
   -->
 
 <header class="header">
-  <p class="header__texte">portfolio 2024</p>
-  <a href="./index.html" class="header__icone">
-    <img src="assets/images/contenu/grosnez.svg" alt="dessin de tête de personnage">
-  </a>
-</header>
+  <div class="header__content">
+    <p class="header__texte">portfolio 2024</p>
+    <a href="./index.html" class="header__icone">
+      <img src="assets/images/contenu/grosnez.svg" alt="dessin de tête de personnage">
+    </a>
+  </div>
 
 
   <nav class="navigation">
     <ul class="navigation__list">
-      <li><a href="#a-propos">À propos</a></li>
-      <li><a href="#projets">Projets</a></li>
+      <li class="navigation__el"><a href="#a-propos">À propos</a></li>
+      <li class="navigation__el"><a href="#projets">Projets</a></li>
     </ul>
   </nav>
+
+</header>
 
 
   <section class="intro">
@@ -81,6 +84,7 @@ EN CSS
 
 <!-- section en grid-->
   <section class="a-propos" id="a-propos">
+    <div class="grid"></div>
     <h2 class="a-propos__titre">Je m'appelle Ines Dalsbaek je suis étudiante en design web à la heaj en Belgique.</h2>
      
     
@@ -103,31 +107,33 @@ EN CSS
       <li class="projets__el-tous">
         <!-- mettre l'image de la fleche en décoration-->
         <img src="assets/images/contenu/arrow-proj.svg" alt="icône de flèche pointant en diagonale vers le bas." class="projets__icone"> 
-        <button>tous</button>
+        <button class="projets__btn">tous</button>
       </li>
       <li class="projets__el-types">
-        <img src="assets/images/contenu/arrow-proj.svg" alt="icône de flèche pointant en diagonale vers le bas." class="projets__icone"> types
+        <img src="assets/images/contenu/arrow-proj.svg" alt="icône de flèche pointant en diagonale vers le bas." class="projets__icone">
+        <button class="projets__btn">types</button>
       </li>
       <li class="projets__el-themes"
-      ><img src="assets/images/contenu/arrow-proj.svg" alt="icône de flèche pointant en diagonale vers le bas." class="projets__icone"> thèmes
+      ><img src="assets/images/contenu/arrow-proj.svg" alt="icône de flèche pointant en diagonale vers le bas." class="projets__icone"> 
+      <button class="projets__btn">thèmes</button>
     </li>
     </ul>
   
 
     <!-- liste -->
-    <div class="projets__type-btn">
+    <ul class="projets__type-btn">
       <button class="type-btn" data-target="web-design">web design [6]</button>
       <button class="type-btn" data-target="objets">objets [4]</button>
       <button class="type-btn" data-target="photographie">photographie [4]</button> 
       <button class="type-btn" data-target="dessins">dessins [2]</button>
-    </div>
+    </ul>
   
-    <div class="projets__theme-btn">
+    <ul class="projets__theme-btn">
       <button class="theme-btn" data-target="observer-reel">observer le réel [5]</button>
       <button class="theme-btn" data-target="etat-limite">état limite [4]</button>
       <button class="theme-btn" data-target="faits-main">faits main [4]</button>
       <button class="theme-btn" data-target="dans-peau">dans la peau de [3]</button>
-    </div>
+    </ul>
   
 
     <!-- liste -->
