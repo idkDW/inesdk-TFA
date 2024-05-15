@@ -45,7 +45,7 @@
       margin-bottom: 20px; 
       padding: 0;
 
-      img{
+      &__icone{
         width: 15px;
       }
   
@@ -59,6 +59,10 @@
         }
 
       }
+
+      
+
+      
     }
   
    
@@ -88,4 +92,21 @@
       }
     }
    
+  }
+
+
+  .images{
+    &__grid{
+    display: grid;
+    grid-template-columns: 100%;
+    justify-content: center;
+    }
+
+    &__grid-wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 40px;
+    margin-top: 27px;
+    grid-row-gap: 27px;
+    }
   }
