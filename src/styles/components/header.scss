@@ -6,16 +6,16 @@
   align-items: center;
   position: relative;
 
-  &__content {
+  .header__content {
     display: flex;
     align-items: center;
   }
 
-  &__texte {
+  .header__texte {
     margin-right: 20px;
   }
 
-  &__icone {
+  .header__icone {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -25,45 +25,40 @@
     }
   }
 
-  .navigation{
-  &__list {
-    display: flex;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    align-items: center;
-  }
+  .navigation {
+    &__list {
+      display: flex;
+      flex-direction: column; 
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      align-items: flex-start; 
+    }
 
-  &__el {
-    margin-left: 40px;
+    &__el {
+      margin-bottom: 5px; 
+      
+      a {
+        text-decoration: none;
+        color: #000;
+        transition: color 0.3s;
 
-    a {
-      text-decoration: none;
-      color: #000;
-      transition: color 0.3s;
-
-      &:hover {
-        color: #007bff;
+        &:hover {
+          color: #007bff;
+        }
       }
     }
   }
 }
-}
 
-
-  @media (max-width: 600px) {
+@media (min-width: 600px) {
+  .header {
     .navigation {
-    .navigation__list {
-      flex-direction: column; /* Change la direction de flex pour colonne */
-      align-items: flex-end; /* Aligne les éléments à droite */
-      margin-top: 20px; /* Ajustez cette valeur pour aligner les liens avec le header */
-
-      .navigation__el {
-        margin-bottom: 8px; /* Ajoute une marge en bas */
-        
-        &:last-child {
-          margin-bottom: 0; /* Enlève la marge en bas pour le dernier élément */
-        }
+      &__list {
+        flex-direction: row; 
+        align-items: center; 
+        margin-top: 0;
+        gap: 40px;
       }
     }
   }

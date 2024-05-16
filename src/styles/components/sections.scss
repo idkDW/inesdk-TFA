@@ -1,18 +1,23 @@
-
 .a-propos {
-    position: relative;
+  position: relative;
 
+  &__grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr; 
+    gap: 20px;
+  }
 
-   
-    &__titre {
-      font-family: "Jura", sans-serif;
-      text-transform: uppercase;
-    }
-  
-    &__img-normal {
-      position: relative; 
-      width: 130px; 
-    }
+  &__titre {
+    font-family: "Jura", sans-serif;
+    text-transform: uppercase;
+    grid-column: 1 / 2; 
+  }
+
+  &__img {
+    grid-column: 2 / 3; 
+    width: 130px;
+    justify-self: end;
+  }
   
     &:hover {
         & + .a-propos__container::before {
@@ -27,9 +32,9 @@
       }
   
 
-    &__container {
-      margin-right: 20px; 
+    &__droite { 
       text-align: right; 
+    
     } 
    
   }
@@ -42,7 +47,7 @@
       list-style-type: none;
       margin-bottom: 20px;
       padding: 0;
-  
+
       .projets__btn {
         text-transform: uppercase;
         cursor: pointer;
@@ -50,17 +55,30 @@
         background: url('../assets/images/décoration/arrow-proj.svg') left center no-repeat;
         background-size: 15px; 
       }
-  
-      .projets__el-types,
-      .projets__el-themes {
+
+      &__el-types,
+      &__el-themes {
         cursor: pointer;
         transition: color 0.3s;
-  
+
         &:hover {
           color: #000;
         }
       }
+    
+
+      &__grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
     }
+
+    &__grid li {
+        list-style: none; /* Pour supprimer les puces des listes */
+    }
+
+}
+
   
   
   
@@ -95,30 +113,7 @@
   }
 
 
-  .images{
-    &__grid{
-    display: grid;
-    grid-template-columns: 100%;
-    justify-content: center;
-    }
 
-    &__grid-wrapper{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-column-gap: 40px;
-    margin-top: 27px;
-    grid-row-gap: 27px;
-    }
-
-    
-  }
-
-  .grid{
-
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(10, 10vh);
-
-  }
 
   .grid-self-start{
     align-self: start;
@@ -129,3 +124,25 @@
   .grid-self-end{
     align-self: end;
   }
+
+
+  @media (min-width: 600px){
+    
+    .a-propos {
+  
+      &__grid{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+      }
+  
+     
+      &__titre {
+        grid-column: 1 / 3;
+      }
+    
+      &__img {
+        grid-column: 3 / 4;
+        width: 200px; 
+      }
+  }
+}
