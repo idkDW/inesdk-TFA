@@ -1,5 +1,12 @@
 .a-propos {
+  display: flex; /* Utilise Flexbox pour la mise en page */
+  justify-content: space-between; /* Espace entre les éléments */
+  align-items: flex-start; /* Aligne les éléments en haut */
   position: relative;
+
+  &__content {
+    flex: 1; /* Prend tout l'espace disponible sauf celui occupé par l'aside */
+  }
 
   &__grid {
     display: grid;
@@ -18,27 +25,46 @@
     width: 130px;
     justify-self: end;
   }
-  
-    &:hover {
-        & + .a-propos__container::before {
-          content: "";
-          position: absolute;
-          top: 0;
-          left: 0;
-          background-image: url('../assets/images/décoration/moi-negatif.jpg');
-          background-size: cover;
-          z-index: -1;
-        }
-      }
-  
 
-    &__droite { 
-      text-align: right; 
-    
-    } 
-   
+  &:hover {
+    & + .a-propos__container::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-image: url('../assets/images/décoration/moi-negatif.jpg');
+      background-size: cover;
+      z-index: -1;
+    }
   }
 
+  &__droite { 
+    text-align: right; 
+  }
+
+  &__aside {
+    width: 20%; /* Prend 20% de la largeur de la page */
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-left: 2px solid #ccc;
+    box-sizing: border-box;
+    margin-left: 40px;
+
+    p {
+      font-size: 16px;
+      margin: 0;
+      padding: 10px;
+      border-bottom: 1px solid #e0e0e0;
+
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+  }
+}
+
+
+  
 
   
   
@@ -144,8 +170,8 @@
       }
     
       &__img {
-        grid-column: 3 / 4;
-        width: 200px; 
+        grid-column: 4 / 5;
+        width: 200px;
       }
   }
 
