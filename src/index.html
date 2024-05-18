@@ -64,11 +64,11 @@ EN CSS
 
 
 
-  <section class="a-propos" id="a-propos">
+  <section class="a-propos" id="a-propos" >
 <div class="a-propos__container">
     <div class="a-propos__grid">
-    <p class="a-propos__titre">Je m'appelle Ines Dalsbaek je suis étudiante en design web en Belgique. J'aime toucher à différents champs 
-      artistiques et les relier entre eux. J'aime raconter des histoires en utilisant</p>
+    <p class="a-propos__titre">Je m'appelle Ines Dalsbaek je suis étudiante en design web. J'aime toucher à différents champs 
+      artistiques et les relier entre eux. J'aime raconter des histoires avec des images, des écrits, des dessins, internet ou mon imagination.</p>
        
     <img src="assets/images/contenu/ines-tête.png" alt="photo d'identité de mon visage en noir et blanc." class="a-propos__img">
   </div>
@@ -76,12 +76,12 @@ EN CSS
 
 
     <div class="a-propos__droite">
-      <p>Ma curiosité pour de nombreux médiums artistiques m'a permis de développer un profil polyvalent. 
-        J’essaie de développer un côté “touche à tout” en m’intéressant à ce qui m’entoure. </p>  
-      <p>Ma curiosité pour de nombreux médias artistiques m'a permis de développer un profil polyvalent</p>
+      <p>Du dessin, en passant par la photographie, la vidéo, l’écriture ou encore le design, 
+        j’essaie de développer un profil “touche à tout” en m’intéressant à ce qui m’entoure.</p>  
+      <p>À la suite d’études en arts appliqués, design et cinéma, j’apprends actuellement le design web en Belgique.</p>
     </div>
   </div>
-    <aside class="a-propos__aside">
+    <aside class="notes">
       <p>animation au hover de la photo qui devient négatif ou noir et blanc</p>
     </aside>
     
@@ -91,7 +91,7 @@ EN CSS
   
 
   <section class="projets" id="projets">
-
+ <div class="projets__container">
     <ul class="projets__categories">
       <li class="projets__el-tous">
         <button class="projets__btn">tous</button>
@@ -103,35 +103,42 @@ EN CSS
       <button class="projets__btn">thèmes</button>
     </li>
     </ul>
+  </div>
+
+  <aside class="notes">
+    <p>animation au hover de la photo qui devient négatif ou noir et blanc</p>
+  </aside>
+
+
   
 
     <ul class="projets__type-btn">
       <li class="type-btn">
-        <button data-target="web-design">web design [6]</button>
+        <button class="projets__boutons" data-target="web-design">web design [6]</button>
       </li>
       <li class="type-btn">
-        <button data-target="objets">objets [4]</button>
+        <button class="projets__boutons" data-target="objets">objets [4]</button>
       </li>
       <li class="type-btn">
-        <button data-target="photographie">photographie [5]</button>
+        <button class="projets__boutons" data-target="photographie">photographie [5]</button>
       </li>
       <li class="type-btn">
-        <button data-target="dessins">dessins [2]</button>
+        <button class="projets__boutons" data-target="dessins">dessins [2]</button>
       </li>
     </ul>
   
     <ul class="projets__theme-btn">
       <li class="theme-btn">
-        <button data-target="observer-reel">observer le réel [6]</button>
+        <button class="projets__boutons" data-target="observer-reel">observer le réel [6]</button>
       </li>
       <li class="theme-btn">
-        <button  data-target="etat-limite">état limite [4]</button>
+        <button class="projets__boutons" data-target="etat-limite">état limite [4]</button>
       </li>
       <li class="theme-btn">
-        <button data-target="faits-main">faits main [4]</button>
+        <button class="projets__boutons" data-target="faits-main">faits main [4]</button>
       </li>
       <li class="theme-btn">
-        <button data-target="dans-peau">dans la peau de [3]</button>
+        <button class="projets__boutons" data-target="dans-peau">dans la peau de [3]</button>
       </li>  
     </ul>
   
@@ -140,32 +147,38 @@ EN CSS
     <ul class="projets__contenu">
       <li class="projets__contenu-item web-design">
         <h2>Web Design</h2>
-        <p><span>3</span>Description du contenu pour Web Design</p>
+        <p>Description du contenu pour Web Design</p>
       </li>
 
       <li class="projets__contenu-item objets">
         <h2>Objets</h2>
-        <p><span>3</span>Description du contenu pour Objets</p>
+        <p>Un objet doit-il forcément être utile pour exister? Et si on pouvait attribuer d’autres 
+          fonctions qui seraient tout aussi suffisantes à un produit. Ainsi les objets de cette collection, tantôt poétiques, 
+          tantôt pratiques, s’ils ne se définissent pas par leur indispensabilité, proposent un autre regard à la notion d’utilité généralement attendue.</p>
       </li>
 
       <li class="projets__contenu-item photographie">
         <h2>Photographie</h2>
-        <p><span>3</span>Description du contenu pour photo</p>
+        <p>Des séries de photographies et photomontages qui racontent un quotidien que l’on connait tant, 
+          auquel on ne porte plus attention: un garçon qui rentre chez lui, des gens à leurs fenêtres. Mais qui inventent aussi, 
+          des endroits fabriqués ou des hommes presqu’animaux. Relevant plutôt de l'expérimental, ces images sont aussi une manière d'appréhender divers outils de mise en scène.</p>
       </li>
 
       <li class="projets__contenu-item dessins">
         <h2>Dessins</h2>
-        <p><span>3</span>Description du contenu pour dessins</p>
+        <p>Inspirée par des artistes tels qu’Aya Takano, Vewn, Marjane Satrapi et bien d’autres, 
+          voici une série de personnages dessinés sur papier et tablette, à travers laquelle j’expérimente 
+          différents styles graphiques et différents supports de réalisation.</p>
       </li>
 
       <li class="projets__contenu-item observer-reel">
         <h2>Observer le réel</h2>
-        <p><span>3</span>Description du contenu pour observer-reel</p>
+        <p>Description du contenu pour observer-reel</p>
       </li>
 
       <li class="projets__contenu-item etat-limite">
         <h2>État limite</h2>
-        <p><span>3</span> ETAT LIMITE:
+        <p> ETAT LIMITE:
           une situation entre le bon fonctionnement et la défaillance
           instabilité, dualité
           limite (cnrtl): Ligne qui détermine une étendue, une chose ayant un développement spatial; 
@@ -174,12 +187,12 @@ EN CSS
 
       <li class="projets__contenu-item faits-main">
         <h2>Faits-main</h2>
-        <p><span>3</span>Description du contenu pour faits-main</p>
+        <p>Description du contenu pour faits-main</p>
       </li>
 
       <li class="projets__contenu-item dans-peau">
         <h2>Dans la peau de</h2>
-        <p><span>3</span>Description du contenu pour dans-peau</p>
+        <p>Description du contenu pour dans-peau</p>
       </li>
 
     </ul>
