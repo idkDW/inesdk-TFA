@@ -1,11 +1,11 @@
 .a-propos {
-  display: flex; /* Utilise Flexbox pour la mise en page */
-  justify-content: space-between; /* Espace entre les éléments */
-  align-items: flex-start; /* Aligne les éléments en haut */
+  display: flex; 
+  justify-content: space-between;
+  align-items: flex-start; 
   position: relative;
 
   &__content {
-    flex: 1; /* Prend tout l'espace disponible sauf celui occupé par l'aside */
+    flex: 1; 
   }
 
   &__grid {
@@ -24,19 +24,33 @@
     grid-column: 2 / 3; 
     width: 130px;
     justify-self: end;
-  }
+    position: relative;
+    z-index: 1;
 
-  &:hover {
-    & + .a-propos__container::before {
+
+    &::before {
       content: "";
       position: absolute;
       top: 0;
       left: 0;
+      width: 100%;
+      height: 100%;
       background-image: url('../assets/images/décoration/moi-negatif.jpg');
       background-size: cover;
-      z-index: -1;
+      z-index: 2;
+      opacity: 0; /* Caché par défaut */
+    }
+
+    &:hover::before {
+      opacity: 1; /* Affichage au survol */
     }
   }
+  
+ 
+ 
+  
+
+ 
 
   &__droite { 
     text-align: right; 
@@ -49,6 +63,7 @@
     border-left: 2px solid #ccc;
     box-sizing: border-box;
     margin-left: 40px;
+    display: none;
 
     p {
       font-size: 16px;
@@ -124,35 +139,33 @@
     &__grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      grid-auto-rows: 200px;
+      grid-auto-rows: 250px;
       gap: 20px;
       list-style: none;
   }
 
   &__grid-item1 {
-    align-self: center; // Place l'élément en bas
-
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: end; 
   }
 
   &__grid-item2 {
-    align-self: start; // Place l'élément en haut
+    display: flex;
+      align-items: center;
+      justify-content: center;
+      align-self: start; 
+  }
 
+  &__grid-item3 {
+      display: flex;
+      align-items: center;
+      justify-content: center;
   }
    
   }
 
-
-
-
-  .grid-self-start{
-    align-self: start;
-  }
-  .grid-self-center{
-    align-self: center;
-  }
-  .grid-self-end{
-    align-self: end;
-  }
 
 
   @media (min-width: 600px){
@@ -171,7 +184,10 @@
     
       &__img {
         grid-column: 4 / 5;
-        width: 200px;
+      }
+
+      &__aside {
+        display: block; 
       }
   }
 
