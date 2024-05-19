@@ -24,6 +24,38 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
+
+  // Fonction pour changer l'image aléatoire
+function changeImage() {
+    var avatar = document.querySelector("#random");
+    var imageRandom = getRandomIntInclusive(1, 3);
+    avatar.setAttribute("src", "src/assets/images/contenu/ines-tête" + imageRandom + ".png");
+  }
+  
+  // Fonction pour obtenir un nombre entier aléatoire dans une plage donnée
+  function getRandomIntInclusive(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  }
+  
+  // Encapsuler le code du bouton dans une fonction anonyme auto-invoquée
+  (function() {
+    // Sélectionnez le bouton
+    var btnAvatar = document.querySelector('.a-propos__btn');
+  
+    // Ajoutez un gestionnaire d'événements pour le clic
+    btnAvatar.addEventListener('click', function() {
+      // Appelez la fonction changeImage pour changer l'image d'avatar
+      changeImage();
+    });
+  })();
+
+
+
+
+
+
 //SYSTEME TRI BOUTONS
 
 document.addEventListener("DOMContentLoaded", function() {
