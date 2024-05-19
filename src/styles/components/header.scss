@@ -3,7 +3,7 @@
   font-size: 12px;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: baseline;
   position: relative;
 
   .header__content {
@@ -22,6 +22,12 @@
 
     img {
       width: 35px;
+      
+      transition: transform 0.3s;
+
+    &:hover{
+      transform: scale(1.1);
+    }
     }
   }
 
@@ -41,10 +47,12 @@
       a {
         text-decoration: none;
         color: #000;
-        transition: color 0.3s;
 
         &:hover {
-          color: #007bff;
+          color: #fff;
+          background-color: #597370;
+          padding: 8px 8px;
+
         }
       }
     }

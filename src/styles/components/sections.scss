@@ -73,27 +73,25 @@
         font-size: 28px;
         text-transform: uppercase;
         cursor: pointer;
-        padding-left: 20px;
-        margin-bottom: 20px;
         background: url('../assets/images/décoration/arrow-proj.svg') left top no-repeat;
+        margin-bottom: 20px;
+        background-color: transparent;
         border: none;
         outline: none;
-  position: relative;
-  overflow: hidden;
-  transition: color 0.3s, border-bottom-width 0.3s; /* Transition pour la couleur et l'épaisseur de la bordure */
-  border-bottom: 2px dotted ; 
-        
-
+        position: relative;
+        transition: transform 0.3s; 
         
         &:hover {
-          color:  #597370;
-          transform: scale(0.9);
-          
+          color: #fff;
+          transform: scale(1.1);
+          background-color: #597370;
+          border-radius: 11px;
+          padding: 8px 8px;
         }
 
         &.active{
 
-          color: #597370;
+          color: #EE6666;
         }
       } 
 
@@ -136,6 +134,10 @@
         }
     }
 
+    &__contenu{
+      margin: 0; 
+    padding: 0;
+    }
    
     
     &__grid {
