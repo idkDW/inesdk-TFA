@@ -6,6 +6,9 @@
 @import 'components/font';
 
 
+html {
+    scroll-behavior: smooth;
+  }
 
 
 body {
@@ -14,5 +17,6 @@ font-family: "Satoshi", sans-serif;
 color: #333;
 font-size: 16px;
 line-height: 150%;
+
 }
 

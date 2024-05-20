@@ -23,14 +23,14 @@
   }
 
   &__modif-1{
-    background-color: #EE6666; 
-    color: #e4f7b3;
+    background-color: #e4f7b3; 
+    color: #ce230c;
     padding: 5px;
   }
 
   &__modif-2{
-    color: #476662;
-    border: 1px solid #476662;
+    color: #415351;
+    border: 1px solid #415351;
   border-radius: 11px;
   padding: 5px;
   }
@@ -50,25 +50,20 @@
         border: 2px dotted #333; 
         border-radius: 11px;
         background-color: transparent;
-        color: #000; 
+        color: #333; 
         text-decoration: none;
         transition: background-color 0.3s, color 0.3s, border-color 0.3s, transform 0.3s;
         cursor: pointer;
 
 
         &:hover {
-          background-color: #597370; 
+          background-color: #415351; 
           color: #fff;
           border-color: #fff; 
           transform: scale(1.1);
         }
   }
 
-  
-  
- 
-
- 
 }
 
 
@@ -100,13 +95,13 @@
         &:hover {
           color: #fff;
           transform: scale(1.1);
-          background-color: #597370;
+          background-color: #415351;
           padding: 8px 8px;
         }
 
         &.active{
-          color: #EE6666;
-          background-color: #597370;
+          color: #FDB4AA;
+          background-color: #415351;
           padding: 8px 8px;
         }
       } 
@@ -132,7 +127,7 @@
         border: 2px dotted #333; 
         border-radius: 11px;
         background-color: transparent;
-        color: #000; 
+        color: #333; 
         text-decoration: none;
         transition: background-color 0.3s, color 0.3s, border-color 0.3s, transform 0.3s;
         cursor: pointer;
@@ -145,7 +140,7 @@
         }
 
         &.active{
-          background-color: #597370;
+          background-color: #415351;
           color: #fff;
           border-color: #fff; 
         }
@@ -166,6 +161,8 @@
       gap: 20px;
       list-style: none;
   }
+
+
 
   &__grid-item1 {
     display: flex;

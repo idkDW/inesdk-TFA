@@ -46,12 +46,13 @@
       
       a {
         text-decoration: none;
-        color: #000;
+        color: #333;
+        font-weight: bold;
 
         &:hover {
           color: #fff;
-          background-color: #597370;
-          padding: 8px 8px;
+          background-color: #415351;
+          padding: 5px 5px;
 
         }
       }
@@ -60,20 +61,25 @@
 }
 
 
+
+@media (min-width: 0px){
 .main{
   margin-left: 28px;
   margin-right: 28px;
 }
 
-@media (min-width: 600px) {
-  .header {
-    .navigation {
-      &__list {
-        flex-direction: row; 
-        align-items: center; 
-        margin-top: 0;
-        gap: 40px;
+
+  @media (min-width: 600px) {
+    .header {
+      .navigation {
+        &__list {
+          flex-direction: row; 
+          align-items: center; 
+          margin-top: 0;
+          gap: 40px;
+        }
       }
     }
-  }
+  }  
 }
+

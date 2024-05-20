@@ -56,6 +56,34 @@ function changeImage() {
 
 
 
+
+//BOUTON "TOUS" SELECTIONNE A L'OUVERTURE DE LA PAGE
+
+  document.addEventListener('DOMContentLoaded', function() {
+    var tousBtn = document.querySelector('.projets__el-tous .projets__btn');
+    tousBtn.classList.add('active');
+
+
+    var typeBtn = document.querySelector('.projets__el-types .projets__btn');
+    var themeBtn = document.querySelector('.projets__el-themes .projets__btn');
+
+
+    typeBtn.addEventListener('click', function() {
+
+        tousBtn.classList.remove('active');
+    });
+
+    themeBtn.addEventListener('click', function() {
+
+        tousBtn.classList.remove('active');
+    });
+
+});
+
+
+
+
+
 //SYSTEME TRI BOUTONS
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -125,4 +153,22 @@ document.addEventListener("DOMContentLoaded", function() {
 
     masquerBoutons();
     masquerContenus();
+});
+
+
+
+
+
+
+
+// FENETRE MODALE CREDITS
+
+document.querySelector(".footer__centre .footer__el").addEventListener("click", function (e) {
+  e.preventDefault();
+  document.querySelector(".footer__credits").classList.remove("hidden");
+});
+
+document.querySelector(".footer__credits #closeCredits").addEventListener("click", function (e) {
+  e.preventDefault();
+  document.querySelector(".footer__credits").classList.add("hidden");
 });
