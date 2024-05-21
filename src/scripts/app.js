@@ -3,7 +3,7 @@ import ScrollTrigger from 'gsap/ScrollTrigger';
 
 'use strict'
 
-
+/*
 //CLASSE ACTIVE
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -20,36 +20,83 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     });
   });
-  
+  */
+
+
+
+
+  document.addEventListener('DOMContentLoaded', function() {
+    // Sélectionner les boutons
+    const projetsCategoriesButtons = document.querySelectorAll('.projets__categories button');
+    const projetsTypeButtons = document.querySelectorAll('.projets__type-btn button, .projets__theme-btn button');
+
+    // Ajouter la classe active au bouton "tous" par défaut
+    const defaultButton = document.querySelector('.projets__el-tous .projets__btn');
+    if (defaultButton) {
+        defaultButton.classList.add('active');
+    }
+
+    // Ajouter un gestionnaire d'événements pour les boutons de catégories
+    projetsCategoriesButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            // Supprimer la classe active de tous les boutons de catégories
+            projetsCategoriesButtons.forEach(btn => btn.classList.remove('active'));
+            // Ajouter la classe active au bouton cliqué
+            this.classList.add('active');
+        });
+    });
+
+    // Ajouter un gestionnaire d'événements pour les boutons de type et de thème
+    projetsTypeButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            // Supprimer la classe active des boutons de type et de thème
+            projetsTypeButtons.forEach(btn => btn.classList.remove('active'));
+            // Ajouter la classe active au bouton cliqué
+            this.classList.add('active');
+        });
+    });
+});
+
 
 
 
 
   // Fonction pour changer l'image aléatoire
-function changeImage() {
-    var avatar = document.querySelector(".a-propos__img");
-    var imageRandom = getRandomIntInclusive(1, 3);
-    avatar.setAttribute("src", "../../assets/images/contenu/ines-tête" + imageRandom + ".png");
+
+document.addEventListener("DOMContentLoaded", function() {
+  var currentImageIndex = 1;
+  var totalImages = 3; // Total number of images
+
+  // Fonction pour changer l'image séquentiellement
+  function changeImage() {
+      var avatar = document.querySelector(".a-propos__img");
+      if (avatar) {
+          currentImageIndex++;
+          if (currentImageIndex > totalImages) {
+              currentImageIndex = 1;
+          }
+          avatar.setAttribute("src", "assets/images/contenu/intro/ines-tête" + currentImageIndex + ".png");
+      } else {
+          console.error("L'élément avec la classe 'a-propos__img' n'a pas été trouvé.");
+      }
   }
-  
-  // Fonction pour obtenir un nombre entier aléatoire dans une plage donnée
-  function getRandomIntInclusive(min, max) {
-    min = Math.ceil(min);
-    max = Math.floor(max);
-    return Math.floor(Math.random() * (max - min + 1)) + min;
-  }
-  
+
   // Encapsuler le code du bouton dans une fonction anonyme auto-invoquée
   (function() {
-    // Sélectionnez le bouton
-    var btnAvatar = document.querySelector('.a-propos__btn');
-  
-    // Ajoutez un gestionnaire d'événements pour le clic
-    btnAvatar.addEventListener('click', function() {
-      // Appelez la fonction changeImage pour changer l'image d'avatar
-      changeImage();
-    });
+      // Sélectionnez le bouton
+      var btnAvatar = document.querySelector('.a-propos__btn');
+
+      // Ajoutez un gestionnaire d'événements pour le clic
+      if (btnAvatar) {
+          btnAvatar.addEventListener('click', function() {
+              // Appelez la fonction changeImage pour changer l'image d'avatar
+              changeImage();
+          });
+      } else {
+          console.error("Le bouton avec la classe 'a-propos__btn' n'a pas été trouvé.");
+      }
   })();
+});
 
 
 
@@ -163,12 +210,16 @@ document.addEventListener("DOMContentLoaded", function() {
 
 // FENETRE MODALE CREDITS
 
+
 document.querySelector(".footer__centre .footer__el").addEventListener("click", function (e) {
   e.preventDefault();
   document.querySelector(".footer__credits").classList.remove("hidden");
+  document.querySelector(".overlay").classList.remove("hidden");
 });
 
 document.querySelector(".footer__credits #closeCredits").addEventListener("click", function (e) {
   e.preventDefault();
   document.querySelector(".footer__credits").classList.add("hidden");
+  document.querySelector(".overlay").classList.add("hidden");
 });
+

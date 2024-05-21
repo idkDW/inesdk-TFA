@@ -42,23 +42,17 @@
     }
 
     &__el {
-      margin-bottom: 5px; 
-      
+      margin-bottom: 10px; 
+  
       a {
         text-decoration: none;
         color: #333;
         font-weight: bold;
-
-        &:hover {
-          color: #fff;
-          background-color: #415351;
-          padding: 5px 5px;
-
         }
       }
     }
   }
-}
+
 
 
 
