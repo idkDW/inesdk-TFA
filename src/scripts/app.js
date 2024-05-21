@@ -27,9 +27,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Fonction pour changer l'image aléatoire
 function changeImage() {
-    var avatar = document.querySelector("#random");
+    var avatar = document.querySelector(".a-propos__img");
     var imageRandom = getRandomIntInclusive(1, 3);
-    avatar.setAttribute("src", "src/assets/images/contenu/ines-tête" + imageRandom + ".png");
+    avatar.setAttribute("src", "../../assets/images/contenu/ines-tête" + imageRandom + ".png");
   }
   
   // Fonction pour obtenir un nombre entier aléatoire dans une plage donnée
