@@ -3,27 +3,11 @@ import ScrollTrigger from 'gsap/ScrollTrigger';
 
 'use strict'
 
-/*
+
+
+
+
 //CLASSE ACTIVE
-
-document.addEventListener('DOMContentLoaded', function() {
-
-    const projetsButtons = document.querySelectorAll('.projets button');
-  
-
-    projetsButtons.forEach(button => {
-      button.addEventListener('click', function() {
-
-        projetsButtons.forEach(btn => btn.classList.remove('active'));
-
-        this.classList.add('active');
-      });
-    });
-  });
-  */
-
-
-
 
   document.addEventListener('DOMContentLoaded', function() {
     // Sélectionner les boutons
