@@ -59,31 +59,31 @@ EN CSS
   <main class="main">
 
   <section class="a-propos" id="a-propos" >
-<div class="a-propos__container">
-    <p class="a-propos__titre">Je m’appelle Ines Dalsbaek je suis étudiante en design web. J’aime toucher à différents champs
-      artistiques et les relier entre eux. J’aime raconter des histoires avec des images, des écrits, des dessins, internet ou mon imagination.</p>
+    <div class="a-propos__container">
+      <p class="a-propos__titre"><span>✶ </span>Je m’appelle Ines Dalsbaek je suis étudiante en design web. J’aime toucher à différents champs
+        artistiques et les relier entre eux. J’aime raconter des histoires avec des images, des écrits, des dessins, internet ou mon imagination.<span> ✶✶✶</span></p>
 
-    <div class="a-propos__content">
+      <div class="a-propos__content">
 
-      <div class="a-propos__texte-container">
-      <p class="a-propos__texte">Du dessin <img src="assets/images/contenu/intro/dessin-intro.svg" alt="" class="a-propos__img-span">,
-        en passant par la photographie <img src="assets/images/contenu/intro/photo-intro.svg" alt="" class="a-propos__img-span">,
-        l’écriture <img src="assets/images/contenu/intro/ecrits-intro.svg" alt="" class="a-propos__img-span">,
-        la vidéo <img src="assets/images/contenu/intro/video-intro.gif" alt="" class="a-propos__img-span">
-        ou encore le design <img src="assets/images/contenu/intro/design-intro.svg" alt="" class="a-propos__img-span">,
-        j’essaie de développer un profil <span class="a-propos__modif-1">« touche à tout »</span> en m’intéressant
-        à ce qui m’entoure <img src="assets/images/contenu/intro/fin-intro.svg" alt="" class="a-propos__img-span">.
-        À la suite d’études en arts appliqués, design et cinéma,
-        j’apprends actuellement le <span class="a-propos__modif-2">design web</span> en Belgique. 
-        <img src="assets/images/contenu/intro/icone-intro.svg" alt="" class="a-propos__img-span"></p>
-    </div>
+        <div class="a-propos__texte-container">
+        <p class="a-propos__texte">Du dessin <img src="assets/images/contenu/intro/dessin-intro.svg" alt="" class="a-propos__img-span">,
+          en passant par la photographie <img src="assets/images/contenu/intro/photo-intro.svg" alt="" class="a-propos__img-span">,
+          l’écriture <img src="assets/images/contenu/intro/ecrits-intro.svg" alt="" class="a-propos__img-span">,
+          la vidéo <img src="assets/images/contenu/intro/video-intro.gif" alt="" class="a-propos__img-span">
+          ou encore le design <img src="assets/images/contenu/intro/design-intro.svg" alt="" class="a-propos__img-span">,
+          j’essaie de développer un profil <span class="a-propos__modif-1">« touche à tout »</span> en m’intéressant
+          à ce qui m’entoure <img src="assets/images/contenu/intro/fin-intro.svg" alt="" class="a-propos__img-span">.
+          À la suite d’études en arts appliqués, design et cinéma,
+          j’apprends actuellement le <span class="a-propos__modif-2">design web</span> en Belgique. 
+          <img src="assets/images/contenu/intro/icone-intro.svg" alt="" class="a-propos__img-span"></p>
+      </div>
 
-    <div class="a-propos__img-container">
-      <img src="assets/images/contenu/intro/ines-tête1.png" alt="photo d'identité de mon visage en noir et blanc." class="a-propos__img">
-        <button class="a-propos__btn">changez moi</button>
+      <div class="a-propos__img-container">
+        <img src="assets/images/contenu/intro/ines-tête1.png" alt="photo d'identité de mon visage en noir et blanc." class="a-propos__img">
+          <button class="a-propos__btn">changez moi</button>
+        </div>
       </div>
     </div>
-  </div>
     <aside class="notes">
       <p>animation au hover de la photo qui devient négatif ou noir et blanc</p>
       <p>possibilité de changer mon avatar au clic du bouton.</p>
@@ -92,171 +92,173 @@ EN CSS
   </section>
 
   <section class="projets" id="projets">
- <div class="projets__container">
-    <ul class="projets__categories">
-      <li class="projets__el-tous">
-        <button class="projets__btn">tous</button>
-      </li>
-      <li class="projets__el-types">
-        <button class="projets__btn">types</button>
-      </li>
-      <li class="projets__el-themes">
-      <button class="projets__btn">thèmes</button>
-    </li>
-    </ul>
-  </div>
+    <div class="projets__container">
+      <ul class="projets__categories">
+        <li class="projets__el-tous">
+          <button class="projets__btn">tous</button>
+        </li>
+        <li class="projets__el-types">
+          <button class="projets__btn">types</button>
+        </li>
+        <li class="projets__el-themes">
+          <button class="projets__btn">thèmes</button>
+        </li>
+      </ul>
 
-  <aside class="notes">
-    <p>animation au hover de la photo qui devient négatif ou noir et blanc</p>
-  </aside>
+      <ul class="projets__type-btn">
+        <li class="type-btn">
+          <button class="projets__boutons" data-target="web-design">web design [6]</button>
+        </li>
+        <li class="type-btn">
+          <button class="projets__boutons" data-target="objets">objets [4]</button>
+        </li>
+        <li class="type-btn">
+          <button class="projets__boutons" data-target="photographie">photographie [5]</button>
+        </li>
+        <li class="type-btn">
+          <button class="projets__boutons" data-target="dessins">dessins [2]</button>
+        </li>
+      </ul>
+  
+      <ul class="projets__theme-btn">
+        <li class="theme-btn">
+          <button class="projets__boutons" data-target="dans-peau">dans la peau de [5]</button>
+        </li>
+        <li class="theme-btn">
+          <button class="projets__boutons" data-target="etat-limite">état limite [4]</button>
+        </li>
+        <li class="theme-btn">
+          <button class="projets__boutons" data-target="observer-reel">observer le réel [4]</button>
+        </li>
+        <li class="theme-btn">
+          <button class="projets__boutons" data-target="faits-main">faits main [4]</button>
+        </li>
+        
+      </ul>
+  
+      <ul class="projets__contenu">
+        <li class="projets__contenu-item web-design">
+          <h2 class="projets__titre">Web Design<span> ✶</span></h2>
+          <p class="projets__sous-titre">Bienvenue sur Internet.</p>
+          <p>Une sélection des mes projets web, sites et pages en tous genres au travers desquels 
+            je me forge une première identité sur Internet. Ce sont différentes manières d’appréhender 
+            le web design en tant qu’outil pratique, informatif, narratif, poétique ou expérimental. 
+            C’est aussi ce portfolio, comme espace personnel et lien entre mes travaux. </p>
+        </li>
+  
+        <li class="projets__contenu-item objets">
+          <h2 class="projets__titre">Objets<span> ✶</span></h2>
+          <p class="projets__sous-titre">Un objet doit-il forcément être utile pour exister? </p>
+          <p>Et si on pouvait attribuer d’autres fonctions qui seraient tout aussi suffisantes à un produit. 
+            Ainsi les objets de cette collection, tantôt poétiques, tantôt pratiques, s’ils ne se définissent 
+            pas par leur indispensabilité, proposent un autre regard à la notion d’utilité généralement attendue.</p>
+        </li>
+  
+        <li class="projets__contenu-item photographie">
+          <h2 class="projets__titre">Photographie<span> ✶</span></h2>
+          <p class="projets__sous-titre">Des séries de photographies et photomontages...</p>
+          <p>...Pour porter un autre regard, une intention nouvelle, raconter un quotidien que l’on connait tant, 
+            auquel on ne porte plus attention: un garçon qui rentre chez lui, des gens à leurs fenêtres. 
+            Et pour inventer aussi, des endroits fabriqués ou des hommes presqu’animaux</p>
+        </li>
+  
+        <li class="projets__contenu-item dessins">
+          <h2 class="projets__titre">Dessins<span> ✶</span></h2>
+          <p class="projets__sous-titre">Travail sur le design de personnages.</p>
+          <p>Inspirée par des artistes tels qu’ Aya Takano, Vewn, Marjane Satrapi et bien d’autres, 
+            voici une série de personnages dessinés sur papier et sur tablette à travers laquelle j’expérimente 
+            différents styles graphiques et différents supports de réalisation. </p>
+        </li>
+  
+        <li class="projets__contenu-item dans-peau">
+          <h2 class="projets__titre">Dans la peau de<span> ✶</span></h2>
+          <p class="projets__sous-titre">On dit souvent de se mettre “à la place de”.</p>
+          <p>Imaginer comment pense l’autre, s’informer sur lui/elle pour comprendre ses envies, ses attentes. 
+            Les projets présentés ici ont fait l’objet pour leur réalisation d’un travail d’enquête en amont pour 
+            tenter de répondre au mieux aux besoins d’un public dans un contexte précis.</p>
+        </li>
+  
+        <li class="projets__contenu-item etat-limite">
+          <h2 class="projets__titre">État limite<span> ✶</span></h2>
+          <p class="projets__sous-titre">Qu’est-ce que la “limite”?</p>
+          <p>La séparation entre le bon fonctionnement et la défaillance? Ce qui ne peut ou ne doit être dépassé ou bien 
+            le point ultime à atteindre? L’état-limite, c’est ici ce moment étrange de latence, un passage entre le connu 
+            et l’inconnu, la mesure et l’excès, où l’on n’est ni d’un côté ni de l’autre.</p>
+        </li>
+  
+        <li class="projets__contenu-item observer-reel">
+          <h2 class="projets__titre">Observer le réel<span> ✶</span></h2>
+          <p class="projets__sous-titre">Attention aux détails.</p>
+          <p>Le “réel”, ce qui n'est pas un produit de la pensée. Parler du réel, pour informer, instruire, apprendre. 
+            Mais aussi pour repenser ce réel, le décrire à travers ses détails banals et insolites, 
+            ses situations connues de tous et vécues différemment à chaque fois. Raconter le réel, 
+            un exercice pratiqué tous les jours, tant pour sortir de celui-ci que pour s’y ancrer encore plus. </p>
+        </li>
+  
+        <li class="projets__contenu-item faits-main">
+          <h2 class="projets__titre">Faits-main<span> ✶</span></h2>
+          <p class="projets__sous-titre">Fabriqués avec amour.</p>
+          <p>Une sélection de travaux où le processus de fabrication est autant, peut-être plus affirmé que le résultat car 
+            il relève de l’expérimentation pour appréhender de diverses manière la technique.
+            C’est par le test aussi bien réfléchi qu’aléatoire que les étapes se décident. “Faits main”, 
+            ce sont des projets fabriqués tant dans leur final qu’au moment de la réalisation.</p>
+        </li>
+  
+       
+  
+      </ul>
+  
+      <ul class="projets__grid">
+  
+        <li class="projets__grid-item1 photographie etat-limite">
+          <figure class="images__item">
+            <img src="assets/images/contenu/projets/liminal.jpg" alt="liminal">
+            <figcaption class="images__caption">liminal</figcaption>
+          </figure>
+        </li>
+  
+        <li class="projets__grid-item2 web-design observer-reel">
+          <figure class="images__item" >
+            <img src="assets/images/contenu/projets/dakodak.png" alt="readimade">
+            <figcaption class="images__caption">readimade</figcaption>
+          </figure>
+        </li>
+  
+        <li class="projets__grid-item3 photographie etat-limite">
+          <figure class="images__item">
+            <img src="assets/images/contenu/projets/insect.jpg" alt="insect">
+            <figcaption class="images__caption">insect</figcaption>
+          </figure>
+        </li>
+  
+        <li class="projets__grid-item1 web-design etat-limite">
+          <figure class="images__item">
+            <img src="assets/images/contenu/projets/this-man.jpg" alt="this-man">
+            <figcaption class="images__caption">this man</figcaption>
+          </figure>
+        </li>
+  
+        <li class="projets__grid-item2 photographie etat-limite">
+          <figure class="images__item">
+            <img src="assets/images/contenu/projets/tambouille.jpg" alt="tambouille">
+            <figcaption class="images__caption">la tambouille</figcaption>
+          </figure>
+        </li>
+  
+        <li class="projets__grid-item3 web-design dans-peau">
+          <figure class="images__item">
+            <img src="assets/images/contenu/projets/decembre.jpg" alt="decembre">
+            <figcaption class="images__caption">Décembre</figcaption>
+          </figure>
+        </li>
+      </ul>
+    </div>
 
-    <ul class="projets__type-btn">
-      <li class="type-btn">
-        <button class="projets__boutons" data-target="web-design">web design [6]</button>
-      </li>
-      <li class="type-btn">
-        <button class="projets__boutons" data-target="objets">objets [4]</button>
-      </li>
-      <li class="type-btn">
-        <button class="projets__boutons" data-target="photographie">photographie [5]</button>
-      </li>
-      <li class="type-btn">
-        <button class="projets__boutons" data-target="dessins">dessins [2]</button>
-      </li>
-    </ul>
+      <aside class="notes">
+        <p>animation au hover de la photo qui devient négatif ou noir et blanc</p>
+      </aside>
 
-    <ul class="projets__theme-btn">
-      <li class="theme-btn">
-        <button class="projets__boutons" data-target="dans-peau">dans la peau de [5]</button>
-      </li>
-      <li class="theme-btn">
-        <button class="projets__boutons" data-target="etat-limite">état limite [4]</button>
-      </li>
-      <li class="theme-btn">
-        <button class="projets__boutons" data-target="observer-reel">observer le réel [4]</button>
-      </li>
-      <li class="theme-btn">
-        <button class="projets__boutons" data-target="faits-main">faits main [4]</button>
-      </li>
-      
-    </ul>
-
-    <ul class="projets__contenu">
-      <li class="projets__contenu-item web-design">
-        <h2>Web Design</h2>
-        <p class="projet__sous-titres">Bienvenue sur Internet.</p>
-        <p>Une sélection des mes projets web, sites et pages en tous genres au travers desquels 
-          je me forge une première identité sur Internet. Ce sont différentes manières d’appréhender 
-          le web design en tant qu’outil pratique, informatif, narratif, poétique ou expérimental. 
-          C’est aussi ce portfolio, comme espace personnel et lien entre mes travaux. </p>
-      </li>
-
-      <li class="projets__contenu-item objets">
-        <h2>Objets</h2>
-        <p class="projet__sous-titres">Un objet doit-il forcément être utile pour exister? </p>
-        <p>Et si on pouvait attribuer d’autres fonctions qui seraient tout aussi suffisantes à un produit. 
-          Ainsi les objets de cette collection, tantôt poétiques, tantôt pratiques, s’ils ne se définissent 
-          pas par leur indispensabilité, proposent un autre regard à la notion d’utilité généralement attendue.</p>
-      </li>
-
-      <li class="projets__contenu-item photographie">
-        <h2>Photographie</h2>
-        <p class="projet__sous-titres">Des séries de photographies et photomontages...</p>
-        <p>...Pour porter un autre regard, une intention nouvelle, raconter un quotidien que l’on connait tant, 
-          auquel on ne porte plus attention: un garçon qui rentre chez lui, des gens à leurs fenêtres. 
-          Et pour inventer aussi, des endroits fabriqués ou des hommes presqu’animaux</p>
-      </li>
-
-      <li class="projets__contenu-item dessins">
-        <h2>Dessins</h2>
-        <p class="projet__sous-titres">Travail sur le design de personnages.</p>
-        <p>Inspirée par des artistes tels qu’ Aya Takano, Vewn, Marjane Satrapi et bien d’autres, 
-          voici une série de personnages dessinés sur papier et sur tablette à travers laquelle j’expérimente 
-          différents styles graphiques et différents supports de réalisation. </p>
-      </li>
-
-      <li class="projets__contenu-item dans-peau">
-        <h2>Dans la peau de</h2>
-        <p class="projet__sous-titres">On dit souvent de se mettre “à la place de”.</p>
-        <p>Imaginer comment pense l’autre, s’informer sur lui/elle pour comprendre ses envies, ses attentes. 
-          Les projets présentés ici ont fait l’objet pour leur réalisation d’un travail d’enquête en amont pour 
-          tenter de répondre au mieux aux besoins d’un public dans un contexte précis.</p>
-      </li>
-
-      <li class="projets__contenu-item etat-limite">
-        <h2>État limite</h2>
-        <p class="projet__sous-titres">Qu’est-ce que la “limite”?</p>
-        <p>La séparation entre le bon fonctionnement et la défaillance? Ce qui ne peut ou ne doit être dépassé ou bien 
-          le point ultime à atteindre? L’état-limite, c’est ici ce moment étrange de latence, un passage entre le connu 
-          et l’inconnu, la mesure et l’excès, où l’on n’est ni d’un côté ni de l’autre.</p>
-      </li>
-
-      <li class="projets__contenu-item observer-reel">
-        <h2>Observer le réel</h2>
-        <p class="projet__sous-titres">Attention aux détails.</p>
-        <p>Le “réel”, ce qui n'est pas un produit de la pensée. Parler du réel, pour informer, instruire, apprendre. 
-          Mais aussi pour repenser ce réel, le décrire à travers ses détails banals et insolites, 
-          ses situations connues de tous et vécues différemment à chaque fois. Raconter le réel, 
-          un exercice pratiqué tous les jours, tant pour sortir de celui-ci que pour s’y ancrer encore plus. </p>
-      </li>
-
-      <li class="projets__contenu-item faits-main">
-        <h2>Faits-main</h2>
-        <p class="projet__sous-titres">Fabriqués avec amour.</p>
-        <p>Une sélection de travaux où le processus de fabrication est autant, peut-être plus affirmé que le résultat car 
-          il relève de l’expérimentation pour appréhender de diverses manière la technique.
-          C’est par le test aussi bien réfléchi qu’aléatoire que les étapes se décident. “Faits main”, 
-          ce sont des projets fabriqués tant dans leur final qu’au moment de la réalisation.</p>
-      </li>
-
-     
-
-    </ul>
-
-    <ul class="projets__grid">
-
-      <li class="projets__grid-item1 photographie etat-limite">
-        <figure class="images__item">
-          <img src="assets/images/contenu/projets/liminal.jpg" alt="liminal">
-          <figcaption class="images__caption">liminal</figcaption>
-        </figure>
-      </li>
-
-      <li class="projets__grid-item2 web-design observer-reel">
-        <figure class="images__item" >
-          <img src="assets/images/contenu/projets/dakodak.png" alt="readimade">
-          <figcaption class="images__caption">readimade</figcaption>
-        </figure>
-      </li>
-
-      <li class="projets__grid-item3 photographie etat-limite">
-        <figure class="images__item">
-          <img src="assets/images/contenu/projets/insect.jpg" alt="insect">
-          <figcaption class="images__caption">insect</figcaption>
-        </figure>
-      </li>
-
-      <li class="projets__grid-item1 web-design etat-limite">
-        <figure class="images__item">
-          <img src="assets/images/contenu/projets/this-man.jpg" alt="this-man">
-          <figcaption class="images__caption">this man</figcaption>
-        </figure>
-      </li>
-
-      <li class="projets__grid-item2 photographie etat-limite">
-        <figure class="images__item">
-          <img src="assets/images/contenu/projets/tambouille.jpg" alt="tambouille">
-          <figcaption class="images__caption">la tambouille</figcaption>
-        </figure>
-      </li>
-
-      <li class="projets__grid-item3 web-design dans-peau">
-        <figure class="images__item">
-          <img src="assets/images/contenu/projets/decembre.jpg" alt="decembre">
-          <figcaption class="images__caption">Décembre</figcaption>
-        </figure>
-      </li>
-    </ul>
+    
 
   </section>
 
@@ -266,7 +268,6 @@ EN CSS
 
 
 <footer class="footer">
-  <div class="footer__ensemble">
     <div class="footer__contact">
       <p class="footer__texte">Contactez moi</p>
       <a href="mailto:dalsbaekines@gmail.com" class="footer__el">dalsbaekines@gmail.com</a>
@@ -276,15 +277,15 @@ EN CSS
       <div class="footer__credits hidden">
         <div class="footer__credits-content">
           <div class="footer__credits-services">
-            <h3 class="footer__credits-titre">Services</h3>
+            <h3 class="footer__credits-titre">Services<span> ✶</span></h3>
             <ul class="footer__credits-el">
-              <li><p>Fonts utilisées : Satoshi, Jura, PP Talisman, IBM Plex Mono.</p></li>
+              <li><p>Fonts utilisées : Satoshi, Jura, PP Talisman, Spline Sans Mono.</p></li>
               <li><p>Pages créées sur Figma et développées sur Visual Studio Code.</p></li>
               <li><p>Aide en ligne : ChatGPT, MDN, CodePen, W3C Validator, Contrast Checker.</p></li>
             </ul>
           </div>
           <div class="footer__credits-merci">
-            <h3 class="footer__credits-titre">Remerciements</h3>
+            <h3 class="footer__credits-titre">Remerciements<span> ✶</span></h3>
             <ul class="footer__credits-el">
               <li><p>Merci aux professeur.es et aux élèves de la section <a href="https://dwt.heaj.be/" target="_blank" class="footer__el">DWT</a> pour leur aide et accompagnement.</p></li>
               <li><p>Merci à mes professeur.es d'arts appliqués, design, cinéma et design web ainsi qu'à mes ami.es pour leur participation à mes travaux.</p></li>
@@ -292,7 +293,7 @@ EN CSS
             </ul>
           </div>
           <div class="footer__credits_contact">
-            <h3 class="footer__credits-titre">Votre avis</h3>
+            <h3 class="footer__credits-titre">Votre avis<span> ✶</span></h3>
             <ul class="footer__credits-el">
               <li><p>Si vous avez des avis ou des questions sur mon portfolio et mes travaux, n'hésitez pas à <a href="mailto:dalsbaekines@gmail.com" class="footer__el">me contacter</a></p></li>
               <li><p>À bientôt!</p></li>
@@ -303,7 +304,6 @@ EN CSS
       </div>
       <small>© Ines Dalsbaek 2024</small>
     </div>
-  </div>
   <div class="footer__follow">
     <p class="footer__texte">Suivez moi</p>
     <ul class="footer__socials">

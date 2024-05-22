@@ -8,10 +8,11 @@
 
 
   &__titre {
-    font-family: "Jura", sans-serif;
+    font-family: "ClashDisplay", sans-serif;
     font-size: 21px;
     color: #476662;
     text-transform: uppercase;
+    word-spacing: 5px;
   }
 
   &__texte{
@@ -64,6 +65,20 @@
         }
   }
 
+
+
+  
+  @media (min-width: 800px){
+
+    &__content{
+      display: flex;
+    }
+
+    &__texte{
+      width: 80%;
+    }
+   }
+
 }
 
 
@@ -81,6 +96,7 @@
     }
 
       &__btn {
+        font-family: "ClashDisplay", sans-serif;
         font-size: 28px;
         text-transform: uppercase;
         cursor: pointer;
@@ -151,7 +167,19 @@
       margin: 0; 
     padding: 0;
     }
-   
+
+    &__titre{
+      font-family: "ClashDisplay", sans-serif;
+      font-size: 28px;
+      font-weight: 400;
+      color: #333;
+    }
+
+    &__sous-titre{
+      font-weight: bold;
+      color: #415351;
+      margin-top: 40px;
+    }
     
     &__grid {
       margin: 0; 
@@ -184,21 +212,31 @@
       align-items: center;
       justify-content: center;
   }
+
+
+  @media (min-width: 600px){
+    &__grid {
+      grid-template-columns: repeat(3, 1fr);
+     }
+  }
    
   }
 
 
   .notes{
+    font-family: "SplineSansMono", sans-serif;
     width: 20%; 
     padding: 10px;
     border-left: 2px dotted #ccc;
     box-sizing: border-box;
     margin-left: 40px;
     display: none;
+    float: right;
 
 
     p {
-      font-size: 16px;
+      font-size: 12px;
+      line-height: 150%;
       margin: 0;
       padding: 10px;
 
@@ -206,40 +244,22 @@
         border-bottom: none;
       }
     }
+
+
+    @media (min-width: 600px){
+      display: block;
+    }
 }
 
 
 
-  @media (min-width: 600px){
-    
-
-
-  .projets {
-    &__grid {
-
-      grid-template-columns: repeat(3, 1fr);
  
-  }
-  }
-
-  .notes{
-    display: block;
-  }
-}
-
-@media (min-width: 800px){
-
-  .a-propos{
-    &__content{
-      display: flex;
-    }
-
-    &__texte{
-      width: 80%;
-    }
-   }
 
 
 
-}
+  
+
+
+
+
 
