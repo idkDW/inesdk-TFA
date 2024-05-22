@@ -2,34 +2,29 @@
   font-size: 12px; 
   font-family: "Jura", sans-serif;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
 
-&__centre{
- flex-wrap: wrap;
- order: 1;
-}
 
 
-  &__texte{
+ &__texte{
     margin: 0;
   }
  
-
   &__el {
     text-decoration: none;
     color: #333;
     font-weight: bold;
-
   }
 
-  &__socials {
+
+
+  &__centre{
     display: flex;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    gap: 10px;
-
+    flex-direction: column; 
   }
+
+
 
   &__credits{
     font-family: "Satoshi", sans-serif;
@@ -86,25 +81,67 @@
     background-color: #FDB4AA;
     transform: scale(1.1);
         }
-        &__follow {
-          align-self: flex-end; // Pour s'assurer qu'il se place en bas
-        }
+        
   }
+  
+  &__follow {
+    flex: 1 1 100%;
+  }
+
+  
+  &__socials {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 10px;
+  }
+
+  
+
+ 
+
+  
+
+ 
 
 
   @media (min-width: 600px){
+
     &__centre{
       align-items: center;
     }
-  
+
+    &__follow{
+      flex: 0 1 auto;
+    }
+  }
+
+
+  @media (min-width: 700px){
     &__credits{
       font-size: 16px;
       bottom: 50px;
     }
+  }
+
+
+  @media (min-width: 900px){
+
   
     &__credits-content{
       display: flex;
-      gap: 20px;
+      justify-content: space-around;
+
+      & > div {
+        flex-basis: 30%; 
+        flex-shrink: 0;
+        flex-grow: 0;
+      }
+    }
+
+    &__credits-btn{
+     margin-left: 15px;
     }
   }
 
