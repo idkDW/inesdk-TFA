@@ -4,7 +4,9 @@
   align-items: flex-start; 
   position: relative;
 
-
+&__container{
+  width: 80%;
+}
 
 
   &__titre {
@@ -123,6 +125,17 @@
   .projets {
     position: relative;
 
+   
+    &__container-flex {
+      display: flex;
+    }
+    
+    &__container{
+      width: 80%;
+    }
+    
+    
+    
     &__categories {
       list-style-type: none;
       margin-bottom: 20px;
@@ -225,14 +238,11 @@
       gap: 20px;
       list-style: none;
   }
- img {
-  transition: transform 0.3s ease; /* Ajoute une transition pour un effet de scaling fluide */
-}
-
-  img.scaling {
-    transform: scale(1.3);
-}
-
+ 
+  &__grid-item1.scaling,   &__grid-item2.scaling,  &__grid-item3.scaling{
+    transform: scale(1.5); 
+    transition: transform 0.3s ease; 
+  }
 
   &__grid-item1 {
     display: flex;

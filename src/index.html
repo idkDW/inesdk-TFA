@@ -31,10 +31,10 @@ section
   div.container 80%
   aside 20%
 
-EN CSS
+EN CSS  
 
   -->
-
+  <div class="intro">
 <header class="header">
   <div class="header__content">
     <p class="header__texte">portfolio 2024</p>
@@ -53,9 +53,11 @@ EN CSS
 
 </header>
 
-  <section class="intro">
-    <h1 class="intro__titre">Bienvenue sur mon portfolio</h1>
-  </section>
+
+
+  <img class="intro__image" src="../assets/images/décoration/test_bg.png" alt="Background Image">
+  <h1 class="intro__titre">Bienvenue sur mon portfolio</h1>
+</div>
 
   <main class="main">
 
@@ -91,8 +93,8 @@ EN CSS
 
   </section>
 
-  <section class="projets" id="projets">
-    <div class="projets__container-flex">
+  <section class="projets projets__container-flex" id="projets">
+    
       <div class="projets__container">
           <ul class="projets__categories">
             <li class="projets__el-tous">
@@ -213,7 +215,7 @@ EN CSS
   
         <li class="projets__grid-item1">
           <figure class="images__item">
-            <img src="assets/images/contenu/projets/liminal.jpg" alt="liminal" class="photographie etat-limite">
+            <img src="assets/images/contenu/projets/liminal.jpg" alt="liminal" data-target="photographie etat-limite">
             <figcaption class="images__caption">liminal</figcaption>
           </figure>
         </li>
@@ -255,11 +257,9 @@ EN CSS
       </ul>
     </div>
 
-      <aside class="notes">
-        <p>animation au hover de la photo qui devient négatif ou noir et blanc</p>
-      </aside>
-
-    </div>
+    <aside class="notes">
+      <p>animation au hover de la photo qui devient négatif ou noir et blanc</p>
+    </aside>
 
   </section>
 

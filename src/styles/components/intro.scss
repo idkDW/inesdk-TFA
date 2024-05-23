@@ -1,16 +1,20 @@
 .intro {
-    height: 100vh;
-    background-image: url('../assets/images/décoration/test_bg.png');
-    background-size: cover; 
-    background-position: center;
-    border-radius: 11px;
-    transition: background-size 0.5s; 
-  
-    &__titre {
-      position: absolute;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      color: #FAFAF9;
-    }
-  }
-  
+  position: relative;
+  height: 100vh;
+  border-radius: 11px;
+  transition: height 0.5s; 
+}
+
+.intro__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: inherit;
+  transform-origin: top; /* Pour que l'image se réduise à partir du haut */
+}
+
+.intro__titre {
+  position: relative;
+  top: 300px;
+  color: #FAFAF9;
+}

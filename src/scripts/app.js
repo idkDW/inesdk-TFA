@@ -218,11 +218,15 @@ document.addEventListener("DOMContentLoaded", function() {
 
     function ajusterTailleImages(classe) {
         console.log("Fonction ajusterTailleImages appelée avec la classe :", classe);
+        let gridItems = document.querySelectorAll('.projets__grid li');
+        console.log(gridItems);
         gridItems.forEach(item => {
+            console.log(item)
             const img = item.querySelector('img'); // Sélectionnez l'élément img à l'intérieur de chaque élément grid-item
             const targetClasses = img.getAttribute('data-target').split(' '); // Récupérez les classes cibles à partir de l'attribut data-target
             console.log("Classes cibles de l'image :", targetClasses);
             if (targetClasses.includes(classe)) {
+                console.log("scaling")
                 item.classList.add('scaling'); // Ajoutez la classe pour appliquer le scaling
             } else {
                 item.classList.remove('scaling'); // Supprimez la classe pour rétablir la taille normale de l'image
@@ -294,7 +298,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 // FENETRE MODALE CREDITS
 
-/*
+
 document.querySelector(".footer__centre .footer__el").addEventListener("click", function (e) {
   e.preventDefault();
   document.querySelector(".footer__credits").classList.remove("hidden");
@@ -306,43 +310,24 @@ document.querySelector(".footer__credits #closeCredits").addEventListener("click
   document.querySelector(".footer__credits").classList.add("hidden");
   document.querySelector(".overlay").classList.add("hidden");
 });
-*/
-// Fonction pour ouvrir la modale avec animation de fondu
-function openModalWithFade() {
-    const creditsModal = document.querySelector('.footer__credits');
-    const overlay = document.querySelector('.overlay');
-    creditsModal.classList.remove('hidden'); // Affiche la modale
-    overlay.classList.remove('hidden'); // Affiche l'overlay
-    gsap.to([creditsModal, overlay], { duration: 0.5, opacity: 1 }); // Animation de fondu vers l'opacité 1 en 0.5 seconde
-  }
-  
-  // Fonction pour fermer la modale avec animation de fondu
-  function closeModalWithFade() {
-    const creditsModal = document.querySelector('.footer__credits');
-    const overlay = document.querySelector('.overlay');
-    gsap.to([creditsModal, overlay], { duration: 0.5, opacity: 0, onComplete: () => { // Animation de fondu vers l'opacité 0 en 0.5 seconde
-      creditsModal.classList.add('hidden'); // Ajoute la classe 'hidden' après l'animation
-      overlay.classList.add('hidden'); // Cache l'overlay
-    }});
-  }
-  
-  // Ajouter des écouteurs d'événements pour ouvrir et fermer la modale
-  document.querySelector(".footer__centre .footer__el").addEventListener("click", function (e) {
-    e.preventDefault();
-    openModalWithFade();
-  });
-  
-  document.querySelector(".footer__credits #closeCredits").addEventListener("click", function (e) {
-    e.preventDefault();
-    closeModalWithFade();
-  });
-  
-  // Ajouter un écouteur d'événement pour fermer la modale en cliquant sur l'overlay
-  document.querySelector('.overlay').addEventListener('click', function(e) {
-    if (!e.target.closest('.footer__credits')) { // Vérifier si l'élément cliqué n'est pas à l'intérieur de la modale
-      closeModalWithFade();
-    }
-  });
+
+
   
 
 
+
+
+gsap.timeline({
+  scrollTrigger: {
+    scrub: 1,
+    trigger: ".intro",
+    start: "top top",
+    end: "bottom+=100vh top",
+    pin: true,
+    markers: true,  
+  }
+})
+.fromTo(".intro__image", 
+  { scale: 1 }, 
+  { scale: 0.8, ease: "none" }
+);
