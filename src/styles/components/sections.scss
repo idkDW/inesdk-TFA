@@ -4,9 +4,6 @@
   align-items: flex-start; 
   position: relative;
 
-&__container{
-  width: 80%;
-}
 
 
   &__titre {
@@ -78,9 +75,9 @@
   }
 
   &__btn{
+    font-family: "ClashDisplay", sans-serif;
     display: block;
     margin-left: auto;
-    font-family: "Jura", sans-serif;
         margin-top: 20px;
         padding: 12px 20px;
         border: 2px dotted #333; 
@@ -115,6 +112,12 @@
     }
    }
 
+   @media (min-width: 1000px){
+
+   &__container{
+    width: 80%;
+  }
+}
 }
 
 
@@ -126,13 +129,6 @@
     position: relative;
 
    
-    &__container-flex {
-      display: flex;
-    }
-    
-    &__container{
-      width: 80%;
-    }
     
     
     
@@ -185,7 +181,7 @@
 
 
       &__boutons{
-        font-family: "Jura", sans-serif;
+        font-family: "ClashDisplay", sans-serif;
         margin: 10px;
         padding: 12px 20px;
         white-space: nowrap;
@@ -284,8 +280,16 @@
         
   }
 
-
-   
+  @media (min-width: 600px){
+  &__container-flex {
+    display: flex;
+  }
+  
+  &__container{
+    width: 80%;
+  }
+  
+}
   }
 
 

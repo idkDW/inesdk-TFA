@@ -1,6 +1,5 @@
 .footer {
   font-size: 12px; 
-  font-family: "Jura", sans-serif;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -15,7 +14,7 @@
   &__el {
     text-decoration: none;
     color: #333;
-    font-weight: bold;
+    font-weight: 700;
   }
 
 
@@ -28,7 +27,6 @@
 
 
   &__credits{
-    font-family: "Satoshi", sans-serif;
     font-size: 12px;
     background-color: #FAFAF9;
     border: 1px solid #ccc;
