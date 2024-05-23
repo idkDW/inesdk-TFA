@@ -226,35 +226,55 @@ document.addEventListener("DOMContentLoaded", function() {
 
 // FENETRE MODALE CREDITS
 
+document.addEventListener("DOMContentLoaded", function() {
+    const creditsLink = document.querySelector(".footer__centre .footer__el");
+    const closeCreditsBtn = document.querySelector(".footer__credits #closeCredits");
+    const creditsModal = document.querySelector(".footer__credits");
+    const overlay = document.querySelector(".overlay");
 
-document.querySelector(".footer__centre .footer__el").addEventListener("click", function (e) {
-  e.preventDefault();
-  document.querySelector(".footer__credits").classList.remove("hidden");
-  document.querySelector(".overlay").classList.remove("hidden");
+    creditsLink.addEventListener("click", function (e) {
+        e.preventDefault();
+        creditsModal.classList.remove("hidden");
+        overlay.classList.remove("hidden");
+
+        // Trigger the fade-in
+        setTimeout(() => {
+            creditsModal.classList.add("visible");
+            overlay.classList.add("visible");
+        }, 10); // small timeout to ensure the class removal is processed
+    });
+
+    closeCreditsBtn.addEventListener("click", function (e) {
+        e.preventDefault();
+
+        // Trigger the fade-out
+        creditsModal.classList.remove("visible");
+        overlay.classList.remove("visible");
+
+        // Wait for the transition to end before hiding the elements
+        setTimeout(() => {
+            creditsModal.classList.add("hidden");
+            overlay.classList.add("hidden");
+        }, 500); // Duration of the fade-out transition
+    });
 });
-
-document.querySelector(".footer__credits #closeCredits").addEventListener("click", function (e) {
-  e.preventDefault();
-  document.querySelector(".footer__credits").classList.add("hidden");
-  document.querySelector(".overlay").classList.add("hidden");
-});
-
-
-  
 
 
 
 
 gsap.timeline({
-  scrollTrigger: {
-    scrub: 1,
-    trigger: ".intro",
-    start: "top top",
-    end: "bottom+=100vh top",
-    pin: true, 
-  }
-})
-.fromTo(".intro__image", 
-  { scale: 1 }, 
-  { scale: 0.8, ease: "none" }
-);
+    scrollTrigger: {
+      scrub: 1,
+      trigger: ".intro",
+      start: "top top",
+      end: "bottom+=100vh top",
+      pin: true, 
+    }
+  })
+  .fromTo(".intro__image", 
+    { scale: 1, borderRadius: "0px" }, 
+    { scale: 0.8, ease: "none" }
+  )
+  .to(".intro__image", 
+    { borderRadius: "11px", ease: "none" }, 0);
+  
