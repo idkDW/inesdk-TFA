@@ -97,8 +97,14 @@
         }
   }
 
+  &__container.hovered {
+    background-color: rgb(249, 255, 205);
+  }
 
-
+  &__img-container.hovered {
+    background-color: lightgray;
+  }
+  
   
   @media (min-width: 800px){
 
@@ -113,11 +119,10 @@
    }
 
    @media (min-width: 1000px){
-
    &__container{
-    width: 80%;
+    width: 100%;
   }
-}
+ }
 }
 
 
@@ -129,7 +134,10 @@
     position: relative;
 
    
-    
+    &__container.hovered {
+      background-color: rgb(249, 255, 205);
+    }
+  
     
     
     &__categories {
@@ -138,32 +146,40 @@
       padding: 0;
       display: flex;
     flex-direction: column;
+
+    &.hovered {
+      background-color: rgb(249, 255, 205);
     }
+    }
+
+    
+  
 
       &__btn {
         font-family: "ClashDisplay", sans-serif;
         font-size: 28px;
         text-transform: uppercase;
+        color: #415351;;
         cursor: pointer;
-        /*background: url('../assets/images/décoration/arrow-proj.svg') left top no-repeat;*/
+        background: url('../assets/images/décoration/flèche.svg') left top no-repeat;
+        background-size: 20px;
         margin-bottom: 20px;
         margin-right: 40px;
+        padding-left: 30px;
         background-color: transparent;
-        border: none;
-        outline: none;
+        border: none;;
         position: relative;
         transition: transform 0.3s; 
             
         &:hover {
-          color: #fff;
-          background-color: #415351;
         transform: scale(1.1);
-        padding: 8px 8px;
+        font-weight: 500;
             }
         
-
+        
         &.active{
           color: #333;
+          font-weight: 500;
         }
       } 
 
@@ -176,6 +192,11 @@
       flex-wrap: wrap;
       list-style: none;
       padding: 0;
+
+      &.hovered {
+        background-color: rgb(249, 255, 205);
+      }
+    
     }
   
 
@@ -194,14 +215,14 @@
         cursor: pointer;
     
         &:hover {
-          background-color: #333; 
+          background-color: #415351;
           color: #fff;
           border-color: #fff; 
           transform: scale(1.1);
         }
 
         &.active{
-          background-color: #415351;
+          background-color: #333; 
           color: #fff;
           border-color: #fff; 
         }
@@ -210,6 +231,10 @@
     &__contenu{
       margin: 0; 
     padding: 0;
+
+    &.hovered {
+      background-color: rgb(249, 255, 205);
+    }
     }
 
     &__titre{
@@ -233,10 +258,25 @@
       grid-auto-rows: 250px;
       gap: 20px;
       list-style: none;
+
+      &.hovered {
+        background-color: rgb(249, 255, 205);
+      }
   }
+
  
-  &__grid-item1.scaling,   &__grid-item2.scaling,  &__grid-item3.scaling{
+ 
+  &__grid-item1.scaling,   
+  &__grid-item2.scaling,  
+  &__grid-item3.scaling {
     transform: scale(1.5); 
+    transition: transform 0.3s ease; 
+  }
+
+  &__grid-item1.reduced, 
+  &__grid-item2.reduced, 
+  &__grid-item3.reduced {
+    transform: scale(0.75);
     transition: transform 0.3s ease; 
   }
 
@@ -286,11 +326,13 @@
   }
   
   &__container{
-    width: 80%;
-  }
-  
+    width: 100%;
+  } 
+ }
 }
-  }
+
+
+
 
 
 
@@ -300,36 +342,54 @@
     padding: 10px;
     border-left: 2px dotted #ccc;
     box-sizing: border-box;
-    margin-left: 40px;
+    margin-left: 100px;
     display: none;
-
 
     p {
       font-size: 12px;
       line-height: 150%;
-      margin: 0;
-      padding: 10px;
+      padding-left: 10px;
 
       &:last-child {
         border-bottom: none;
       }
     }
 
-
-    @media (min-width: 1000px){
-      display: block;
+    &__a-propos:hover {
+      cursor: pointer;
+      background-color: rgb(249, 255, 205);
     }
+
+    &__avatar:hover {
+      cursor: pointer;
+      background-color: lightgray;
+  }
+
+  &__projets:hover {
+    cursor: pointer;
+    background-color: lightgray;
 }
 
+  &__premier:hover {
+    cursor: pointer;
+    background-color: lightgray;
+}
+    
+  &__deuxieme:hover {
+    cursor: pointer;
+    background-color: lightgray;
+}
+&__texte:hover {
+  cursor: pointer;
+  background-color: lightgray;
+}
 
+&__images:hover {
+  cursor: pointer;
+  background-color: lightgray;
+}
 
- 
-
-
-
-  
-
-
-
-
-
+  @media (min-width: 1000px){
+    display: block;
+  }
+}

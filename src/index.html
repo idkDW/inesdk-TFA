@@ -34,28 +34,26 @@ section
 EN CSS  
 
   -->
-  <div class="intro">
+
   <header class="header">
-  
-    
+    <div class="header__intro">
       <div class="header__content">
         <p class="header__texte">portfolio 2024</p>
         <a href="./index.html" class="header__icone">
           <img src="assets/images/contenu/intro/grosnez.svg" alt="dessin de tête de personnage">
         </a>
       </div>
-
       <nav class="navigation">
         <ul class="navigation__list">
           <li class="navigation__el"><a href="#a-propos">À propos</a></li>
           <li class="navigation__el"><a href="#projets">Projets</a></li>
-        </ul>
-        
+        </ul>       
       </nav>
-    </header>
-    <img class="intro__image" src="../assets/images/décoration/test_bg.png" alt="Background Image">  
-    <h1 class="intro__titre">Bienvenue sur mon portfolio</h1>
-  </div>
+    </div>
+    <img class="header__image" src="../assets/images/décoration/test_bg.png" alt="Background Image">  
+  </header>
+
+
 
   <main class="main">
 
@@ -67,13 +65,13 @@ EN CSS
       <div class="a-propos__content">
 
         <div class="a-propos__texte-container">
-        <p class="a-propos__texte">Du dessin<img src="assets/images/contenu/intro/dessin-intro.svg" alt="" class="a-propos__img-span">,
-          en passant par la photographie <img src="assets/images/contenu/intro/photo-intro.svg" alt="" class="a-propos__img-span">,
-          l’écriture<img src="assets/images/contenu/intro/ecrits-intro.svg" alt="" class="a-propos__img-span">,
-          la vidéo <img src="assets/images/contenu/intro/video-intro.gif" alt="" class="a-propos__img-span">
-          ou encore le design <img src="assets/images/contenu/intro/design-intro.svg" alt="" class="a-propos__img-span">,
+        <p class="a-propos__texte">Du dessin<img src="assets/images/contenu/intro/dessin-intro.svg" alt="dessin de tête de personnage en tracés linéaires" class="a-propos__img-span">,
+          en passant par la photographie <img src="assets/images/contenu/intro/photo-intro.svg" alt="photo d'un tête de garçon en gros plan" class="a-propos__img-span">,
+          l’écriture<img src="assets/images/contenu/intro/ecrits-intro.svg" alt="mot hi érit en orange sur un fond vert" class="a-propos__img-span">,
+          la vidéo <img src="assets/images/contenu/intro/video-intro.gif" alt="gif en boucle de 7 secondes" class="a-propos__img-span">
+          ou encore le design <img src="assets/images/contenu/intro/design-intro.svg" alt="caractères spéciaux éccrits dans un encadrés arrondi" class="a-propos__img-span">,
           j’essaie de développer un profil <span class="a-propos__modif-1">« touche à tout »</span> en m’intéressant
-          à ce qui m’entoure<img src="assets/images/contenu/intro/icone-intro.svg" alt="" class="a-propos__img-span">.
+          à ce qui m’entoure<img src="assets/images/contenu/intro/icone-intro.svg" alt="icône d'étoile orange à six branches" class="a-propos__img-span">.
           À la suite d’études en <span class="a-propos__modif-3">arts appliqués</span>, <span class="a-propos__modif-4">design</span> et <span class="a-propos__modif-5">[</span> cinéma <span class="a-propos__modif-5">]</span>,
           j’apprends actuellement le <span class="a-propos__modif-2">design web</span> en Belgique.</p>
       </div>
@@ -85,8 +83,8 @@ EN CSS
       </div>
     </div>
     <aside class="notes">
-      <p>animation au hover de la photo qui devient négatif ou noir et blanc</p>
-      <p>possibilité de changer mon avatar au clic du bouton.</p>
+      <p class="notes__a-propos">section “à propos”, présentation de moi-même et de mon profil</p>
+      <p class="notes__avatar">possibilité de changer mon avatar au clic du bouton</p>
     </aside>
 
   </section>
@@ -256,7 +254,12 @@ EN CSS
     </div>
 
     <aside class="notes">
-      <p>animation au hover de la photo qui devient négatif ou noir et blanc</p>
+      <p class="notes__projets">section “projets”, présentation de mes projets personnels ou scolaires</p>
+      <p class="notes__premier">boutons cliquables, premier niveau de filtre</p>
+      <p class="notes__deuxieme">boutons cliquables, second niveau de filtres</p>
+      <p class="notes__texte">changement du texte en fonction du type ou du thème</p>
+      <p class="notes__images">Changement de taille des images sélectionnées (plus grandes) et non sélectionnées (plus petites)</p>
+      <p class="notes__images">Aperçu d’un projet ou de certains de ses éléments au hover de l’image du projet</p>
     </aside>
 
   </section>
@@ -278,15 +281,28 @@ EN CSS
           <div class="footer__credits-services">
             <h3 class="footer__credits-titre">Services<span> ✶</span></h3>
             <ul class="footer__credits-el">
-              <li><p>Fonts utilisées : Satoshi, Jura, PP Talisman, Spline Sans Mono.</p></li>
-              <li><p>Pages créées sur Figma et développées sur Visual Studio Code.</p></li>
-              <li><p>Aide en ligne : ChatGPT, MDN, CodePen, W3C Validator, Contrast Checker.</p></li>
+              <li>
+                <p>Fonts utilisées : <a href="https://www.fontshare.com/fonts/satoshi" target="_blank" class="footer__el">Satoshi</a>, 
+                <a href="https://www.fontshare.com/?q=Clash%20Display" target="_blank" class="footer__el">Clash Display</a>, 
+                <a href="https://fonts.google.com/specimen/Spline+Sans+Mono" target="_blank" class="footer__el">Spline Sans Mono</a>.</p>
+              </li>
+              <li>
+                <p>Pages créées sur <a href="https://www.figma.com/fr-fr/" target="_blank" class="footer__el">Figma</a>
+                et développées sur <a href="https://code.visualstudio.com/" target="_blank" class="footer__el">Visual Studio Code</a>.</p>
+              </li>
+              <li>
+                <p>Aide en ligne : <a href="https://chatgpt.com/auth/login" target="_blank" class="footer__el">ChatGPT</a>, 
+                <a href="https://developer.mozilla.org/fr/" target="_blank" class="footer__el">MDN</a>, 
+                <a href="https://gsap.com/" target="_blank" class="footer__el">GSAP</a>, 
+                <a href="https://validator.w3.org/" target="_blank" class="footer__el">W3C Validator</a>, 
+                <a href="https://webaim.org/resources/contrastchecker/" target="_blank" class="footer__el">Contrast Checker</a>.</p>
+              </li>
             </ul>
           </div>
           <div class="footer__credits-merci">
             <h3 class="footer__credits-titre">Remerciements<span> ✶</span></h3>
             <ul class="footer__credits-el">
-              <li><p>Merci aux professeur.es et aux élèves de la section  ET A SALWA<a href="https://dwt.heaj.be/" target="_blank" class="footer__el">DWT</a> pour leur aide et accompagnement.</p></li>
+              <li><p>Merci aux professeur.es et aux élèves de la section <a href="https://dwt.heaj.be/" target="_blank" class="footer__el">DWT</a> pour leur aide et accompagnement.</p></li>
               <li><p>Merci à mes professeur.es d'arts appliqués, design, cinéma et design web ainsi qu'à mes ami.es pour leur participation à mes travaux.</p></li>
               <li><p>Merci à mes ami.es pour leurs tests utilisateur et leurs retours.</p></li>
             </ul>

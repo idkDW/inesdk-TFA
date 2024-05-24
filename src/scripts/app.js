@@ -117,7 +117,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
-//SYSTEME TRI BOUTONS
+//SYSTEME TRI BOUTONS ET TAILLES IMAGES
 
 document.addEventListener("DOMContentLoaded", function() {
     const typeBtnsContainer = document.querySelector('.projets__type-btn');
@@ -149,20 +149,20 @@ document.addEventListener("DOMContentLoaded", function() {
         let gridItems = document.querySelectorAll('.projets__grid li');
         console.log(gridItems);
         gridItems.forEach(item => {
-            console.log(item)
+            console.log(item);
             const img = item.querySelector('img'); // Sélectionnez l'élément img à l'intérieur de chaque élément grid-item
             const targetClasses = img.getAttribute('data-target').split(' '); // Récupérez les classes cibles à partir de l'attribut data-target
             console.log("Classes cibles de l'image :", targetClasses);
             if (targetClasses.includes(classe)) {
-                console.log("scaling")
-                item.classList.add('scaling'); // Ajoutez la classe pour appliquer le scaling
+                console.log("scaling");
+                item.classList.add('scaling'); // Ajoutez la classe pour agrandir l'image
+                item.classList.remove('reduced'); // Supprimez la classe pour rétablir la taille normale
             } else {
-                item.classList.remove('scaling'); // Supprimez la classe pour rétablir la taille normale de l'image
+                item.classList.add('reduced'); // Ajoutez la classe pour réduire l'image
+                item.classList.remove('scaling'); // Supprimez la classe d'agrandissement
             }
         });
     }
-    
-    
 
     // Clic sur le bouton "Tous"
     const tousBtn = document.querySelector('.projets__el-tous .projets__btn');
@@ -171,6 +171,7 @@ document.addEventListener("DOMContentLoaded", function() {
         masquerContenus();
         gridItems.forEach(item => {
             item.style.transform = 'scale(1)'; // Rétablit la taille normale de toutes les images
+            item.classList.remove('scaling', 'reduced'); // Supprime toutes les classes de transformation
         });
     });
 
@@ -182,6 +183,7 @@ document.addEventListener("DOMContentLoaded", function() {
         masquerContenus();
         gridItems.forEach(item => {
             item.style.transform = 'scale(1)'; // Rétablit la taille normale de toutes les images
+            item.classList.remove('scaling', 'reduced'); // Supprime toutes les classes de transformation
         });
     });
 
@@ -193,6 +195,7 @@ document.addEventListener("DOMContentLoaded", function() {
         masquerContenus();
         gridItems.forEach(item => {
             item.style.transform = 'scale(1)'; // Rétablit la taille normale de toutes les images
+            item.classList.remove('scaling', 'reduced'); // Supprime toutes les classes de transformation
         });
     });
 
@@ -219,7 +222,6 @@ document.addEventListener("DOMContentLoaded", function() {
     masquerBoutons();
     masquerContenus();
 });
-
 
 
 
@@ -262,19 +264,101 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
+ //HOVER NOTES ET CONTENU
+
+const notesAPropos = document.querySelector('.notes__a-propos');
+const notesAvatar = document.querySelector('.notes__avatar');
+const notesProjets = document.querySelector('.notes__projets');
+const notesPremier = document.querySelector('.notes__premier');
+const notesDeuxieme = document.querySelector('.notes__deuxieme');
+const notesTexte = document.querySelector('.notes__texte');
+const notesImages = document.querySelector('.notes__images');
+
+
+const aProposContainer = document.querySelector('.a-propos__container');
+const aProposImageContainer = document.querySelector('.a-propos__img-container');
+const projetContainer = document.querySelector('.projets__container');
+const projetCategories = document.querySelector('.projets__categories');
+const projetType = document.querySelector('.projets__type-btn');
+const projetTheme= document.querySelector('.projets__theme-btn');
+const projetContenu = document.querySelector('.projets__contenu');
+const projetGrid = document.querySelector('.projets__grid');
+
+
+notesAPropos.addEventListener('mouseover', function() {
+  aProposContainer.classList.add('hovered');
+});
+
+notesAPropos.addEventListener('mouseout', function() {
+  aProposContainer.classList.remove('hovered');
+});
+
+notesAvatar.addEventListener('mouseover', function() {
+  aProposImageContainer.classList.add('hovered');
+});
+
+notesAvatar.addEventListener('mouseout', function() {
+  aProposImageContainer.classList.remove('hovered');
+});
+
+notesProjets.addEventListener('mouseover', function() {
+    projetContainer.classList.add('hovered');
+  });
+  
+notesProjets.addEventListener('mouseout', function() {
+    projetContainer.classList.remove('hovered');
+  });
+  
+notesPremier.addEventListener('mouseover', function() {
+    projetCategories.classList.add('hovered');
+  });
+  
+notesDeuxieme.addEventListener('mouseout', function() {
+    projetType.classList.remove('hovered');
+    projetTheme.classList.remove('hovered');
+  });
+  
+notesDeuxieme.addEventListener('mouseover', function() {
+    projetType.classList.add('hovered');
+    projetTheme.classList.add('hovered');
+  });
+  
+notesPremier.addEventListener('mouseout', function() {
+    projetCategories.classList.remove('hovered');
+  });
+
+notesTexte.addEventListener('mouseover', function() {
+    projetContenu.classList.add('hovered');
+  });
+  
+notesTexte.addEventListener('mouseout', function() {
+    projetContenu.classList.remove('hovered');
+  });
+  
+notesImages.addEventListener('mouseover', function() {
+    projetGrid.classList.add('hovered');
+  });
+  
+notesImages.addEventListener('mouseout', function() {
+    projetGrid.classList.remove('hovered');
+  });
+
+
+
+
+
 gsap.timeline({
     scrollTrigger: {
       scrub: 1,
-      trigger: ".intro",
+      trigger: ".header",
       start: "top top",
       end: "bottom+=100vh top",
       pin: true, 
     }
   })
-  .fromTo(".intro__image", 
+  .fromTo(".header__image", 
     { scale: 1, borderRadius: "0px" }, 
     { scale: 0.8, ease: "none" }
   )
-  .to(".intro__image", 
+  .to(".header__image", 
     { borderRadius: "11px", ease: "none" }, 0);
-  
