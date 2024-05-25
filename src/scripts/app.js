@@ -1,6 +1,9 @@
 import gsap from "gsap";
 import ScrollTrigger from 'gsap/ScrollTrigger';
+
 gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(SplitText);
+
 
 'use strict'
 
@@ -145,21 +148,16 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     function ajusterTailleImages(classe) {
-        console.log("Fonction ajusterTailleImages appelée avec la classe :", classe);
         let gridItems = document.querySelectorAll('.projets__grid li');
-        console.log(gridItems);
         gridItems.forEach(item => {
-            console.log(item);
-            const img = item.querySelector('img'); // Sélectionnez l'élément img à l'intérieur de chaque élément grid-item
-            const targetClasses = img.getAttribute('data-target').split(' '); // Récupérez les classes cibles à partir de l'attribut data-target
-            console.log("Classes cibles de l'image :", targetClasses);
+            const img = item.querySelector('img');
+            const targetClasses = img.getAttribute('data-target').split(' ');
             if (targetClasses.includes(classe)) {
-                console.log("scaling");
-                item.classList.add('scaling'); // Ajoutez la classe pour agrandir l'image
-                item.classList.remove('reduced'); // Supprimez la classe pour rétablir la taille normale
+                item.classList.add('scaling');
+                item.classList.remove('reduced');
             } else {
-                item.classList.add('reduced'); // Ajoutez la classe pour réduire l'image
-                item.classList.remove('scaling'); // Supprimez la classe d'agrandissement
+                item.classList.add('reduced');
+                item.classList.remove('scaling');
             }
         });
     }
@@ -170,9 +168,10 @@ document.addEventListener("DOMContentLoaded", function() {
         masquerBoutons();
         masquerContenus();
         gridItems.forEach(item => {
-            item.style.transform = 'scale(1)'; // Rétablit la taille normale de toutes les images
-            item.classList.remove('scaling', 'reduced'); // Supprime toutes les classes de transformation
+            item.style.transform = 'scale(1)';
+            item.classList.remove('scaling', 'reduced');
         });
+        ajusterTailleImages('');
     });
 
     // Clic sur le bouton "Types"
@@ -182,8 +181,8 @@ document.addEventListener("DOMContentLoaded", function() {
         themeBtnsContainer.style.display = 'none';
         masquerContenus();
         gridItems.forEach(item => {
-            item.style.transform = 'scale(1)'; // Rétablit la taille normale de toutes les images
-            item.classList.remove('scaling', 'reduced'); // Supprime toutes les classes de transformation
+            item.style.transform = 'scale(1)';
+            item.classList.remove('scaling', 'reduced');
         });
     });
 
@@ -194,8 +193,8 @@ document.addEventListener("DOMContentLoaded", function() {
         themeBtnsContainer.style.display = 'flex';
         masquerContenus();
         gridItems.forEach(item => {
-            item.style.transform = 'scale(1)'; // Rétablit la taille normale de toutes les images
-            item.classList.remove('scaling', 'reduced'); // Supprime toutes les classes de transformation
+            item.style.transform = 'scale(1)';
+            item.classList.remove('scaling', 'reduced');
         });
     });
 
@@ -225,41 +224,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
-
-// FENETRE MODALE CREDITS
-
-document.addEventListener("DOMContentLoaded", function() {
-    const creditsLink = document.querySelector(".footer__centre .footer__el");
-    const closeCreditsBtn = document.querySelector(".footer__credits #closeCredits");
-    const creditsModal = document.querySelector(".footer__credits");
-    const overlay = document.querySelector(".overlay");
-
-    creditsLink.addEventListener("click", function (e) {
-        e.preventDefault();
-        creditsModal.classList.remove("hidden");
-        overlay.classList.remove("hidden");
-
-        // Trigger the fade-in
-        setTimeout(() => {
-            creditsModal.classList.add("visible");
-            overlay.classList.add("visible");
-        }, 10); // small timeout to ensure the class removal is processed
-    });
-
-    closeCreditsBtn.addEventListener("click", function (e) {
-        e.preventDefault();
-
-        // Trigger the fade-out
-        creditsModal.classList.remove("visible");
-        overlay.classList.remove("visible");
-
-        // Wait for the transition to end before hiding the elements
-        setTimeout(() => {
-            creditsModal.classList.add("hidden");
-            overlay.classList.add("hidden");
-        }, 500); // Duration of the fade-out transition
-    });
-});
 
 
 
@@ -361,4 +325,9 @@ gsap.timeline({
     { scale: 0.8, ease: "none" }
   )
   .to(".header__image", 
-    { borderRadius: "11px", ease: "none" }, 0);
+    { borderRadius: "20px", ease: "none" }, 0);
+
+
+
+
+ 

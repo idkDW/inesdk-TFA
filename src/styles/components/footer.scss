@@ -1,4 +1,6 @@
 .footer {
+  margin-top: 60px;
+  margin-bottom: 20px;
   font-size: 12px; 
   display: flex;
   flex-wrap: wrap;
@@ -15,6 +17,9 @@
     font-weight: 700;
   }
 
+  &__contact{
+    margin-bottom: 10px;
+  }
 
 
   &__centre{

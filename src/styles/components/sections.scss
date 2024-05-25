@@ -8,14 +8,20 @@
 
   &__titre {
     font-family: "ClashDisplay", sans-serif;
-    font-size: 21px;
+    font-size: 28px;
     color: #476662;
     text-transform: uppercase;
     word-spacing: 5px;
+    margin-top: -20px;
+    margin-bottom: 60px;
+    font-weight: 400;
   }
 
   &__texte{
     line-height: 250%;
+    margin-bottom: 60px;
+
+    
   }
 
   &__img-span{
@@ -71,30 +77,29 @@
   &__img {
     display: block;
      margin-left: auto;
-     width: 130px;
+     width: 120px;
   }
 
   &__btn{
     font-family: "ClashDisplay", sans-serif;
     display: block;
     margin-left: auto;
-        margin-top: 20px;
-        padding: 12px 20px;
-        border: 2px dotted #333; 
-        border-radius: 11px;
-        background-color: transparent;
-        color: #333; 
-        text-decoration: none;
-        transition: background-color 0.3s, color 0.3s, border-color 0.3s, transform 0.3s;
-        cursor: pointer;
+    margin-top: 20px;
+    padding: 15px 20px;
+    border: 2px dotted #333; 
+    border-radius: 11px;
+    background-color: transparent;
+    color: #333; 
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s, transform 0.3s;
+    cursor: pointer;
 
-
-        &:hover {
-          background-color: #415351; 
-          color: #fff;
-          border-color: #fff; 
-          transform: scale(1.1);
-        }
+      &:hover {
+        background-color: #415351; 
+        color: #fff;
+        border-color: #fff; 
+        transform: scale(1.1);
+      }
   }
 
   &__container.hovered {
@@ -132,6 +137,7 @@
   
   .projets {
     position: relative;
+    margin-top: 120px;
 
    
     &__container.hovered {
@@ -167,7 +173,7 @@
         margin-right: 40px;
         padding-left: 30px;
         background-color: transparent;
-        border: none;;
+        border: none;
         position: relative;
         transition: transform 0.3s; 
             
@@ -187,7 +193,7 @@
    
     &__type-btn,
     &__theme-btn {
-      margin-bottom: 20px; 
+      margin-bottom: 60px; 
       display: flex;
       flex-wrap: wrap;
       list-style: none;
@@ -204,7 +210,7 @@
       &__boutons{
         font-family: "ClashDisplay", sans-serif;
         margin: 10px;
-        padding: 12px 20px;
+        padding: 15px 20px;
         white-space: nowrap;
         border: 2px dotted #333; 
         border-radius: 11px;
@@ -248,11 +254,12 @@
       font-weight: bold;
       color: #415351;
       margin-top: 40px;
+      margin-bottom: 20px;
     }
     
     &__grid {
-      margin: 0; 
-    padding: 0;
+      margin-top: 40px; 
+      padding: 0;
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       grid-auto-rows: 250px;
