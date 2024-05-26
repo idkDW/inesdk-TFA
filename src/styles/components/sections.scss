@@ -6,22 +6,21 @@
 
 
 
+
   &__titre {
     font-family: "ClashDisplay", sans-serif;
     font-size: 28px;
     color: #476662;
     text-transform: uppercase;
     word-spacing: 5px;
-    margin-top: -20px;
     margin-bottom: 60px;
     font-weight: 400;
+    line-height: 120%;
   }
 
   &__texte{
     line-height: 250%;
     margin-bottom: 60px;
-
-    
   }
 
   &__img-span{
@@ -85,7 +84,7 @@
     display: block;
     margin-left: auto;
     margin-top: 20px;
-    padding: 15px 20px;
+    padding: 12px 15px;
     border: 2px dotted #333; 
     border-radius: 11px;
     background-color: transparent;
@@ -103,11 +102,13 @@
   }
 
   &__container.hovered {
-    background-color: rgb(249, 255, 205);
+    background-color: rgb(244, 244, 244);
+    border-radius: 11px;
   }
 
   &__img-container.hovered {
-    background-color: lightgray;
+    background-color: rgb(244, 244, 244);
+    border-radius: 11px;
   }
   
   
@@ -130,9 +131,6 @@
  }
 }
 
-
-  
-
   
   
   .projets {
@@ -141,7 +139,8 @@
 
    
     &__container.hovered {
-      background-color: rgb(249, 255, 205);
+      background-color: rgb(244, 244, 244);
+    border-radius: 11px;
     }
   
     
@@ -154,7 +153,8 @@
     flex-direction: column;
 
     &.hovered {
-      background-color: rgb(249, 255, 205);
+      background-color: rgb(244, 244, 244);
+    border-radius: 11px;
     }
     }
 
@@ -200,7 +200,8 @@
       padding: 0;
 
       &.hovered {
-        background-color: rgb(249, 255, 205);
+        background-color: rgb(244, 244, 244);
+    border-radius: 11px;
       }
     
     }
@@ -239,7 +240,8 @@
     padding: 0;
 
     &.hovered {
-      background-color: rgb(249, 255, 205);
+      background-color: rgb(244, 244, 244);
+    border-radius: 11px;
     }
     }
 
@@ -267,7 +269,8 @@
       list-style: none;
 
       &.hovered {
-        background-color: rgb(249, 255, 205);
+        background-color: rgb(244, 244, 244);
+    border-radius: 11px;
       }
   }
 
@@ -364,36 +367,43 @@
 
     &__a-propos:hover {
       cursor: pointer;
-      background-color: rgb(249, 255, 205);
+      background-color: rgb(244, 244, 244);
+      border-radius: 11px;
     }
 
     &__avatar:hover {
       cursor: pointer;
-      background-color: lightgray;
+      background-color: rgb(244, 244, 244);
+      border-radius: 11px;
   }
 
   &__projets:hover {
     cursor: pointer;
-    background-color: lightgray;
+    background-color: rgb(244, 244, 244);
+      border-radius: 11px;
 }
 
   &__premier:hover {
     cursor: pointer;
-    background-color: lightgray;
+    background-color: rgb(244, 244, 244);
+      border-radius: 11px;
 }
     
   &__deuxieme:hover {
     cursor: pointer;
-    background-color: lightgray;
+    background-color: rgb(244, 244, 244);
+      border-radius: 11px;
 }
 &__texte:hover {
   cursor: pointer;
-  background-color: lightgray;
+  background-color: rgb(244, 244, 244);
+      border-radius: 11px;
 }
 
 &__images:hover {
   cursor: pointer;
-  background-color: lightgray;
+  background-color: rgb(244, 244, 244);
+      border-radius: 11px;
 }
 
   @media (min-width: 1000px){

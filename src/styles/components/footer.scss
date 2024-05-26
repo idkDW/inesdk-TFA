@@ -12,9 +12,26 @@
   }
  
   &__el {
+    position: relative;
+    display: inline-block;
     text-decoration: none;
     color: #333;
     font-weight: 700;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 0;
+      height: 1px;
+      background-color: #476662;
+      transition: width 0.3s ease;
+    }
+
+    &:hover::before {
+      width: 100%;
+    } 
   }
 
   &__contact{
@@ -37,7 +54,7 @@
     padding: 20px;
     border-radius: 11px;
     position:fixed;
-    bottom: 100px; 
+    bottom: 10px; 
     left: 0;
     right: 0;
     z-index: 1000;
@@ -78,21 +95,23 @@
   }
 
   &__credits-btn{
+    font-family: "ClashDisplay", sans-serif;
+    margin-top: 20px;
+    padding: 12px 15px;
+    border: 2px dotted #333; 
+    border-radius: 11px;
+    background-color: transparent;
+    color: #333; 
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s, transform 0.3s;
     cursor: pointer;
-    color: #fff;
-    background-color: #415351;
-    padding: 8px 8px;
-    border: none;
-    outline: none;
-    position: relative;
-    transition: transform 0.3s;
-        
-    &:hover {
-    color: #333;
-    background-color: #FDB4AA;
-    transform: scale(1.1);
-        }
-        
+
+      &:hover {
+        background-color: #415351; 
+        color: #fff;
+        border-color: #fff; 
+        transform: scale(1.1);
+      }
   }
   
   &__follow {

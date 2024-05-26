@@ -2,7 +2,7 @@ import gsap from "gsap";
 import ScrollTrigger from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
-gsap.registerPlugin(SplitText);
+
 
 
 'use strict'
@@ -50,7 +50,7 @@ gsap.registerPlugin(SplitText);
 
 
 
-  // Fonction pour changer l'image aléatoire
+  // CHANGER IMAGE AVATAR 
 
 document.addEventListener("DOMContentLoaded", function() {
   var currentImageIndex = 1;
@@ -224,6 +224,40 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
+// FENETRE MODALE CREDITS
+
+document.addEventListener("DOMContentLoaded", function() {
+  const creditsLink = document.querySelector(".footer__centre .footer__el");
+  const closeCreditsBtn = document.querySelector(".footer__credits #closeCredits");
+  const creditsModal = document.querySelector(".footer__credits");
+  const overlay = document.querySelector(".overlay");
+
+  creditsLink.addEventListener("click", function (e) {
+      e.preventDefault();
+      creditsModal.classList.remove("hidden");
+      overlay.classList.remove("hidden");
+
+      // Trigger the fade-in
+      setTimeout(() => {
+          creditsModal.classList.add("visible");
+          overlay.classList.add("visible");
+      }, 10); // small timeout to ensure the class removal is processed
+  });
+
+  closeCreditsBtn.addEventListener("click", function (e) {
+      e.preventDefault();
+
+      // Trigger the fade-out
+      creditsModal.classList.remove("visible");
+      overlay.classList.remove("visible");
+
+      // Wait for the transition to end before hiding the elements
+      setTimeout(() => {
+          creditsModal.classList.add("hidden");
+          overlay.classList.add("hidden");
+      }, 500); // Duration of the fade-out transition
+  });
+});
 
 
 
@@ -311,6 +345,8 @@ notesImages.addEventListener('mouseout', function() {
 
 
 
+//ANIMATION IMAGE INTRO
+
 gsap.timeline({
     scrollTrigger: {
       scrub: 1,
@@ -329,5 +365,29 @@ gsap.timeline({
 
 
 
+//ANIMATION TITRE 
 
- 
+document.addEventListener("DOMContentLoaded", () => {
+  const texteContainer = document.querySelector(".a-propos__titre");
+  const words = texteContainer.innerHTML.split(" ").map(word => `<span>${word}</span>`).join(" ");
+  texteContainer.innerHTML = words;
+
+  const spans = document.querySelectorAll(".a-propos__titre span");
+
+  gsap.set(spans, { opacity: 0, y: 20 });
+
+  gsap.to(spans, {
+    scrollTrigger: {
+      trigger: ".a-propos__titre",
+      start: "top 80%",
+      end: "top 20%",
+      scrub: true,
+      toggleActions: "play none none none"
+    },
+    opacity: 1,
+    y: 0,
+    stagger: 0.1,
+    ease: "power2.out",
+    duration: 0.8
+  });
+});
