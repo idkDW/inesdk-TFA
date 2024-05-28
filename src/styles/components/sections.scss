@@ -273,6 +273,10 @@
       grid-auto-rows: 250px;
       gap: 20px;
       list-style: none;
+      
+      img{
+        width: 100px;
+      }
 
       &.hovered {
         background-color: rgb(244, 244, 244);
