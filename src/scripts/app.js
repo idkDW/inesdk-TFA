@@ -7,9 +7,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 'use strict'
 
-
-
-
+/*if(document.querySelector('.index')) {}*/
 
 
 //CLASSE ACTIVE
@@ -391,3 +389,7 @@ document.addEventListener("DOMContentLoaded", () => {
     duration: 0.8
   });
 });
+
+
+
+
