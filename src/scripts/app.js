@@ -404,8 +404,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-
-  /* créer un slider*/
+/*
+  /* créer un slider
 
 "use strict";
 
@@ -416,7 +416,7 @@ prevButton.addEventListener("click", prevSlide);
 nextButton.addEventListener("click", nextSlide);
 
 
-/*nav au clavier*/
+/*nav au clavier
 document.addEventListener("keydown", keyboardListener);
 
 function keyboardListener(event){
@@ -448,3 +448,4 @@ function nextSlide(){
    activeSlideEl.classList.remove("slider__el--show");
    nextSlideEl.classList.add("slider__el--show");
 }
+*/
