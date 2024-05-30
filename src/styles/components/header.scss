@@ -94,12 +94,21 @@
 }
 
 
- @media (min-width: 0px) {
-    .main {
-      margin-left: 28px;
-      margin-right: 28px;
-    }
-  }
+.main{
 
+  @media (min-width: 0px) {
+    margin-left: 28px;
+    margin-right: 28px;
+}
+
+@media (min-width: 800px){
+    margin-left: 36px;
+    margin-right: 36px;
+}
+
+
+}
+
+ 
 
 
