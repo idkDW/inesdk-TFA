@@ -7,7 +7,10 @@ gsap.registerPlugin(ScrollTrigger);
 
 'use strict'
 
-/*if(document.querySelector('.index')) {}*/
+
+
+if(document.body.classList.contains("index-body")){
+
 
 
 //CLASSE ACTIVE
@@ -120,105 +123,111 @@ document.addEventListener("DOMContentLoaded", function() {
 
 //SYSTEME TRI BOUTONS ET TAILLES IMAGES
 
+
 document.addEventListener("DOMContentLoaded", function() {
-    const typeBtnsContainer = document.querySelector('.projets__type-btn');
-    const themeBtnsContainer = document.querySelector('.projets__theme-btn');
-    const gridItems = document.querySelectorAll('.projets__grid-item');
-    const contenuItems = document.querySelectorAll('.projets__contenu-item');
+  const typeBtnsContainer = document.querySelector('.projets__type-btn');
+  const themeBtnsContainer = document.querySelector('.projets__theme-btn');
+  const gridItems = document.querySelectorAll('.projets__grid-item');
+  const contenuItems = document.querySelectorAll('.projets__contenu-item');
 
-    function masquerContenus() {
-        contenuItems.forEach(item => {
-            item.style.display = 'none';
-        });
-    }
+  function masquerContenus() {
+      contenuItems.forEach(item => {
+          item.style.display = 'none';
+      });
+  }
 
-    function afficherContenu(contenuClass) {
-        masquerContenus();
-        const contenu = document.querySelector(`.projets__contenu-item.${contenuClass}`);
-        if (contenu) {
-            contenu.style.display = 'block';
-        }
-    }
+  function afficherContenu(contenuClass) {
+      masquerContenus();
+      const contenu = document.querySelector(`.projets__contenu-item.${contenuClass}`);
+      if (contenu) {
+          contenu.style.display = 'block';
+      }
+  }
 
-    function masquerBoutons() {
-        typeBtnsContainer.style.display = 'none';
-        themeBtnsContainer.style.display = 'none';
-    }
+  function masquerBoutons() {
+      typeBtnsContainer.style.display = 'none';
+      themeBtnsContainer.style.display = 'none';
+  }
 
-    function ajusterTailleImages(classe) {
-        let gridItems = document.querySelectorAll('.projets__grid li');
-        gridItems.forEach(item => {
-            const img = item.querySelector('img');
-            const targetClasses = img.getAttribute('data-target').split(' ');
-            if (targetClasses.includes(classe)) {
-                item.classList.add('scaling');
-                item.classList.remove('reduced');
-            } else {
-                item.classList.add('reduced');
-                item.classList.remove('scaling');
-            }
-        });
-    }
+  function ajusterTailleImages(classe) {
+      let gridItems = document.querySelectorAll('.projets__grid li');
+      gridItems.forEach(item => {
+          const img = item.querySelector('img');
+          const targetClasses = img.getAttribute('data-target').split(' ');
+          
+          if (classe === 'tous') {
+              // Réinitialise les classes si "tous" est cliqué
+              item.classList.remove('scaling', 'reduced');
+          } else if (targetClasses.includes(classe)) {
+              item.classList.add('scaling');
+              item.classList.remove('reduced');
+          } else {
+              item.classList.add('reduced');
+              item.classList.remove('scaling');
+          }
+      });
+  }
 
-    // Clic sur le bouton "Tous"
-    const tousBtn = document.querySelector('.projets__el-tous .projets__btn');
-    tousBtn.addEventListener('click', function() {
-        masquerBoutons();
-        masquerContenus();
-        gridItems.forEach(item => {
-            item.style.transform = 'scale(1)';
-            item.classList.remove('scaling', 'reduced');
-        });
-        ajusterTailleImages('');
-    });
+  // Clic sur le bouton "Tous"
+  const tousBtn = document.querySelector('.projets__el-tous .projets__btn');
+  tousBtn.addEventListener('click', function() {
+      masquerBoutons();
+      masquerContenus();
+      gridItems.forEach(item => {
+          item.style.transform = 'scale(1)';
+          item.classList.remove('scaling', 'reduced');
+      });
+      ajusterTailleImages('tous'); // Ajuste les tailles des images
+  });
 
-    // Clic sur le bouton "Types"
-    const typesBtn = document.querySelector('.projets__el-types .projets__btn');
-    typesBtn.addEventListener('click', function() {
-        typeBtnsContainer.style.display = 'flex';
-        themeBtnsContainer.style.display = 'none';
-        masquerContenus();
-        gridItems.forEach(item => {
-            item.style.transform = 'scale(1)';
-            item.classList.remove('scaling', 'reduced');
-        });
-    });
+  // Clic sur le bouton "Types"
+  const typesBtn = document.querySelector('.projets__el-types .projets__btn');
+  typesBtn.addEventListener('click', function() {
+      typeBtnsContainer.style.display = 'flex';
+      themeBtnsContainer.style.display = 'none';
+      masquerContenus();
+      gridItems.forEach(item => {
+          item.style.transform = 'scale(1)';
+          item.classList.remove('scaling', 'reduced');
+      });
+  });
 
-    // Clic sur le bouton "Thèmes"
-    const themesBtn = document.querySelector('.projets__el-themes .projets__btn');
-    themesBtn.addEventListener('click', function() {
-        typeBtnsContainer.style.display = 'none';
-        themeBtnsContainer.style.display = 'flex';
-        masquerContenus();
-        gridItems.forEach(item => {
-            item.style.transform = 'scale(1)';
-            item.classList.remove('scaling', 'reduced');
-        });
-    });
+  // Clic sur le bouton "Thèmes"
+  const themesBtn = document.querySelector('.projets__el-themes .projets__btn');
+  themesBtn.addEventListener('click', function() {
+      typeBtnsContainer.style.display = 'none';
+      themeBtnsContainer.style.display = 'flex';
+      masquerContenus();
+      gridItems.forEach(item => {
+          item.style.transform = 'scale(1)';
+          item.classList.remove('scaling', 'reduced');
+      });
+  });
 
-    // Clic sur les boutons de type
-    const typeBtns = document.querySelectorAll('.projets__type-btn .type-btn button');
-    typeBtns.forEach(btn => {
-        btn.addEventListener('click', function() {
-            const target = btn.getAttribute('data-target');
-            ajusterTailleImages(target);
-            afficherContenu(target);
-        });
-    });
+  // Clic sur les boutons de type
+  const typeBtns = document.querySelectorAll('.projets__type-btn .type-btn button');
+  typeBtns.forEach(btn => {
+      btn.addEventListener('click', function() {
+          const target = btn.getAttribute('data-target');
+          ajusterTailleImages(target);
+          afficherContenu(target);
+      });
+  });
 
-    // Clic sur les boutons de thème
-    const themeBtns = document.querySelectorAll('.projets__theme-btn .theme-btn button');
-    themeBtns.forEach(btn => {
-        btn.addEventListener('click', function() {
-            const target = btn.getAttribute('data-target');
-            ajusterTailleImages(target);
-            afficherContenu(target);
-        });
-    });
+  // Clic sur les boutons de thème
+  const themeBtns = document.querySelectorAll('.projets__theme-btn .theme-btn button');
+  themeBtns.forEach(btn => {
+      btn.addEventListener('click', function() {
+          const target = btn.getAttribute('data-target');
+          ajusterTailleImages(target);
+          afficherContenu(target);
+      });
+  });
 
-    masquerBoutons();
-    masquerContenus();
+  masquerBoutons();
+  masquerContenus();
 });
+
 
 
 
@@ -390,6 +399,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+}
 
 
 
