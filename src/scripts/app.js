@@ -404,48 +404,208 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-/*
-  /* créer un slider
 
-"use strict";
+if(document.body.classList.contains("projet-body")){
+
+
+//AFFICHER ET MASQUER LES PARAGRAPHES DE TEXTE
+
+document.addEventListener('DOMContentLoaded', function() {
+  const showButton = document.getElementById('showButton');
+  const hideButton = document.getElementById('hideButton');
+  const hiddenTexts = document.querySelectorAll('.travaux__texte--hidden');
+
+  showButton.addEventListener('click', function() {
+    hiddenTexts.forEach(text => {
+      text.classList.add('travaux__texte--visible');
+      text.classList.remove('travaux__texte--hidden');
+    });
+
+    showButton.classList.add('hidden');
+    hideButton.classList.remove('hidden');
+  });
+
+  hideButton.addEventListener('click', function() {
+    hiddenTexts.forEach(text => {
+      text.classList.add('travaux__texte--hidden');
+      text.classList.remove('travaux__texte--visible');
+    });
+
+    showButton.classList.remove('hidden');
+    hideButton.classList.add('hidden');
+  });
+});
+
+
+
+//SLIDER AVEC TROIS MANIERES DE NAVIGUER POUR AFFICHER LES IMAGES
 
 let prevButton = document.querySelector(".btn__prev");
 let nextButton = document.querySelector(".btn__next");
 
-prevButton.addEventListener("click", prevSlide);
-nextButton.addEventListener("click", nextSlide);
+prevButton.addEventListener("click", () => {
+    prevSlide();
+    updateThumbnailSlider(document.querySelector(".slider__el--show"));
+    updateIndicators();
+});
 
+nextButton.addEventListener("click", () => {
+    nextSlide();
+    updateThumbnailSlider(document.querySelector(".slider__el--show"));
+    updateIndicators();
+});
 
-/*nav au clavier
+/* Navigation au clavier */
 document.addEventListener("keydown", keyboardListener);
 
-function keyboardListener(event){
-    if(event.code == "ArrowLeft"){
+function keyboardListener(event) {
+    if (event.code === "ArrowLeft") {
         prevSlide();
-    }else if(event.code == "ArrowRight"){
+        updateThumbnailSlider(document.querySelector(".slider__el--show"));
+        updateIndicators();
+    } else if (event.code === "ArrowRight") {
         nextSlide();
+        updateThumbnailSlider(document.querySelector(".slider__el--show"));
+        updateIndicators();
     }
 }
 
-
-
-function prevSlide(){
-     let activeSlideEl = document.querySelector(".slider__el--show");
-     let prevSlideEl = activeSlideEl.previousElementSibling;
-     if(!prevSlideEl){
+function prevSlide() {
+    let activeSlideEl = document.querySelector(".slider__el--show");
+    let prevSlideEl = activeSlideEl.previousElementSibling;
+    if (!prevSlideEl) {
         prevSlideEl = activeSlideEl.parentNode.lastElementChild;
-     }
+    }
     activeSlideEl.classList.remove("slider__el--show");
     prevSlideEl.classList.add("slider__el--show");
+    updateThumbnailSlider(prevSlideEl);
+    updateIndicators();
 }
 
-function nextSlide(){
+function nextSlide() {
     let activeSlideEl = document.querySelector(".slider__el--show");
     let nextSlideEl = activeSlideEl.nextElementSibling;
-    if(!nextSlideEl){
-       nextSlideEl = activeSlideEl.parentNode.firstElementChild;
+    if (!nextSlideEl) {
+        nextSlideEl = activeSlideEl.parentNode.firstElementChild;
     }
-   activeSlideEl.classList.remove("slider__el--show");
-   nextSlideEl.classList.add("slider__el--show");
+    activeSlideEl.classList.remove("slider__el--show");
+    nextSlideEl.classList.add("slider__el--show");
+    updateThumbnailSlider(nextSlideEl);
+    updateIndicators();
 }
-*/
+
+// Nouvelle fonctionnalité : navigation en cliquant sur les images dans slider__images
+let miniatureImages = document.querySelectorAll(".slider__images-img");
+
+miniatureImages.forEach((img, index) => {
+    img.addEventListener("click", () => {
+        showSlide(index);
+        updateThumbnailSlider(document.querySelector(".slider__el--show"));
+        updateIndicators();
+    });
+});
+
+function showSlide(index) {
+    let slides = document.querySelectorAll(".slider__el");
+    let activeSlideEl = document.querySelector(".slider__el--show");
+
+    activeSlideEl.classList.remove("slider__el--show");
+    slides[index].classList.add("slider__el--show");
+    updateThumbnailSlider(slides[index]);
+    updateIndicators();
+}
+
+function updateThumbnailSlider(activeSlideEl) {
+    let index = Array.from(activeSlideEl.parentNode.children).indexOf(activeSlideEl);
+    let thumbnailSlider = document.querySelector('.slider__images');
+    let thumbnails = document.querySelectorAll('.slider__images-el');
+    let activeThumbnail = thumbnails[index];
+
+    // Retirer la classe active de tous les thumbnails
+    thumbnails.forEach(thumbnail => thumbnail.classList.remove('slider__images-el--active'));
+
+    // Ajouter la classe active au thumbnail actif
+    activeThumbnail.classList.add('slider__images-el--active');
+
+    let thumbnailContainerWidth = thumbnailSlider.offsetWidth;
+    let activeThumbnailWidth = activeThumbnail.offsetWidth;
+
+    // Centrer le thumbnail actif dans le conteneur
+    let scrollAmount = activeThumbnail.offsetLeft - (thumbnailContainerWidth / 2) + (activeThumbnailWidth / 2);
+
+    thumbnailSlider.scrollTo({
+        left: scrollAmount,
+        behavior: 'smooth'
+    });
+}
+
+// Nouvelle fonctionnalité : navigation en cliquant sur les indicateurs
+let indicators = document.querySelectorAll(".slider__indicateurs-el");
+
+indicators.forEach((indicator, index) => {
+    indicator.addEventListener("click", () => {
+        showSlide(index);
+        updateThumbnailSlider(document.querySelector(".slider__el--show"));
+        updateIndicators();
+    });
+});
+
+function updateIndicators() {
+    let slides = document.querySelectorAll(".slider__el");
+    let activeSlideIndex = Array.from(slides).findIndex(slide => slide.classList.contains("slider__el--show"));
+    let indicators = document.querySelectorAll(".slider__indicateurs-el");
+
+    indicators.forEach((indicator, index) => {
+        if (index === activeSlideIndex) {
+            indicator.classList.add("slider__indicateurs-el--active");
+        } else {
+            indicator.classList.remove("slider__indicateurs-el--active");
+        }
+    });
+}
+
+
+
+
+
+// FENETRE MODALE CREDITS
+
+document.addEventListener("DOMContentLoaded", function() {
+  const creditsLink = document.querySelector(".footer__centre .footer__el");
+  const closeCreditsBtn = document.querySelector(".footer__credits #closeCredits");
+  const creditsModal = document.querySelector(".footer__credits");
+  const overlay = document.querySelector(".overlay");
+
+  creditsLink.addEventListener("click", function (e) {
+      e.preventDefault();
+      creditsModal.classList.remove("hidden");
+      overlay.classList.remove("hidden");
+
+      // Trigger the fade-in
+      setTimeout(() => {
+          creditsModal.classList.add("visible");
+          overlay.classList.add("visible");
+      }, 10); // small timeout to ensure the class removal is processed
+  });
+
+  closeCreditsBtn.addEventListener("click", function (e) {
+      e.preventDefault();
+
+      // Trigger the fade-out
+      creditsModal.classList.remove("visible");
+      overlay.classList.remove("visible");
+
+      // Wait for the transition to end before hiding the elements
+      setTimeout(() => {
+          creditsModal.classList.add("hidden");
+          overlay.classList.add("hidden");
+      }, 500); // Duration of the fade-out transition
+  });
+});
+
+
+
+
+
+
+}
