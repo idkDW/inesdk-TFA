@@ -440,16 +440,20 @@ document.addEventListener('DOMContentLoaded', function() {
 
 //SLIDER AVEC TROIS MANIERES DE NAVIGUER POUR AFFICHER LES IMAGES
 
+// SLIDER AVEC TROIS MANIERES DE NAVIGUER POUR AFFICHER LES IMAGES
+
 let prevButton = document.querySelector(".btn__prev");
 let nextButton = document.querySelector(".btn__next");
 
 prevButton.addEventListener("click", () => {
+    stopAllAudio();
     prevSlide();
     updateThumbnailSlider(document.querySelector(".slider__el--show"));
     updateIndicators();
 });
 
 nextButton.addEventListener("click", () => {
+    stopAllAudio();
     nextSlide();
     updateThumbnailSlider(document.querySelector(".slider__el--show"));
     updateIndicators();
@@ -460,10 +464,12 @@ document.addEventListener("keydown", keyboardListener);
 
 function keyboardListener(event) {
     if (event.code === "ArrowLeft") {
+        stopAllAudio();
         prevSlide();
         updateThumbnailSlider(document.querySelector(".slider__el--show"));
         updateIndicators();
     } else if (event.code === "ArrowRight") {
+        stopAllAudio();
         nextSlide();
         updateThumbnailSlider(document.querySelector(".slider__el--show"));
         updateIndicators();
@@ -499,6 +505,7 @@ let miniatureImages = document.querySelectorAll(".slider__images-img");
 
 miniatureImages.forEach((img, index) => {
     img.addEventListener("click", () => {
+        stopAllAudio();
         showSlide(index);
         updateThumbnailSlider(document.querySelector(".slider__el--show"));
         updateIndicators();
@@ -544,6 +551,7 @@ let indicators = document.querySelectorAll(".slider__indicateurs-el");
 
 indicators.forEach((indicator, index) => {
     indicator.addEventListener("click", () => {
+        stopAllAudio();
         showSlide(index);
         updateThumbnailSlider(document.querySelector(".slider__el--show"));
         updateIndicators();
@@ -564,6 +572,14 @@ function updateIndicators() {
     });
 }
 
+// Nouvelle fonctionnalité : arrêter tous les audios
+function stopAllAudio() {
+    let audioElements = document.querySelectorAll('.slider__audio');
+    audioElements.forEach(audio => {
+        audio.pause();
+        audio.currentTime = 0;
+    });
+}
 
 
 
@@ -602,10 +618,5 @@ document.addEventListener("DOMContentLoaded", function() {
       }, 500); // Duration of the fade-out transition
   });
 });
-
-
-
-
-
 
 }
