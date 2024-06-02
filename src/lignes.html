@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <title>Entre les lignes</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <meta name="description" content="">
+  <!-- Meta Partage -->
+  <link rel="icon" href="assets/images/décoration/etoileicon.svg" type="image/x-icon">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="../styles/app.css">
+  <script src="../scripts/app.js" defer></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jura:wght@300..700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
+</head>
+
+
+<body class="projet-body">
+
+  <header class="projets-header">
+    <div class="header__intro">
+      <div class="header__content">
+        <p class="header__texte">portfolio 2024</p>
+        <a href="./index.html" class="header__icone">
+          <img src="../assets/images/contenu/intro/grosnez.svg" alt="dessin de tête de personnage">
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <div class="main">
+    <section class="travaux">
+      <div class="travaux__top">
+        <h1 class="travaux__titre">entre les lignes <span class="travaux__date">2021</span></h1>
+        <ul class="travaux__skills">
+          <li class="travaux__skills-texte">Design produit</li>
+          <li class="travaux__skills-texte">UX</li>
+          <li class="travaux__skills-texte">Illustrator</li>
+        </ul>
+
+        <p class="travaux__texte travaux__texte--visible">
+            Dans notre quotidien, l'activité de la lecture est souvent négligée au profit d'autres occupations et est généralement perçue comme un divertissement, à intégrer dans notre routine si le temps le permet. Cependant, nos journées sont remplies de moments d'attente imprévus, comme dans les transports ou avant un rendez-vous. Ces instants peuvent être mis à profit pour lire. En réfléchissant à cette opportunité, j'ai envisagé un marque-page revisité pour faciliter la lecture durant ces "interstices" innocupés de la journée.
+        </p>
+        <p class="travaux__texte travaux__texte--hidden">
+            Ce petit objet, facilement transportable, pourrait permettre au lecteur.ice de retrouver aisément sa page ainsi que l’endroit précis de l’arrêt de sa lecture et rendre ainsi plus accessible cette dernière en extérieur ou dans d’autre moments, où la concentration peut se rendre compliquée et où les espaces ne sont pas forcément prévus pour.
+        </p>
+        <p class="travaux__texte travaux__texte--hidden">
+            Le prototype du marque-page, dessiné sur Illustrator et passé à la découpe laser, est fabriqué à partir de deux matériaux: du papier calque coloré assemblé à la main à une lanquette en papier épais noir.
+        </p>
+        
+        <button id="showButton" class="travaux__texte-btn show-button">
+          <img class="btn-img" src="assets/images/décoration/arrow-bottom.svg" alt="icône de tête de flèche qui pointe vers le bas.">
+        </button>
+        <button id="hideButton" class="travaux__texte-btn hide-button hidden">
+          <img class="btn-img" src="assets/images/décoration/arrow-top.svg" alt="icône de tête de flèche qui pointe vers le haut.">
+        </button>
+      </div>
+
+      <div class="slider">
+        <div class="travaux__mid">
+          <ul class="slider__list">
+            <li class="slider__el slider__el--show">
+              <img class="slider__img" src="assets/images/pages-projet/lignes/lignes1.JPG" alt="photomontage d'un cerf dans un champ">
+              <p>Marque-pages en deux formats: standard et poche.</p>
+            </li>
+            <li class="slider__el">
+              <img class="slider__img" src="assets/images/pages-projet/lignes/lignes2.jpg" alt="photomontage d'un entité étrange à côté d'un abris de bus dans un champ.">
+              <p>Page se plaçant entre les deux côtés de l'objet.</p>
+            </li>
+            <li class="slider__el">
+              <img class="slider__img" src="assets/images/pages-projet/lignes/lignes3.jpg" alt="photmontage d'une entité étrange à côté d'une maisonnette et de châteaux d'eau souriants dans un champ.">      
+              <p>Possibilité de cibler une ligne en particulier.</p>
+            </li>
+            <li class="slider__el">
+              <img class="slider__img" src="assets/images/pages-projet/lignes/lignes4.jpg" alt="photomontage de trois maisons identiques de face dans un champ avec un message superposé sur le haut de l'image.">
+              <p>L'objet entourant la page peut coulisser aisément sur celle-ci.</p>
+            </li>
+            <li class="slider__el">
+              <img class="slider__img" src="assets/images/pages-projet/lignes/lignes5.jpg" alt="photomontage d'une explosion de lumière dans un lac sombre avec un soleil rouge dans le ciel.">
+              <p>La languette plus solide permet un bon maintient de l'objet.</p>
+            </li>
+            <li class="slider__el">
+              <img class="slider__img" src="assets/images/pages-projet/lignes/lignes6.jpg" alt="photomontage d'un chemin entouré d'herbe menant à un château d'eau avec un visage et un panneau au premier plan.">
+              <p>Aspects techniques des deux formats de l'objet.</p>
+            </li>
+            <li class="slider__el">
+              <img class="slider__img" src="assets/images/pages-projet/lignes/lignes7.jpg" alt="photomontage d'une entité étrange dans une chambre avec une vieille télévision et un message superposé sur l'image.">
+              <p>Vue des détails de découpe pour cibler une ligne.</p>
+            </li>
+            <li class="slider__el">
+              <img class="slider__img" src="assets/images/pages-projet/lignes/lignes8.jpg" alt="photomontage de deux personnes portant des masques de rongueurs dans une chambre à l'aspect vieillot et un message superposé sur l'image.">
+              <p>Vue des détails de découpe pour cibler une ligne.</p>
+            </li>
+          </ul>
+        </div>
+
+        <div class="travaux__bottom">
+          <ul class="slider__images">
+            <li class="slider__images-el slider__images-el--active">
+              <img class="slider__images-img" src="assets/images/pages-projet/lignes/lignes1.JPG" alt="photomontage d'un cerf dans un champ.">
+            </li>
+            <li class="slider__images-el">
+              <img class="slider__images-img" src="assets/images/pages-projet/lignes/lignes2.jpg" alt="photomontage d'un entité étrange à côté d'un abris de bus dans un champ.">
+            </li>
+            <li class="slider__images-el">
+              <img class="slider__images-img" src="assets/images/pages-projet/lignes/lignes3.jpg" alt="photmontage d'une entité étrange à côté d'une maisonnette et de châteaux d'eau souriants dans un champ.">
+            </li>
+            <li class="slider__images-el">
+              <img class="slider__images-img" src="assets/images/pages-projet/lignes/lignes4.jpg" alt="photomontage de trois maisons identiques de face dans un champ avec un message superposé sur le haut de l'image.">
+            </li>
+            <li class="slider__images-el">
+              <img class="slider__images-img" src="assets/images/pages-projet/lignes/lignes5.jpg" alt="photomontage d'une explosion de lumière dans un lac sombre avec un soleil rouge dans le ciel.">
+            </li>
+            <li class="slider__images-el">
+              <img class="slider__images-img" src="assets/images/pages-projet/lignes/lignes6.jpg" alt="photomontage d'un chemin entouré d'herbe menant à un château d'eau avec un visage et un panneau au premier plan.">
+            </li>
+            <li class="slider__images-el">
+              <img class="slider__images-img" src="assets/images/pages-projet/lignes/lignes7.jpg" alt="photomontage d'une entité étrange dans une chambre avec une vieille télévision et un message superposé sur l'image.">
+            </li>
+            <li class="slider__images-el">
+              <img class="slider__images-img" src="assets/images/pages-projet/lignes/lignes8.jpg" alt="photomontage de deux personnes portant des masques de rongueurs dans une chambre à l'aspect vieillot et un message superposé sur l'image.">
+            </li>
+          </ul>
+
+          <ul class="slider__controls">
+            <li class="slider__btn">
+              <button class="btn__prev">
+                <img class="btn-img" src="assets/images/décoration/slider-left.svg" alt="icône de tête de flèche qui pointe vers la gauche.">
+              </button>
+            </li>
+            <li class="slider__indicateurs-wrapper">
+              <ul class="slider__indicateurs">
+                <li class="slider__indicateurs-el slider__indicateurs-el--active"></li>
+                <li class="slider__indicateurs-el"></li>
+                <li class="slider__indicateurs-el"></li>
+                <li class="slider__indicateurs-el"></li>
+                <li class="slider__indicateurs-el"></li>
+                <li class="slider__indicateurs-el"></li>
+                <li class="slider__indicateurs-el"></li>
+                <li class="slider__indicateurs-el"></li>
+              </ul>
+            </li>
+            <li class="slider__btn">
+              <button class="btn__next">
+                <img class="btn-img" src="assets/images/décoration/slider-right.svg" alt="icône de tête de flèche qui pointe vers la droite.">
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </div>
+
+
+  <footer class="footer">
+    <div class="footer__contact">
+      <p class="footer__texte">Contactez moi</p>
+      <a href="mailto:dalsbaekines@gmail.com" class="footer__el">dalsbaekines@gmail.com</a>
+    </div>
+    <div class="footer__centre">
+      <a href="#" class="footer__el">Crédits</a>
+      <div class="footer__credits hidden">
+        <div class="footer__credits-content">
+          <div class="footer__credits-services">
+            <h3 class="footer__credits-titre">Services<span> ✶</span></h3>
+            <ul class="footer__credits-el">
+              <li>
+                <p>Fonts utilisées : <a href="https://www.fontshare.com/fonts/satoshi" target="_blank" class="footer__el">Satoshi</a>, 
+                <a href="https://www.fontshare.com/?q=Clash%20Display" target="_blank" class="footer__el">Clash Display</a>, 
+                <a href="https://fonts.google.com/specimen/Spline+Sans+Mono" target="_blank" class="footer__el">Spline Sans Mono</a>.</p>
+              </li>
+              <li>
+                <p>Pages créées sur <a href="https://www.figma.com/fr-fr/" target="_blank" class="footer__el">Figma</a>
+                et développées sur <a href="https://code.visualstudio.com/" target="_blank" class="footer__el">Visual Studio Code</a>.</p>
+              </li>
+              <li>
+                <p>Aide en ligne : <a href="https://chatgpt.com/auth/login" target="_blank" class="footer__el">ChatGPT</a>, 
+                <a href="https://developer.mozilla.org/fr/" target="_blank" class="footer__el">MDN</a>, 
+                <a href="https://gsap.com/" target="_blank" class="footer__el">GSAP</a>, 
+                <a href="https://validator.w3.org/" target="_blank" class="footer__el">W3C Validator</a>, 
+                <a href="https://webaim.org/resources/contrastchecker/" target="_blank" class="footer__el">Contrast Checker</a>.</p>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__credits-merci">
+            <h3 class="footer__credits-titre">Remerciements<span> ✶</span></h3>
+            <ul class="footer__credits-el">
+              <li><p>Merci à Hippolyte avec qui j'ai réalisé les photographies de ce projet.</p></li>
+            </ul>
+          </div>
+          <div class="footer__credits_contact">
+            <h3 class="footer__credits-titre">Votre avis<span> ✶</span></h3>
+            <ul class="footer__credits-el">
+              <li><p>Si vous avez des avis ou des questions sur mon portfolio et mes travaux, n'hésitez pas à <a href="mailto:dalsbaekines@gmail.com" class="footer__el">me contacter</a></p></li>
+              <li><p>À bientôt!</p></li>
+            </ul>
+          </div>
+        </div>
+        <button class="footer__credits-btn" id="closeCredits">Fermer</button>
+      </div>
+      <small>© Ines Dalsbaek 2024</small>
+    </div>
+  <div class="footer__follow">
+    <p class="footer__texte">Suivez moi</p>
+    <ul class="footer__socials">
+      <li><a href="https://www.instagram.com/idk_dwt/" target="_blank" class="footer__el">Instagram</a></li>
+      <li><a href="https://github.com/idkDW" target="_blank" class="footer__el">Github</a></li>
+    </ul>
+  </div>
+  <div class="overlay hidden"></div>
+</footer>
+
+</body>
+</html>
+
+
+
+
