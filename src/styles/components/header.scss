@@ -77,16 +77,6 @@
     object-fit: cover;
     transform-origin: top;
   }
-
-  @media (min-width: 600px) {
-    .navigation {
-      &__list {
-        flex-direction: row;
-        align-items: center;
-        gap: 40px;
-      }
-    }
-  }
 }
 
 
@@ -97,9 +87,31 @@
   }
 }
 
+@media (min-width: 600px) {
+  .header{
+    &__intro{
+      margin-left: 27px;
+      margin-right: 27px;
+    }
+    .navigation {
+      &__list {
+        flex-direction: row;
+        align-items: center;
+        gap: 40px;
+      }
+    }
+  }
+}
+
 @media (min-width: 800px) {
   .main {
     margin-left: 36px;
     margin-right: 36px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .main {
+    margin-left: 63px;
   }
 }

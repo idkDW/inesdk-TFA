@@ -15,26 +15,26 @@ if(document.body.classList.contains("index-body")){
 
 //CLASSE ACTIVE
 
-  document.addEventListener('DOMContentLoaded', function() {
-    // Sélectionner les boutons
-    const projetsCategoriesButtons = document.querySelectorAll('.projets__categories button');
-    const projetsTypeButtons = document.querySelectorAll('.projets__type-btn button, .projets__theme-btn button');
+document.addEventListener('DOMContentLoaded', function() {
+// Sélectionner les boutons
+const projetsCategoriesButtons = document.querySelectorAll('.projets__categories button');
+const projetsTypeButtons = document.querySelectorAll('.projets__type-btn button, .projets__theme-btn button');
 
-    // Ajouter la classe active au bouton "tous" par défaut
-    const defaultButton = document.querySelector('.projets__el-tous .projets__btn');
-    if (defaultButton) {
-        defaultButton.classList.add('active');
-    }
+// Ajouter la classe active au bouton "tous" par défaut
+const defaultButton = document.querySelector('.projets__el-tous .projets__btn');
+if (defaultButton) {
+    defaultButton.classList.add('active');
+}
 
-    // Ajouter un gestionnaire d'événements pour les boutons de catégories
-    projetsCategoriesButtons.forEach(button => {
-        button.addEventListener('click', function() {
-            // Supprimer la classe active de tous les boutons de catégories
-            projetsCategoriesButtons.forEach(btn => btn.classList.remove('active'));
-            // Ajouter la classe active au bouton cliqué
-            this.classList.add('active');
-        });
+// Ajouter un gestionnaire d'événements pour les boutons de catégories
+projetsCategoriesButtons.forEach(button => {
+    button.addEventListener('click', function() {
+        // Supprimer la classe active de tous les boutons de catégories
+        projetsCategoriesButtons.forEach(btn => btn.classList.remove('active'));
+        // Ajouter la classe active au bouton cliqué
+        this.classList.add('active');
     });
+});
 
     // Ajouter un gestionnaire d'événements pour les boutons de type et de thème
     projetsTypeButtons.forEach(button => {
@@ -53,39 +53,40 @@ if(document.body.classList.contains("index-body")){
 
   // CHANGER IMAGE AVATAR 
 
-document.addEventListener("DOMContentLoaded", function() {
-  var currentImageIndex = 1;
-  var totalImages = 4; // Total number of images
+  document.addEventListener("DOMContentLoaded", function() {
+    var currentImageIndex = 1;
+    var totalImages = 4; // Total number of images
 
-  // Fonction pour changer l'image séquentiellement
-  function changeImage() {
-      var avatar = document.querySelector(".a-propos__img");
-      if (avatar) {
-          currentImageIndex++;
-          if (currentImageIndex > totalImages) {
-              currentImageIndex = 1;
-          }
-          avatar.setAttribute("src", "assets/images/contenu/intro/ines-tête" + currentImageIndex + ".png");
-      } else {
-          console.error("L'élément avec la classe 'a-propos__img' n'a pas été trouvé.");
-      }
-  }
+    // Fonction pour changer l'image séquentiellement
+    function changeImage() {
+        var avatar = document.querySelector(".a-propos__img");
+        if (avatar) {
+            currentImageIndex++;
+            if (currentImageIndex > totalImages) {
+                currentImageIndex = 1;
+            }
+            // Ne modifiez que l'attribut src, pas srcset
+            avatar.setAttribute("src", "assets/images/contenu/intro/ines-tête" + currentImageIndex + ".png");
+        } else {
+            console.error("L'élément avec la classe 'a-propos__img' n'a pas été trouvé.");
+        }
+    }
 
-  // Encapsuler le code du bouton dans une fonction anonyme auto-invoquée
-  (function() {
-      // Sélectionnez le bouton
-      var btnAvatar = document.querySelector('.a-propos__btn');
+    // Encapsuler le code du bouton dans une fonction anonyme auto-invoquée
+    (function() {
+        // Sélectionnez le bouton
+        var btnAvatar = document.querySelector('.a-propos__btn');
 
-      // Ajoutez un gestionnaire d'événements pour le clic
-      if (btnAvatar) {
-          btnAvatar.addEventListener('click', function() {
-              // Appelez la fonction changeImage pour changer l'image d'avatar
-              changeImage();
-          });
-      } else {
-          console.error("Le bouton avec la classe 'a-propos__btn' n'a pas été trouvé.");
-      }
-  })();
+        // Ajoutez un gestionnaire d'événements pour le clic
+        if (btnAvatar) {
+            btnAvatar.addEventListener('click', function() {
+                // Appelez la fonction changeImage pour changer l'image d'avatar
+                changeImage();
+            });
+        } else {
+            console.error("Le bouton avec la classe 'a-propos__btn' n'a pas été trouvé.");
+        }
+    })();
 });
 
 
@@ -278,6 +279,8 @@ const notesPremier = document.querySelector('.notes__premier');
 const notesDeuxieme = document.querySelector('.notes__deuxieme');
 const notesTexte = document.querySelector('.notes__texte');
 const notesImages = document.querySelector('.notes__images');
+const notesClic = document.querySelector('.notes__clic');
+
 
 
 const aProposContainer = document.querySelector('.a-propos__container');
@@ -288,6 +291,8 @@ const projetType = document.querySelector('.projets__type-btn');
 const projetTheme= document.querySelector('.projets__theme-btn');
 const projetContenu = document.querySelector('.projets__contenu');
 const projetGrid = document.querySelector('.projets__grid');
+const projetGridItems = document.querySelectorAll('.projets__grid-item');
+
 
 
 notesAPropos.addEventListener('mouseover', function() {
@@ -317,6 +322,10 @@ notesProjets.addEventListener('mouseout', function() {
 notesPremier.addEventListener('mouseover', function() {
     projetCategories.classList.add('hovered');
   });
+
+notesPremier.addEventListener('mouseout', function() {
+    projetCategories.classList.remove('hovered');
+  });
   
 notesDeuxieme.addEventListener('mouseout', function() {
     projetType.classList.remove('hovered');
@@ -328,10 +337,6 @@ notesDeuxieme.addEventListener('mouseover', function() {
     projetTheme.classList.add('hovered');
   });
   
-notesPremier.addEventListener('mouseout', function() {
-    projetCategories.classList.remove('hovered');
-  });
-
 notesTexte.addEventListener('mouseover', function() {
     projetContenu.classList.add('hovered');
   });
@@ -348,9 +353,19 @@ notesImages.addEventListener('mouseout', function() {
     projetGrid.classList.remove('hovered');
   });
 
+notesClic.addEventListener('mouseover', function() {
+projetGridItems.forEach(item => {
+    item.classList.add('hovered');
+});
+});
 
+notesClic.addEventListener('mouseout', function() {
+projetGridItems.forEach(item => {
+    item.classList.remove('hovered');
+});
+});
 
-
+    
 
 //ANIMATION IMAGE INTRO
 
