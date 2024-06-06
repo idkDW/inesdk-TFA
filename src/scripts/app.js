@@ -369,21 +369,30 @@ projetGridItems.forEach(item => {
 
 //ANIMATION IMAGE INTRO
 
+
 gsap.timeline({
     scrollTrigger: {
-      scrub: 1,
-      trigger: ".header",
-      start: "top top",
-      end: "bottom+=100vh top",
-      pin: true, 
+        scrub: 1,
+        trigger: ".header",
+        start: "top top",
+        end: "bottom+=100vh top",
+        pin: true,
+        onUpdate: self => {
+        const progress = self.progress; // Progression du défilement (valeur entre 0 et 1)
+        const opacity = 1 - progress; // Opacité inversement proportionnelle à la progression
+        
+        gsap.to(".header__texte-img", { opacity: opacity, ease: "none" }); 
+        gsap.to(".header__texte-petit", { opacity: opacity, ease: "none" }); // Ajout de l'animation pour le paragraphe ".header__texte-petit"
+        }
     }
-  })
-  .fromTo(".header__image", 
-    { scale: 1, borderRadius: "0px" }, 
+    })
+    .fromTo(".header__image",
+    { scale: 1, borderRadius: "5px" },
     { scale: 0.8, ease: "none" }
-  )
-  .to(".header__image", 
+    )
+    .to(".header__image",
     { borderRadius: "20px", ease: "none" }, 0);
+    
 
 
 
@@ -413,6 +422,33 @@ document.addEventListener("DOMContentLoaded", () => {
     duration: 0.8
   });
 });
+
+
+//ANIMATION SCROLL  GRILLE
+
+document.addEventListener("DOMContentLoaded", () => {
+const images = document.querySelectorAll(".projets__grid-item img");
+
+// Cacher les images initialement
+gsap.set(images, { opacity: 0, scale: 0.9 });
+
+// Créer une animation pour chaque image
+images.forEach(image => {
+    gsap.to(image, {
+    opacity: 1,
+    scale: 1,
+    duration: 0.3,
+    ease: "power2.out",
+    scrollTrigger: {
+        trigger: image,
+        start: "top 80%",
+        end: "top 20%",
+        once: true 
+    }
+    });
+});
+});
+
 
 }
 

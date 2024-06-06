@@ -76,7 +76,41 @@
     height: 90%;
     object-fit: cover;
     transform-origin: top;
+    position: absolute;
+    left: 0;
+    z-index: 0; 
   }
+
+  &__texte-petit {
+    font-family: "ClashDisplay", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 120%;
+    position: absolute;
+    top: calc(50% - 50px);
+    left: 50%;
+    transform: translate(-50%, -100%);
+    color: #d9d9d9;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    z-index: 10;
+}
+
+&__texte-img {
+    font-family: "ClashDisplay", sans-serif;
+    font-size: 63px;
+    font-weight: 200;
+    color: #FAFAF9;
+    line-height: 120%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    text-align: center; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    z-index: 10;
+}
+
 }
 
 
