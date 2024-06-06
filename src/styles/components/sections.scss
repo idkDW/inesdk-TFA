@@ -560,9 +560,55 @@
     &__texte{
       font-size: 20px;
     }
-    &__img-span {
-      width: 60px;
-      height: 40px;
+  }
+}
+
+
+@media (min-width: 1600px) {
+  .a-propos {
+    &__titre {
+      font-size: 47px;  
     }
+  }
+  .projets {
+    &__btn {
+      font-size: 40px;
+    }
+  }
+}
+
+@media (min-width: 1800px) {
+  .a-propos {
+    &__img {
+      width: 200px;
+      height: 247px;
+    }
+  }
+  .projets {
+    &__btn {
+      font-size: 47px;
+    }
+    &__boutons {
+      font-size: 20px;
+    }
+    &__titre {
+      font-size: 47px;
+      margin-top: 100px;
+    }
+  
+    &__sous-titre {
+      font-size: 27px;
+      margin-top: 60px;
+      margin-bottom: 40px;
+    }
+    &__texte{
+      font-size: 20px;
+    }
+    &__grid{
+      margin-top: 200px;
+    }
+  }
+  .notes {
+    margin-left: 180px;
   }
 }
