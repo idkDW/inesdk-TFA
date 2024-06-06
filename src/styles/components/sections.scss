@@ -13,13 +13,17 @@
     word-spacing: 5px;
     margin-bottom: 60px;
     font-weight: 400;
-    line-height: 120%;
+    line-height: 140%;
   }
 
   &__texte {
     line-height: 250%;
     margin-bottom: 60px;
     font-size: 12px;
+  }
+
+  &__texte-bold{
+    font-weight: 700;
   }
 
   &__img-span {
@@ -454,6 +458,8 @@
 
 @media (min-width: 800px) {
   .a-propos {
+    margin-top: 100px;
+    margin-bottom: 200px;
     &__content {
       display: flex;
       margin-top: 150px;
@@ -498,9 +504,6 @@
     &__img {
       width: 170px;
       height: 217px;
-    }
-    &__btn {
-      font-size: 16px;
     }
   }
 

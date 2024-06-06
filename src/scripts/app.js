@@ -367,9 +367,20 @@ projetGridItems.forEach(item => {
 
     
 
+
+
+
+
+
+
+
+
+
+
+
 //ANIMATION IMAGE INTRO
 
-
+/*
 gsap.timeline({
     scrollTrigger: {
         scrub: 1,
@@ -391,11 +402,44 @@ gsap.timeline({
     { scale: 0.8, ease: "none" }
     )
     .to(".header__image",
+    { borderRadius: "20px", ease: "none" }, 0);*/
+
+
+    gsap.timeline({
+        scrollTrigger: {
+            scrub: 1,
+            trigger: ".header",
+            start: "top top",
+            end: "bottom+=100vh top",
+            pin: true,
+            onUpdate: self => {
+                const progress = self.progress; // Progression du défilement (valeur entre 0 et 1)
+                const opacity = 1 - progress; // Opacité inversement proportionnelle à la progression
+    
+                gsap.to(".header__texte-img", { opacity: opacity, ease: "none" }); 
+                gsap.to(".header__texte-petit", { opacity: opacity, ease: "none" }); // Ajout de l'animation pour le paragraphe ".header__texte-petit"
+            }
+        }
+    })
+    .fromTo(".header__image",
+    { 
+        scale: 1, 
+        borderRadius: "0px",
+        y: 0 // Ajout de la propriété y pour déplacer l'image verticalement
+    },
+    { 
+        scale: 0.8, 
+        y: 10, 
+        ease: "none" 
+    }
+    )
+    .to(".header__image",
     { borderRadius: "20px", ease: "none" }, 0);
+
+
     
 
-
-
+    
 //ANIMATION TITRE 
 
 document.addEventListener("DOMContentLoaded", () => {
