@@ -1,7 +1,7 @@
 .a-propos {
-  display: flex; 
+  display: flex;
   justify-content: space-between;
-  align-items: flex-start; 
+  align-items: flex-start;
   position: relative;
   margin-bottom: 150px;
 
@@ -22,7 +22,7 @@
     font-size: 12px;
   }
 
-  &__texte-bold{
+  &__texte-bold {
     font-weight: 700;
   }
 
@@ -34,7 +34,7 @@
 
   &__modif-1 {
     font-family: "Jura", sans-serif;
-    background-color: #e4f7b3; 
+    background-color: #e4f7b3;
     color: #ce230c;
     padding: 5px;
   }
@@ -50,7 +50,7 @@
     position: relative;
 
     &::after {
-      content: '';
+      content: "";
       position: absolute;
       left: 0;
       bottom: -2px;
@@ -64,7 +64,7 @@
     font-family: "ClashDisplay", sans-serif;
     font-size: 18px;
     font-weight: 600;
-    color: #415351; 
+    color: #415351;
   }
 
   &__modif-5 {
@@ -87,18 +87,19 @@
     margin-left: auto;
     margin-top: 20px;
     padding: 12px 15px;
-    border: 2px dotted #333; 
+    border: 2px dotted #333;
     border-radius: 11px;
     background-color: transparent;
-    color: #333; 
+    color: #333;
     text-decoration: none;
-    transition: background-color 0.3s, color 0.3s, border-color 0.3s, transform 0.3s;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s,
+      transform 0.3s;
     cursor: pointer;
 
     &:hover {
-      background-color: #415351; 
+      background-color: #415351;
       color: #fff;
-      border-color: #fff; 
+      border-color: #fff;
       transform: scale(1.1);
     }
   }
@@ -148,7 +149,7 @@
     text-transform: uppercase;
     color: #415351;
     cursor: pointer;
-    background: url('../assets/images/décoration/flèche.svg') left top no-repeat;
+    background: url("../assets/images/décoration/flèche.svg") left top no-repeat;
     background-size: 20px;
     margin-bottom: 20px;
     margin-right: 40px;
@@ -156,7 +157,7 @@
     background-color: transparent;
     border: none;
     position: relative;
-    transition: transform 0.3s; 
+    transition: transform 0.3s;
 
     &:hover {
       transform: scale(1.1);
@@ -167,11 +168,11 @@
       color: #333;
       font-weight: 500;
     }
-  } 
+  }
 
   &__type-btn,
   &__theme-btn {
-    margin-bottom: 60px; 
+    margin-bottom: 60px;
     display: flex;
     flex-wrap: wrap;
     list-style: none;
@@ -189,30 +190,31 @@
     margin: 10px;
     padding: 15px 20px;
     white-space: nowrap;
-    border: 2px dotted #333; 
+    border: 2px dotted #333;
     border-radius: 11px;
     background-color: transparent;
-    color: #333; 
+    color: #333;
     text-decoration: none;
-    transition: background-color 0.3s, color 0.3s, border-color 0.3s, transform 0.3s;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s,
+      transform 0.3s;
     cursor: pointer;
 
     &:hover {
       background-color: #415351;
       color: #fff;
-      border-color: #fff; 
+      border-color: #fff;
       transform: scale(1.1);
     }
 
     &.active {
-      background-color: #333; 
+      background-color: #333;
       color: #fff;
-      border-color: #fff; 
+      border-color: #fff;
     }
   }
 
   &__contenu {
-    margin: 0; 
+    margin: 0;
     padding: 0;
 
     &.hovered {
@@ -235,13 +237,13 @@
     margin-bottom: 20px;
   }
 
-  &__texte{
+  &__texte {
     font-size: 12px;
   }
 
   &__grid {
     position: relative;
-    margin-top: 80px; 
+    margin-top: 80px;
     padding: 0;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -273,22 +275,22 @@
       top: -18px;
       left: 0;
       width: 100%;
-      height: 100%; 
+      height: 100%;
       opacity: 0;
       transition: opacity 0.3s ease;
       display: flex;
-      justify-content: center; 
+      justify-content: center;
       align-items: center;
 
       &__img {
-        width: 170px; 
-        height: auto; 
+        width: 170px;
+        height: auto;
         object-fit: cover;
       }
     }
 
     &:hover .hover-grid {
-      opacity: 1; 
+      opacity: 1;
     }
 
     &.hovered {
@@ -301,18 +303,18 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    align-self: end; 
+    align-self: end;
     position: relative;
     overflow: hidden;
 
-    &.scaling {   
-      transform: scale(1.4); 
-      transition: transform 0.3s ease; 
+    &.scaling {
+      transform: scale(1.4);
+      transition: transform 0.3s ease;
     }
 
-    &.reduced { 
-      transform: scale(0.60);
-      transition: transform 0.3s ease; 
+    &.reduced {
+      transform: scale(0.6);
+      transition: transform 0.3s ease;
     }
   }
 
@@ -320,18 +322,18 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    align-self: start; 
+    align-self: start;
     position: relative;
     overflow: hidden;
 
-    &.scaling {   
-      transform: scale(1.4); 
-      transition: transform 0.3s ease; 
+    &.scaling {
+      transform: scale(1.4);
+      transition: transform 0.3s ease;
     }
 
-    &.reduced { 
-      transform: scale(0.60);
-      transition: transform 0.3s ease; 
+    &.reduced {
+      transform: scale(0.6);
+      transition: transform 0.3s ease;
     }
   }
 
@@ -342,21 +344,21 @@
     position: relative;
     overflow: hidden;
 
-    &.scaling {   
-      transform: scale(1.4); 
-      transition: transform 0.3s ease; 
+    &.scaling {
+      transform: scale(1.4);
+      transition: transform 0.3s ease;
     }
 
-    &.reduced { 
-      transform: scale(0.60);
-      transition: transform 0.3s ease; 
+    &.reduced {
+      transform: scale(0.6);
+      transition: transform 0.3s ease;
     }
   }
 }
 
 .notes {
   font-family: "SplineSansMono", sans-serif;
-  width: 15%; 
+  width: 15%;
   padding: 10px;
   border-left: 2px dotted #ccc;
   box-sizing: border-box;
@@ -374,16 +376,16 @@
     }
   }
 
-  &__avatar{
+  &__avatar {
     margin-top: 540px;
   }
-  &__texte{
+  &__texte {
     margin-top: 30px;
   }
-  &__images{
+  &__images {
     margin-top: 200px;
   }
-  &__clic{
+  &__clic {
     margin-top: 20px;
   }
 
@@ -401,10 +403,10 @@
   }
 }
 
-@media (min-width: 500px){
+@media (min-width: 500px) {
   .projets {
-    &__grid{
-      img{
+    &__grid {
+      img {
         width: 120px;
       }
     }
@@ -412,9 +414,9 @@
 }
 
 @media (min-width: 600px) {
-  .a-propos{
+  .a-propos {
     margin-bottom: 200px;
-    &__titre{
+    &__titre {
       font-size: 28px;
     }
     &__texte {
@@ -428,12 +430,12 @@
 
   .projets {
     &__categories {
-      flex-direction: row;  
+      flex-direction: row;
     }
     &__sous-titre {
       font-size: 20px;
     }
-    &__texte{
+    &__texte {
       font-size: 16px;
       width: 80%;
     }
@@ -449,7 +451,7 @@
         width: 120px;
       }
     }
-    
+
     &__btn-container {
       display: flex;
     }
@@ -465,10 +467,10 @@
       margin-top: 150px;
     }
 
-    &__titre{
+    &__titre {
       font-size: 36px;
     }
-    
+
     &__texte {
       width: 85%;
     }
@@ -487,9 +489,9 @@
     &__titre {
       font-size: 36px;
     }
-    &__grid{
+    &__grid {
       margin-top: 150px;
-      a{
+      a {
         font-size: 16px;
       }
     }
@@ -507,15 +509,15 @@
     }
   }
 
-  .projets{
+  .projets {
     &__boutons {
       font-size: 16px;
     }
-    &__texte{
+    &__texte {
       width: 60%;
     }
-    &__grid{
-      img{
+    &__grid {
+      img {
         width: 150px;
       }
     }
@@ -525,28 +527,26 @@
         top: -18px;
         left: 0;
         width: 100%;
-        height: 100%; 
+        height: 100%;
         opacity: 0;
         transition: opacity 0.3s ease;
         display: flex;
-        justify-content: center; 
+        justify-content: center;
         align-items: center;
-  
+
         &__img {
-          width: 210px; 
-          height: auto; 
+          width: 210px;
+          height: auto;
           object-fit: cover;
         }
       }
-  
+
       &:hover .hover-grid {
-        opacity: 1; 
+        opacity: 1;
       }
     }
   }
 }
-
-
 
 @media (min-width: 1200px) {
   .notes {
@@ -554,23 +554,21 @@
   }
 }
 
-
 @media (min-width: 1400px) {
   .a-propos {
     &__titre {
-      font-size: 40px;  
+      font-size: 40px;
     }
-    &__texte{
+    &__texte {
       font-size: 20px;
     }
   }
 }
 
-
 @media (min-width: 1600px) {
   .a-propos {
     &__titre {
-      font-size: 47px;  
+      font-size: 47px;
     }
   }
   .projets {
@@ -598,16 +596,16 @@
       font-size: 47px;
       margin-top: 100px;
     }
-  
+
     &__sous-titre {
       font-size: 27px;
       margin-top: 60px;
       margin-bottom: 40px;
     }
-    &__texte{
+    &__texte {
       font-size: 20px;
     }
-    &__grid{
+    &__grid {
       margin-top: 200px;
     }
   }

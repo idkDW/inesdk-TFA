@@ -1,210 +1,425 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-  <title>24H en 360°</title>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <head>
+    <title>24H en 360°</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-  <meta name="description" content="">
-  <!-- Meta Partage -->
-  <link rel="shortcut icon" href="assets/images/décoration/iconeok.ico">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="" />
+    <!-- Meta Partage -->
+    <link rel="shortcut icon" href="assets/images/décoration/iconeok.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <link rel="stylesheet" href="../styles/app.css">
-  <script src="../scripts/app.js" defer></script>
+    <link rel="stylesheet" href="../styles/app.css" />
+    <script src="../scripts/app.js" defer></script>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Jura:wght@300..700&display=swap" rel="stylesheet">
-  <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
-</head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jura:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
+  </head>
 
-<body class="projet-body">
-
-  <header class="projets-header">
-    <div class="header__intro">
-      <div class="header__content">
-        <p class="header__texte">portfolio 2024</p>
-        <a href="./index.html" class="header__icone">
-          <img src="../assets/images/contenu/intro/grosnez.svg" alt="dessin de tête de personnage">
-        </a>
+  <body class="projet-body">
+    <header class="projets-header">
+      <div class="header__intro">
+        <div class="header__content">
+          <p class="header__texte">portfolio 2024</p>
+          <a href="./index.html" class="header__icone">
+            <img
+              src="../assets/images/contenu/intro/grosnez.svg"
+              alt="dessin de tête de personnage"
+            />
+          </a>
+        </div>
       </div>
-    </div>
-  </header>
+    </header>
 
-  <div class="main">
-    <section class="travaux">
-      <div class="travaux__top">
-        <h1 class="travaux__titre">24H en 360° <span class="travaux__date">2021</span></h1>
-        <ul class="travaux__skills">
-          <li class="travaux__skills-texte">Design produit</li>
-          <li class="travaux__skills-texte">Design d’espace</li>
-          <li class="travaux__skills-texte">Maquette</li>
-        </ul>
-
-        <p class="travaux__texte travaux__texte--visible">
-            Dans la ville de Lyon se trouve le parc de la Feyssine, si grand et pourtant peu fréquenté. Ce projet a pour ambition de mettre cet espace en valeur à travers la mise en place d’un dispositif de structure saisonnière. Il s’agit d’un complément d’architecture placé en tant qu’ajout sur un puit de captage déjà présent dans l’espace du parc. Tenant place d’observatoire, cette installation permet un moment privilégié de contemplation paysagère du parc et d’une vue dégagée sur la zone urbaine de Lyon, où cela n’est pas forcément possible ou accessible.
-
-        </p>
-        <p class="travaux__texte travaux__texte--hidden">
-            Ce dispositif comprend des assises, des escaliers et une passerelle. Les assises, évoquant des chaises hautes de surveillance, sont positionnées en hauteur par rapport à la base du puit, offrant ainsi une vue panoramique. De plus, elles possèdent deux types de dossiers différents: l’un orienté de manière traditionnelle, face à l’horizon et l’autre légèrement plus incliné vers l’arrière, permettant ainsi une pose plus confortable pour observer le ciel
-        </p>
-        <p class="travaux__texte travaux__texte--hidden">
-            L’installation est réversible et ponctuelle, c’est-à-dire qu’il est possible de l’installer comme de la désinstaller du puit rapidement. La structure est basique, avec une utilisation de bois auto-clave comme matériau principal. On y retrouve une certaine sobriété ainsi qu’une économie générale d’assemblage et de montage. Cependant, elle est efficace et astucieuse car légère et solide à la fois. Elle se place de fond en comble comme un ajout au paysage sans aucune altération sur ce dernier.
-        </p>
-
-        <button id="showButton" class="travaux__texte-btn show-button">
-          <img class="btn-img" src="assets/images/décoration/arrow-bottom.svg" alt="icône de tête de flèche qui pointe vers le bas.">
-        </button>
-        <button id="hideButton" class="travaux__texte-btn hide-button hidden">
-          <img class="btn-img" src="assets/images/décoration/arrow-top.svg" alt="icône de tête de flèche qui pointe vers le haut.">
-        </button>
-      </div>
-
-      <div class="slider">
-        <div class="travaux__mid">
-          <ul class="slider__list">
-            <li class="slider__el slider__el--show">
-              <img class="slider__img" src="assets/images/pages-projet/360/espace3.jpg" srcset="assets/images/pages-projet/360/retina/espace3@2x.jpg" alt="photographie d'une maquette miniature d'une strucure en bois posée sur un puit en papier avec un arbre.">
-            </li>
-            <li class="slider__el">
-              <img class="slider__img slider__img--grande" src="assets/images/pages-projet/360/espace1.jpg" srcset="assets/images/pages-projet/360/retina/espace1@2x.jpg" alt="photographie en plongée d'une maquette miniature d'une strucure en bois posée sur un puit en papier avec un arbre.">
-            </li>
-            <li class="slider__el">
-              <img class="slider__img" src="assets/images/pages-projet/360/espace2.jpg" srcset="assets/images/pages-projet/360/retina/espace2@2x.jpg" alt="photographie en plan large d'une maquette miniature d'une strucure en bois posée sur un puit en papier avec un arbre.">
-            </li>
-            <li class="slider__el">
-              <img class="slider__img slider__img--grande" src="assets/images/pages-projet/360/espace4.jpg" srcset="assets/images/pages-projet/360/retina/espace4@2x.jpg" alt="photographie du détail des escaliers d'une maquette miniature en bois posée sur un puit en papier.">
-            </li>
-            <li class="slider__el">
-              <img class="slider__img" src="assets/images/pages-projet/360/espace5.jpg" srcset="assets/images/pages-projet/360/retina/espace5@2x.jpg" alt="photographie en top shot d'une maquette miniature d'une strucure en bois posée sur un puit en papier avec un arbre.">
-            </li>
-            <li class="slider__el">
-              <img class="slider__img slider__img--grande" src="assets/images/pages-projet/360/espace6.jpg" srcset="assets/images/pages-projet/360/retina/espace6@2x.jpg" alt="photographie en plan serré et plongé du détail des assises d'une maquette miniature d'une strucure en bois posée sur un puit en papier avec un arbre..">
-            </li>
-            <li class="slider__el">
-              <img class="slider__img slider__img--grande" src="assets/images/pages-projet/360/espace7.jpg" srcset="assets/images/pages-projet/360/retina/espace7@2x.jpg" alt="photographie du détail des escaliers d'une maquette miniature en bois posée sur un puit en papier.">
-            </li>
-            <li class="slider__el">
-              <img class="slider__img" src="assets/images/pages-projet/360/espace8.jpeg" srcset="assets/images/pages-projet/360/retina/espace8@2x.jpg" alt="photographie du parc de la Feyssine de la ville de Lyon avec un puit de captage.">
-            </li>
+    <div class="main">
+      <section class="travaux">
+        <div class="travaux__top">
+          <h1 class="travaux__titre">
+            24H en 360° <span class="travaux__date">2021</span>
+          </h1>
+          <ul class="travaux__skills">
+            <li class="travaux__skills-texte">Design produit</li>
+            <li class="travaux__skills-texte">Design d’espace</li>
+            <li class="travaux__skills-texte">Maquette</li>
           </ul>
+
+          <p class="travaux__texte travaux__texte--visible">
+            Dans la ville de Lyon se trouve le parc de la Feyssine, si grand
+            et pourtant peu fréquenté. Ce projet a pour ambition de mettre cet
+            espace en valeur à travers la mise en place d’un dispositif
+            de structure saisonnière. Il s’agit d’un complément d’architecture
+            placé en tant qu’ajout sur un puit de captage déjà présent dans
+            l’espace du parc. Tenant place d’observatoire, cette installation
+            permet un moment privilégié de contemplation paysagère du parc
+            et d’une vue dégagée sur la zone urbaine de Lyon, où cela n’est pas
+            forcément possible ou accessible.
+          </p>
+          <p class="travaux__texte travaux__texte--hidden">
+            Ce dispositif comprend des assises, des escaliers et une passerelle.
+            Les assises, évoquant des chaises hautes de surveillance, sont
+            positionnées en hauteur par rapport à la base du puit, offrant ainsi
+            une vue panoramique. De plus, elles possèdent deux types de dossiers
+            différents: l’un orienté de manière traditionnelle, face à l’horizon
+            et l’autre légèrement plus incliné vers l’arrière, permettant ainsi
+            une pose plus confortable pour observer le ciel
+          </p>
+          <p class="travaux__texte travaux__texte--hidden">
+            L’installation est réversible et ponctuelle, c’est-à-dire qu’il est
+            possible de l’installer comme de la désinstaller du puit rapidement.
+            La structure est basique, avec une utilisation de bois auto-clave
+            comme matériau principal. On y retrouve une certaine sobriété ainsi
+            qu’une économie générale d’assemblage et de montage. Cependant, elle
+            est efficace et astucieuse car légère et solide à la fois. Elle
+            se place de fond en comble comme un ajout au paysage sans aucune
+            altération sur ce dernier.
+          </p>
+
+          <button id="showButton" class="travaux__texte-btn show-button">
+            <img
+              class="btn-img"
+              src="assets/images/décoration/arrow-bottom.svg"
+              alt="icône de tête de flèche qui pointe vers le bas."
+            />
+          </button>
+          <button id="hideButton" class="travaux__texte-btn hide-button hidden">
+            <img
+              class="btn-img"
+              src="assets/images/décoration/arrow-top.svg"
+              alt="icône de tête de flèche qui pointe vers le haut."
+            />
+          </button>
         </div>
 
-        <div class="travaux__bottom">
-          <ul class="slider__images">
-            <li class="slider__images-el slider__images-el--active">
-              <img class="slider__images-img" src="assets/images/pages-projet/360/espace3.jpg" srcset="assets/images/pages-projet/360/retina/espace3@2x.jpg" alt="photographie d'une maquette miniature d'une strucure en bois posée sur un puit en papier avec un arbre.">
-            </li>
-            <li class="slider__images-el">
-              <img class="slider__images-img" src="assets/images/pages-projet/360/espace1.jpg" srcset="assets/images/pages-projet/360/retina/espace1@2x.jpg" alt="photographie en plongée d'une maquette miniature d'une strucure en bois posée sur un puit en papier avec un arbre.">
-            </li>
-            <li class="slider__images-el">
-              <img class="slider__images-img" src="assets/images/pages-projet/360/espace2.jpg" srcset="assets/images/pages-projet/360/retina/espace2@2x.jpg" alt="photographie en plan large d'une maquette miniature d'une strucure en bois posée sur un puit en papier avec un arbre.">
-            </li>
-            <li class="slider__images-el">
-              <img class="slider__images-img" src="assets/images/pages-projet/360/espace4.jpg" srcset="assets/images/pages-projet/360/retina/espace4@2x.jpg" alt="photographie du détail des escaliers d'une maquette miniature en bois posée sur un puit en papier.">
-            </li>
-            <li class="slider__images-el">
-              <img class="slider__images-img" src="assets/images/pages-projet/360/espace5.jpg" srcset="assets/images/pages-projet/360/retina/espace5@2x.jpg" alt="photographie en top shot d'une maquette miniature d'une strucure en bois posée sur un puit en papier avec un arbre.">
-            </li>
-            <li class="slider__images-el">
-              <img class="slider__images-img" src="assets/images/pages-projet/360/espace6.jpg" srcset="assets/images/pages-projet/360/retina/espace6@2x.jpg" alt="photographie en plan serré et plongé du détail des assises d'une maquette miniature d'une strucure en bois posée sur un puit en papier avec un arbre.">
-            </li>
-            <li class="slider__images-el">
-              <img class="slider__images-img" src="assets/images/pages-projet/360/espace7.jpg" srcset="assets/images/pages-projet/360/retina/espace7@2x.jpg" alt="photographie du détail des escaliers d'une maquette miniature en bois posée sur un puit en papier.">
-            </li>
-            <li class="slider__images-el">
-              <img class="slider__images-img" src="assets/images/pages-projet/360/espace8.jpeg" srcset="assets/images/pages-projet/360/retina/espace8@2x.jpg" alt="photographie du parc de la Feyssine de la ville de Lyon avec un puit de captage.">
-            </li>
-          </ul>
+        <div class="slider">
+          <div class="travaux__mid">
+            <ul class="slider__list">
+              <li class="slider__el slider__el--show">
+                <img
+                  class="slider__img"
+                  src="assets/images/pages-projet/360/espace3.jpg"
+                  srcset="assets/images/pages-projet/360/retina/espace3@2x.jpg"
+                  alt="photographie d'une maquette miniature d'une strucure en bois posée sur un puit en papier avec un arbre."
+                />
+              </li>
+              <li class="slider__el">
+                <img
+                  class="slider__img slider__img--grande"
+                  src="assets/images/pages-projet/360/espace1.jpg"
+                  srcset="assets/images/pages-projet/360/retina/espace1@2x.jpg"
+                  alt="photographie en plongée d'une maquette miniature d'une strucure en bois posée sur un puit en papier avec un arbre."
+                />
+              </li>
+              <li class="slider__el">
+                <img
+                  class="slider__img"
+                  src="assets/images/pages-projet/360/espace2.jpg"
+                  srcset="assets/images/pages-projet/360/retina/espace2@2x.jpg"
+                  alt="photographie en plan large d'une maquette miniature d'une strucure en bois posée sur un puit en papier avec un arbre."
+                />
+              </li>
+              <li class="slider__el">
+                <img
+                  class="slider__img slider__img--grande"
+                  src="assets/images/pages-projet/360/espace4.jpg"
+                  srcset="assets/images/pages-projet/360/retina/espace4@2x.jpg"
+                  alt="photographie du détail des escaliers d'une maquette miniature en bois posée sur un puit en papier."
+                />
+              </li>
+              <li class="slider__el">
+                <img
+                  class="slider__img"
+                  src="assets/images/pages-projet/360/espace5.jpg"
+                  srcset="assets/images/pages-projet/360/retina/espace5@2x.jpg"
+                  alt="photographie en top shot d'une maquette miniature d'une strucure en bois posée sur un puit en papier avec un arbre."
+                />
+              </li>
+              <li class="slider__el">
+                <img
+                  class="slider__img slider__img--grande"
+                  src="assets/images/pages-projet/360/espace6.jpg"
+                  srcset="assets/images/pages-projet/360/retina/espace6@2x.jpg"
+                  alt="photographie en plan serré et plongé du détail des assises d'une maquette miniature d'une strucure en bois posée sur un puit en papier avec un arbre.."
+                />
+              </li>
+              <li class="slider__el">
+                <img
+                  class="slider__img slider__img--grande"
+                  src="assets/images/pages-projet/360/espace7.jpg"
+                  srcset="assets/images/pages-projet/360/retina/espace7@2x.jpg"
+                  alt="photographie du détail des escaliers d'une maquette miniature en bois posée sur un puit en papier."
+                />
+              </li>
+              <li class="slider__el">
+                <img
+                  class="slider__img"
+                  src="assets/images/pages-projet/360/espace8.jpeg"
+                  srcset="assets/images/pages-projet/360/retina/espace8@2x.jpg"
+                  alt="photographie du parc de la Feyssine de la ville de Lyon avec un puit de captage."
+                />
+              </li>
+            </ul>
+          </div>
 
-          <ul class="slider__controls">
-            <li class="slider__btn">
-              <button class="btn__prev">
-                <img class="btn-img" src="assets/images/décoration/slider-left.svg" alt="icône de tête de flèche qui pointe vers la gauche.">
-              </button>
-            </li>
-            <li class="slider__indicateurs-wrapper">
-              <ul class="slider__indicateurs">
-                <li class="slider__indicateurs-el slider__indicateurs-el--active"></li>
-                <li class="slider__indicateurs-el"></li>
-                <li class="slider__indicateurs-el"></li>
-                <li class="slider__indicateurs-el"></li>
-                <li class="slider__indicateurs-el"></li>
-                <li class="slider__indicateurs-el"></li>
-                <li class="slider__indicateurs-el"></li>
-                <li class="slider__indicateurs-el"></li>
+          <div class="travaux__bottom">
+            <ul class="slider__images">
+              <li class="slider__images-el slider__images-el--active">
+                <img
+                  class="slider__images-img"
+                  src="assets/images/pages-projet/360/espace3.jpg"
+                  srcset="assets/images/pages-projet/360/retina/espace3@2x.jpg"
+                  alt="photographie d'une maquette miniature d'une strucure en bois posée sur un puit en papier avec un arbre."
+                />
+              </li>
+              <li class="slider__images-el">
+                <img
+                  class="slider__images-img"
+                  src="assets/images/pages-projet/360/espace1.jpg"
+                  srcset="assets/images/pages-projet/360/retina/espace1@2x.jpg"
+                  alt="photographie en plongée d'une maquette miniature d'une strucure en bois posée sur un puit en papier avec un arbre."
+                />
+              </li>
+              <li class="slider__images-el">
+                <img
+                  class="slider__images-img"
+                  src="assets/images/pages-projet/360/espace2.jpg"
+                  srcset="assets/images/pages-projet/360/retina/espace2@2x.jpg"
+                  alt="photographie en plan large d'une maquette miniature d'une strucure en bois posée sur un puit en papier avec un arbre."
+                />
+              </li>
+              <li class="slider__images-el">
+                <img
+                  class="slider__images-img"
+                  src="assets/images/pages-projet/360/espace4.jpg"
+                  srcset="assets/images/pages-projet/360/retina/espace4@2x.jpg"
+                  alt="photographie du détail des escaliers d'une maquette miniature en bois posée sur un puit en papier."
+                />
+              </li>
+              <li class="slider__images-el">
+                <img
+                  class="slider__images-img"
+                  src="assets/images/pages-projet/360/espace5.jpg"
+                  srcset="assets/images/pages-projet/360/retina/espace5@2x.jpg"
+                  alt="photographie en top shot d'une maquette miniature d'une strucure en bois posée sur un puit en papier avec un arbre."
+                />
+              </li>
+              <li class="slider__images-el">
+                <img
+                  class="slider__images-img"
+                  src="assets/images/pages-projet/360/espace6.jpg"
+                  srcset="assets/images/pages-projet/360/retina/espace6@2x.jpg"
+                  alt="photographie en plan serré et plongé du détail des assises d'une maquette miniature d'une strucure en bois posée sur un puit en papier avec un arbre."
+                />
+              </li>
+              <li class="slider__images-el">
+                <img
+                  class="slider__images-img"
+                  src="assets/images/pages-projet/360/espace7.jpg"
+                  srcset="assets/images/pages-projet/360/retina/espace7@2x.jpg"
+                  alt="photographie du détail des escaliers d'une maquette miniature en bois posée sur un puit en papier."
+                />
+              </li>
+              <li class="slider__images-el">
+                <img
+                  class="slider__images-img"
+                  src="assets/images/pages-projet/360/espace8.jpeg"
+                  srcset="assets/images/pages-projet/360/retina/espace8@2x.jpg"
+                  alt="photographie du parc de la Feyssine de la ville de Lyon avec un puit de captage."
+                />
+              </li>
+            </ul>
+
+            <ul class="slider__controls">
+              <li class="slider__btn">
+                <button class="btn__prev">
+                  <img
+                    class="btn-img"
+                    src="assets/images/décoration/slider-left.svg"
+                    alt="icône de tête de flèche qui pointe vers la gauche."
+                  />
+                </button>
+              </li>
+              <li class="slider__indicateurs-wrapper">
+                <ul class="slider__indicateurs">
+                  <li
+                    class="slider__indicateurs-el slider__indicateurs-el--active"
+                  ></li>
+                  <li class="slider__indicateurs-el"></li>
+                  <li class="slider__indicateurs-el"></li>
+                  <li class="slider__indicateurs-el"></li>
+                  <li class="slider__indicateurs-el"></li>
+                  <li class="slider__indicateurs-el"></li>
+                  <li class="slider__indicateurs-el"></li>
+                  <li class="slider__indicateurs-el"></li>
+                </ul>
+              </li>
+              <li class="slider__btn">
+                <button class="btn__next">
+                  <img
+                    class="btn-img"
+                    src="assets/images/décoration/slider-right.svg"
+                    alt="icône de tête de flèche qui pointe vers la droite."
+                  />
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <footer class="footer">
+      <div class="footer__contact">
+        <p class="footer__texte">Contactez moi</p>
+        <a href="mailto:dalsbaekines@gmail.com" class="footer__el"
+          >dalsbaekines@gmail.com</a
+        >
+      </div>
+      <div class="footer__centre">
+        <a href="#" class="footer__el">Crédits</a>
+        <div class="footer__credits hidden">
+          <div class="footer__credits-content">
+            <div class="footer__credits-services">
+              <h3 class="footer__credits-titre">Services<span> ✶</span></h3>
+              <ul class="footer__credits-el">
+                <li>
+                  <p>
+                    Fonts utilisées:
+                    <a
+                      href="https://www.fontshare.com/fonts/satoshi"
+                      target="_blank"
+                      class="footer__el"
+                      >Satoshi</a
+                    >,
+                    <a
+                      href="https://www.fontshare.com/?q=Clash%20Display"
+                      target="_blank"
+                      class="footer__el"
+                      >Clash Display</a
+                    >,
+                    <a
+                      href="https://fonts.google.com/specimen/Spline+Sans+Mono"
+                      target="_blank"
+                      class="footer__el"
+                      >Spline Sans Mono</a
+                    >.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    Pages créées sur
+                    <a
+                      href="https://www.figma.com/fr-fr/"
+                      target="_blank"
+                      class="footer__el"
+                      >Figma</a
+                    >
+                    et développées sur
+                    <a
+                      href="https://code.visualstudio.com/"
+                      target="_blank"
+                      class="footer__el"
+                      >Visual Studio Code</a
+                    >.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    Aide en ligne:
+                    <a
+                      href="https://chatgpt.com/auth/login"
+                      target="_blank"
+                      class="footer__el"
+                      >ChatGPT</a
+                    >,
+                    <a
+                      href="https://developer.mozilla.org/fr/"
+                      target="_blank"
+                      class="footer__el"
+                      >MDN</a
+                    >,
+                    <a
+                      href="https://gsap.com/"
+                      target="_blank"
+                      class="footer__el"
+                      >GSAP</a
+                    >,
+                    <a
+                      href="https://validator.w3.org/"
+                      target="_blank"
+                      class="footer__el"
+                      >W3 °C Validator</a
+                    >,
+                    <a
+                      href="https://webaim.org/resources/contrastchecker/"
+                      target="_blank"
+                      class="footer__el"
+                      >Contrast Checker</a
+                    >.
+                  </p>
+                </li>
               </ul>
-            </li>
-            <li class="slider__btn">
-              <button class="btn__next">
-                <img class="btn-img" src="assets/images/décoration/slider-right.svg" alt="icône de tête de flèche qui pointe vers la droite.">
-              </button>
-            </li>
-          </ul>
+            </div>
+            <div class="footer__credits-merci">
+              <h3 class="footer__credits-titre">
+                Remerciements<span> ✶</span>
+              </h3>
+              <ul class="footer__credits-el">
+                <li>
+                  <p>
+                    Merci à Hippolyte avec qui j’ai réalisé les photographies
+                    de ce projet.
+                  </p>
+                </li>
+              </ul>
+            </div>
+            <div class="footer__credits_contact">
+              <h3 class="footer__credits-titre">Votre avis<span> ✶</span></h3>
+              <ul class="footer__credits-el">
+                <li>
+                  <p>
+                    Si vous avez des avis ou des questions sur mon portfolio
+                    et mes travaux, n’hésitez pas à
+                    <a href="mailto:dalsbaekines@gmail.com" class="footer__el"
+                      >me contacter</a
+                    >.
+                  </p>
+                </li>
+                <li><p>À bientôt!</p></li>
+              </ul>
+            </div>
+          </div>
+          <button class="footer__credits-btn" id="closeCredits">Fermer</button>
         </div>
+        <small>© Ines Dalsbaek 2024</small>
       </div>
-    </section>
-  </div>
-
-  <footer class="footer">
-    <div class="footer__contact">
-      <p class="footer__texte">Contactez moi</p>
-      <a href="mailto:dalsbaekines@gmail.com" class="footer__el">dalsbaekines@gmail.com</a>
-    </div>
-    <div class="footer__centre">
-      <a href="#" class="footer__el">Crédits</a>
-      <div class="footer__credits hidden">
-        <div class="footer__credits-content">
-          <div class="footer__credits-services">
-            <h3 class="footer__credits-titre">Services<span> ✶</span></h3>
-            <ul class="footer__credits-el">
-              <li>
-                <p>Fonts utilisées: <a href="https://www.fontshare.com/fonts/satoshi" target="_blank" class="footer__el">Satoshi</a>,
-                <a href="https://www.fontshare.com/?q=Clash%20Display" target="_blank" class="footer__el">Clash Display</a>,
-                <a href="https://fonts.google.com/specimen/Spline+Sans+Mono" target="_blank" class="footer__el">Spline Sans Mono</a>.</p>
-              </li>
-              <li>
-                <p>Pages créées sur <a href="https://www.figma.com/fr-fr/" target="_blank" class="footer__el">Figma</a>
-                et développées sur <a href="https://code.visualstudio.com/" target="_blank" class="footer__el">Visual Studio Code</a>.</p>
-              </li>
-              <li>
-                <p>Aide en ligne: <a href="https://chatgpt.com/auth/login" target="_blank" class="footer__el">ChatGPT</a>,
-                <a href="https://developer.mozilla.org/fr/" target="_blank" class="footer__el">MDN</a>,
-                <a href="https://gsap.com/" target="_blank" class="footer__el">GSAP</a>,
-                <a href="https://validator.w3.org/" target="_blank" class="footer__el">W3 °C Validator</a>,
-                <a href="https://webaim.org/resources/contrastchecker/" target="_blank" class="footer__el">Contrast Checker</a>.</p>
-              </li>
-            </ul>
-          </div>
-          <div class="footer__credits-merci">
-            <h3 class="footer__credits-titre">Remerciements<span> ✶</span></h3>
-            <ul class="footer__credits-el">
-              <li><p>Merci à Hippolyte avec qui j’ai réalisé les photographies de ce projet.</p></li>
-            </ul>
-          </div>
-          <div class="footer__credits_contact">
-            <h3 class="footer__credits-titre">Votre avis<span> ✶</span></h3>
-            <ul class="footer__credits-el">
-              <li><p>Si vous avez des avis ou des questions sur mon portfolio et mes travaux, n’hésitez pas à <a href="mailto:dalsbaekines@gmail.com" class="footer__el">me contacter</a>.</p></li>
-              <li><p>À bientôt!</p></li>
-            </ul>
-          </div>
-        </div>
-        <button class="footer__credits-btn" id="closeCredits">Fermer</button>
+      <div class="footer__follow">
+        <p class="footer__texte">Suivez moi</p>
+        <ul class="footer__socials">
+          <li>
+            <a
+              href="https://www.instagram.com/idk_dwt/"
+              target="_blank"
+              class="footer__el"
+              >Instagram</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://github.com/idkDW"
+              target="_blank"
+              class="footer__el"
+              >Github</a
+            >
+          </li>
+        </ul>
       </div>
-      <small>© Ines Dalsbaek 2024</small>
-    </div>
-  <div class="footer__follow">
-    <p class="footer__texte">Suivez moi</p>
-    <ul class="footer__socials">
-      <li><a href="https://www.instagram.com/idk_dwt/" target="_blank" class="footer__el">Instagram</a></li>
-      <li><a href="https://github.com/idkDW" target="_blank" class="footer__el">Github</a></li>
-    </ul>
-  </div>
-  <div class="overlay hidden"></div>
-</footer>
-
-</body>
+      <div class="overlay hidden"></div>
+    </footer>
+  </body>
 </html>

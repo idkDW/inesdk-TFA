@@ -1,217 +1,457 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-  <title>Rigging</title>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <head>
+    <title>Rigging</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-  <meta name="description" content="">
-  <!-- Meta Partage -->
-  <link rel="shortcut icon" href="assets/images/décoration/iconeok.ico">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="" />
+    <!-- Meta Partage -->
+    <link rel="shortcut icon" href="assets/images/décoration/iconeok.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <link rel="stylesheet" href="../styles/app.css">
-  <script src="../scripts/app.js" defer></script>
+    <link rel="stylesheet" href="../styles/app.css" />
+    <script src="../scripts/app.js" defer></script>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Jura:wght@300..700&display=swap" rel="stylesheet">
-  <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
-</head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jura:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
+  </head>
 
-<body class="projet-body">
-
-  <header class="projets-header">
-    <div class="header__intro">
-      <div class="header__content">
-        <p class="header__texte">portfolio 2024</p>
-        <a href="./index.html" class="header__icone">
-          <img src="../assets/images/contenu/intro/grosnez.svg" alt="dessin de tête de personnage">
-        </a>
+  <body class="projet-body">
+    <header class="projets-header">
+      <div class="header__intro">
+        <div class="header__content">
+          <p class="header__texte">portfolio 2024</p>
+          <a href="./index.html" class="header__icone">
+            <img
+              src="../assets/images/contenu/intro/grosnez.svg"
+              alt="dessin de tête de personnage"
+            />
+          </a>
+        </div>
       </div>
-    </div>
-  </header>
+    </header>
 
-  <div class="main">
-    <section class="travaux">
-      <div class="travaux__top">
-        <h1 class="travaux__titre">rigging <span class="travaux__date">2023</span></h1>
-        <ul class="travaux__skills">
-          <li class="travaux__skills-texte">Dessin digital</li>
-          <li class="travaux__skills-texte">Illustrator</li>
-          <li class="travaux__skills-texte">Sérigraphie</li>
-        </ul>
-
-        <p class="travaux__texte travaux__texte--visible">
-            En essayant un nouveau style de dessin, j’ai réalisé des petits personnages riggés sur Illustrator prêts à l’animation. Bien que je ne les ai pas encore animés, j’ai pu m’en servir avec d’autres techniques telles que la sérigraphie.
-        </p>
-        <p class="travaux__texte travaux__texte--hidden">
-            Ces personnages s’appuyent sur une même base formelle au niveau de la construction du corps, inspirée par différentes références telles que la figure d’Astroboy, les personnages d’animation de Kaiba ou encore l’univers du cartoon.
-        </p>
-        <p class="travaux__texte travaux__texte--hidden">
-            Le dessin à la main m’a permis de partir d’une base de recherches pour définir l’esthétique finale des personnages. Je les ai ensuite redessinés et vectorisés sur Illustrator en ajoutant un squelette pour « rigger » les personnages et potentiellement pouvoir les animer sur After Effects. Je me suis amusée à me servir de ces designs pour appréhender la sérigraphie en créant d’autres personnages sur une même base de corps.
-        </p>
-
-        <button id="showButton" class="travaux__texte-btn show-button">
-          <img class="btn-img" src="assets/images/décoration/arrow-bottom.svg" alt="icône de tête de flèche qui pointe vers le bas.">
-        </button>
-        <button id="hideButton" class="travaux__texte-btn hide-button hidden">
-          <img class="btn-img" src="assets/images/décoration/arrow-top.svg" alt="icône de tête de flèche qui pointe vers le haut.">
-        </button>
-      </div>
-
-      <div class="slider">
-        <div class="travaux__mid">
-          <ul class="slider__list">
-            <li class="slider__el slider__el--show">
-              <img class="slider__img" src="assets/images/pages-projet/rigging/rigg1.jpg" srcset="assets/images/pages-projet/rigging/retina/rigg1@2x.jpg" alt="dessin de deux personnages féminins de face avec une tête de chat, un tourbillon vert et une étoile rose entre les deux.">
-              <p>Création de nouveaux personnages sur une même base.</p>
-            </li>
-            <li class="slider__el">
-              <img class="slider__img" src="assets/images/pages-projet/rigging/lololo.jpg" srcset="assets/images/pages-projet/rigging/retina/lololo@2x.jpg" alt="dessin d'un personnage féminin de face colorisé à côté du même dessin dessiné de manière linéaire.">
-              <p>Personnage féminin colorisé et vectorisé sur Illustrator.</p>
-            </li>
-            <li class="slider__el">
-              <img class="slider__img" src="assets/images/pages-projet/rigging/rigg3.jpg" srcset="assets/images/pages-projet/rigging/retina/rigg3@2x.jpg" alt="dessin d'un personnage masculin de face colorisé à côté du même dessin dessiné de manière linéaire.">
-              <p>Personnage masculin colorisé et vectorisé sur Illustrator.</p>
-            </li>
-            <li class="slider__el">
-              <img class="slider__img" src="assets/images/pages-projet/rigging/rigg5.jpg" srcset="assets/images/pages-projet/rigging/retina/rigg5@2x.jpg" alt="dessins et recherches de design de deux personnages:  corps, têtes, habits, couleurs.">
-              <p>Recherches graphiques pour définir le design des personnages.</p>
-            </li>
-            <li class="slider__el">
-              <img class="slider__img slider__img--grande" src="assets/images/pages-projet/rigging/rigg6.jpg" srcset="assets/images/pages-projet/rigging/retina/rigg6@2x.jpg" alt="dessin linéaire sur un calque d'un personnage féminin avec trois têtes de personnages alignées à côté.">
-              <p>Dessins sur calques pour la sérigraphie.</p>
-            </li>
-            <li class="slider__el">
-              <img class="slider__img slider__img--grande" src="assets/images/pages-projet/rigging/rigg7.jpg" srcset="assets/images/pages-projet/rigging/retina/rigg7@2x.jpg" alt="dessin linéaire sur un calque d'un personnage féminin avec trois têtes de personnages alignées à côté.">
-              <p>Dessins sur calques pour la sérigraphie.</p>
-            </li>
-            <li class="slider__el">
-              <img class="slider__img slider__img--grande" src="assets/images/pages-projet/rigging/rigg8.jpg" srcset="assets/images/pages-projet/rigging/retina/rigg8@2x.jpg" alt="photographie d'une table de sérigraphie rouge avec un dessin linéaire sur calque placé dessus.">
-              <p>Tests du rendu de sérigraphie.</p>
-            </li>
-            <li class="slider__el">
-              <img class="slider__img slider__img--grande" src="assets/images/pages-projet/rigging/rigg9.jpg" srcset="assets/images/pages-projet/rigging/retina/rigg9@2x.jpg" alt="photographie d'un carde de sérigraphie rouge tendu en extérieur avec un dessin linéaire dessus.">
-              <p>Tests du rendu de sérigraphie.</p>
-            </li>
+    <div class="main">
+      <section class="travaux">
+        <div class="travaux__top">
+          <h1 class="travaux__titre">
+            rigging <span class="travaux__date">2023</span>
+          </h1>
+          <ul class="travaux__skills">
+            <li class="travaux__skills-texte">Dessin digital</li>
+            <li class="travaux__skills-texte">Illustrator</li>
+            <li class="travaux__skills-texte">Sérigraphie</li>
           </ul>
+
+          <p class="travaux__texte travaux__texte--visible">
+            En essayant un nouveau style de dessin, j’ai réalisé des petits
+            personnages riggés sur Illustrator prêts à l’animation. Bien que
+            je ne les ai pas encore animés, j’ai pu m’en servir avec d’autres
+            techniques telles que la sérigraphie.
+          </p>
+          <p class="travaux__texte travaux__texte--hidden">
+            Ces personnages s’appuyent sur une même base formelle au niveau
+            de la construction du corps, inspirée par différentes références
+            telles que la figure d’Astroboy, les personnages d’animation
+            de Kaiba ou encore l’univers du cartoon.
+          </p>
+          <p class="travaux__texte travaux__texte--hidden">
+            Le dessin à la main m’a permis de partir d’une base de recherches
+            pour définir l’esthétique finale des personnages. Je les ai ensuite
+            redessinés et vectorisés sur Illustrator en ajoutant un squelette
+            pour « rigger » les personnages et potentiellement pouvoir les
+            animer sur After Effects. Je me suis amusée à me servir de ces
+            designs pour appréhender la sérigraphie en créant d’autres
+            personnages sur une même base de corps.
+          </p>
+
+          <button id="showButton" class="travaux__texte-btn show-button">
+            <img
+              class="btn-img"
+              src="assets/images/décoration/arrow-bottom.svg"
+              alt="icône de tête de flèche qui pointe vers le bas."
+            />
+          </button>
+          <button id="hideButton" class="travaux__texte-btn hide-button hidden">
+            <img
+              class="btn-img"
+              src="assets/images/décoration/arrow-top.svg"
+              alt="icône de tête de flèche qui pointe vers le haut."
+            />
+          </button>
         </div>
 
-        <div class="travaux__bottom">
-          <ul class="slider__images">
-            <li class="slider__images-el slider__images-el--active">
-              <img class="slider__images-img" src="assets/images/pages-projet/rigging/rigg1.jpg" srcset="assets/images/pages-projet/rigging/retina/rigg1@2x.jpg" alt="dessin de deux personnages féminins de face avec une tête de chat, un tourbillon vert et une étoile rose entre les deux.">
-            </li>
-            <li class="slider__images-el">
-              <img class="slider__images-img" src="assets/images/pages-projet/rigging/lololo.jpg" srcset="assets/images/pages-projet/rigging/retina/lololo@2x.jpg" alt="dessin d'un personnage féminin de face colorisé à côté du même dessin dessiné de manière linéaire.">
-            </li>
-            <li class="slider__images-el">
-              <img class="slider__images-img" src="assets/images/pages-projet/rigging/rigg3.jpg" srcset="assets/images/pages-projet/rigging/retina/rigg3@2x.jpg" alt="dessin d'un personnage masculin de face colorisé à côté du même dessin dessiné de manière linéaire.">
-            </li>
-            <li class="slider__images-el">
-              <img class="slider__images-img" src="assets/images/pages-projet/rigging/rigg5.jpg" srcset="assets/images/pages-projet/rigging/retina/rigg5@2x.jpg" alt="dessins et recherches de design de deux personnages:  corps, têtes, habits, couleurs.">
-            </li>
-            <li class="slider__images-el">
-              <img class="slider__images-img slider__img--grande" src="assets/images/pages-projet/rigging/rigg6.jpg" srcset="assets/images/pages-projet/rigging/retina/rigg6@2x.jpg" alt="dessin linéaire sur un calque d'un personnage féminin avec trois têtes de personnages alignées à côté.">
-            </li>
-            <li class="slider__images-el">
-              <img class="slider__images-img slider__img--grande" src="assets/images/pages-projet/rigging/rigg7.jpg" srcset="assets/images/pages-projet/rigging/retina/rigg7@2x.jpg" alt="dessin linéaire sur un calque d'un personnage féminin avec trois têtes de personnages alignées à côté.">
-            </li>
-            <li class="slider__images-el">
-              <img class="slider__images-img slider__img--grande" src="assets/images/pages-projet/rigging/rigg8.jpg" srcset="assets/images/pages-projet/rigging/retina/rigg8@2x.jpg" alt="photographie d'une table de sérigraphie rouge avec un dessin linéaire sur calque placé dessus.">
-            </li>
-            <li class="slider__images-el">
-              <img class="slider__images-img slider__img--grande" src="assets/images/pages-projet/rigging/rigg9.jpg" srcset="assets/images/pages-projet/rigging/retina/rigg9@2x.jpg" alt="photographie d'un carde de sérigraphie rouge tendu en extérieur avec un dessin linéaire dessus.">
-            </li>
-          </ul>
+        <div class="slider">
+          <div class="travaux__mid">
+            <ul class="slider__list">
+              <li class="slider__el slider__el--show">
+                <img
+                  class="slider__img"
+                  src="assets/images/pages-projet/rigging/rigg1.jpg"
+                  srcset="
+                    assets/images/pages-projet/rigging/retina/rigg1@2x.jpg
+                  "
+                  alt="dessin de deux personnages féminins de face avec une tête de chat, un tourbillon vert et une étoile rose entre les deux."
+                />
+                <p>Création de nouveaux personnages sur une même base.</p>
+              </li>
+              <li class="slider__el">
+                <img
+                  class="slider__img"
+                  src="assets/images/pages-projet/rigging/lololo.jpg"
+                  srcset="
+                    assets/images/pages-projet/rigging/retina/lololo@2x.jpg
+                  "
+                  alt="dessin d'un personnage féminin de face colorisé à côté du même dessin dessiné de manière linéaire."
+                />
+                <p>Personnage féminin colorisé et vectorisé sur Illustrator.</p>
+              </li>
+              <li class="slider__el">
+                <img
+                  class="slider__img"
+                  src="assets/images/pages-projet/rigging/rigg3.jpg"
+                  srcset="
+                    assets/images/pages-projet/rigging/retina/rigg3@2x.jpg
+                  "
+                  alt="dessin d'un personnage masculin de face colorisé à côté du même dessin dessiné de manière linéaire."
+                />
+                <p>
+                  Personnage masculin colorisé et vectorisé sur Illustrator.
+                </p>
+              </li>
+              <li class="slider__el">
+                <img
+                  class="slider__img"
+                  src="assets/images/pages-projet/rigging/rigg5.jpg"
+                  srcset="
+                    assets/images/pages-projet/rigging/retina/rigg5@2x.jpg
+                  "
+                  alt="dessins et recherches de design de deux personnages:  corps, têtes, habits, couleurs."
+                />
+                <p>
+                  Recherches graphiques pour définir le design des personnages.
+                </p>
+              </li>
+              <li class="slider__el">
+                <img
+                  class="slider__img slider__img--grande"
+                  src="assets/images/pages-projet/rigging/rigg6.jpg"
+                  srcset="
+                    assets/images/pages-projet/rigging/retina/rigg6@2x.jpg
+                  "
+                  alt="dessin linéaire sur un calque d'un personnage féminin avec trois têtes de personnages alignées à côté."
+                />
+                <p>Dessins sur calques pour la sérigraphie.</p>
+              </li>
+              <li class="slider__el">
+                <img
+                  class="slider__img slider__img--grande"
+                  src="assets/images/pages-projet/rigging/rigg7.jpg"
+                  srcset="
+                    assets/images/pages-projet/rigging/retina/rigg7@2x.jpg
+                  "
+                  alt="dessin linéaire sur un calque d'un personnage féminin avec trois têtes de personnages alignées à côté."
+                />
+                <p>Dessins sur calques pour la sérigraphie.</p>
+              </li>
+              <li class="slider__el">
+                <img
+                  class="slider__img slider__img--grande"
+                  src="assets/images/pages-projet/rigging/rigg8.jpg"
+                  srcset="
+                    assets/images/pages-projet/rigging/retina/rigg8@2x.jpg
+                  "
+                  alt="photographie d'une table de sérigraphie rouge avec un dessin linéaire sur calque placé dessus."
+                />
+                <p>Tests du rendu de sérigraphie.</p>
+              </li>
+              <li class="slider__el">
+                <img
+                  class="slider__img slider__img--grande"
+                  src="assets/images/pages-projet/rigging/rigg9.jpg"
+                  srcset="
+                    assets/images/pages-projet/rigging/retina/rigg9@2x.jpg
+                  "
+                  alt="photographie d'un carde de sérigraphie rouge tendu en extérieur avec un dessin linéaire dessus."
+                />
+                <p>Tests du rendu de sérigraphie.</p>
+              </li>
+            </ul>
+          </div>
 
-          <ul class="slider__controls">
-            <li class="slider__btn">
-              <button class="btn__prev">
-                <img class="btn-img" src="assets/images/décoration/slider-left.svg" alt="icône de tête de flèche qui pointe vers la gauche.">
-              </button>
-            </li>
-            <li class="slider__indicateurs-wrapper">
-              <ul class="slider__indicateurs">
-                <li class="slider__indicateurs-el slider__indicateurs-el--active"></li>
-                <li class="slider__indicateurs-el"></li>
-                <li class="slider__indicateurs-el"></li>
-                <li class="slider__indicateurs-el"></li>
-                <li class="slider__indicateurs-el"></li>
-                <li class="slider__indicateurs-el"></li>
-                <li class="slider__indicateurs-el"></li>
-                <li class="slider__indicateurs-el"></li>
+          <div class="travaux__bottom">
+            <ul class="slider__images">
+              <li class="slider__images-el slider__images-el--active">
+                <img
+                  class="slider__images-img"
+                  src="assets/images/pages-projet/rigging/rigg1.jpg"
+                  srcset="
+                    assets/images/pages-projet/rigging/retina/rigg1@2x.jpg
+                  "
+                  alt="dessin de deux personnages féminins de face avec une tête de chat, un tourbillon vert et une étoile rose entre les deux."
+                />
+              </li>
+              <li class="slider__images-el">
+                <img
+                  class="slider__images-img"
+                  src="assets/images/pages-projet/rigging/lololo.jpg"
+                  srcset="
+                    assets/images/pages-projet/rigging/retina/lololo@2x.jpg
+                  "
+                  alt="dessin d'un personnage féminin de face colorisé à côté du même dessin dessiné de manière linéaire."
+                />
+              </li>
+              <li class="slider__images-el">
+                <img
+                  class="slider__images-img"
+                  src="assets/images/pages-projet/rigging/rigg3.jpg"
+                  srcset="
+                    assets/images/pages-projet/rigging/retina/rigg3@2x.jpg
+                  "
+                  alt="dessin d'un personnage masculin de face colorisé à côté du même dessin dessiné de manière linéaire."
+                />
+              </li>
+              <li class="slider__images-el">
+                <img
+                  class="slider__images-img"
+                  src="assets/images/pages-projet/rigging/rigg5.jpg"
+                  srcset="
+                    assets/images/pages-projet/rigging/retina/rigg5@2x.jpg
+                  "
+                  alt="dessins et recherches de design de deux personnages:  corps, têtes, habits, couleurs."
+                />
+              </li>
+              <li class="slider__images-el">
+                <img
+                  class="slider__images-img slider__img--grande"
+                  src="assets/images/pages-projet/rigging/rigg6.jpg"
+                  srcset="
+                    assets/images/pages-projet/rigging/retina/rigg6@2x.jpg
+                  "
+                  alt="dessin linéaire sur un calque d'un personnage féminin avec trois têtes de personnages alignées à côté."
+                />
+              </li>
+              <li class="slider__images-el">
+                <img
+                  class="slider__images-img slider__img--grande"
+                  src="assets/images/pages-projet/rigging/rigg7.jpg"
+                  srcset="
+                    assets/images/pages-projet/rigging/retina/rigg7@2x.jpg
+                  "
+                  alt="dessin linéaire sur un calque d'un personnage féminin avec trois têtes de personnages alignées à côté."
+                />
+              </li>
+              <li class="slider__images-el">
+                <img
+                  class="slider__images-img slider__img--grande"
+                  src="assets/images/pages-projet/rigging/rigg8.jpg"
+                  srcset="
+                    assets/images/pages-projet/rigging/retina/rigg8@2x.jpg
+                  "
+                  alt="photographie d'une table de sérigraphie rouge avec un dessin linéaire sur calque placé dessus."
+                />
+              </li>
+              <li class="slider__images-el">
+                <img
+                  class="slider__images-img slider__img--grande"
+                  src="assets/images/pages-projet/rigging/rigg9.jpg"
+                  srcset="
+                    assets/images/pages-projet/rigging/retina/rigg9@2x.jpg
+                  "
+                  alt="photographie d'un carde de sérigraphie rouge tendu en extérieur avec un dessin linéaire dessus."
+                />
+              </li>
+            </ul>
+
+            <ul class="slider__controls">
+              <li class="slider__btn">
+                <button class="btn__prev">
+                  <img
+                    class="btn-img"
+                    src="assets/images/décoration/slider-left.svg"
+                    alt="icône de tête de flèche qui pointe vers la gauche."
+                  />
+                </button>
+              </li>
+              <li class="slider__indicateurs-wrapper">
+                <ul class="slider__indicateurs">
+                  <li
+                    class="slider__indicateurs-el slider__indicateurs-el--active"
+                  ></li>
+                  <li class="slider__indicateurs-el"></li>
+                  <li class="slider__indicateurs-el"></li>
+                  <li class="slider__indicateurs-el"></li>
+                  <li class="slider__indicateurs-el"></li>
+                  <li class="slider__indicateurs-el"></li>
+                  <li class="slider__indicateurs-el"></li>
+                  <li class="slider__indicateurs-el"></li>
+                </ul>
+              </li>
+              <li class="slider__btn">
+                <button class="btn__next">
+                  <img
+                    class="btn-img"
+                    src="assets/images/décoration/slider-right.svg"
+                    alt="icône de tête de flèche qui pointe vers la droite."
+                  />
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <footer class="footer">
+      <div class="footer__contact">
+        <p class="footer__texte">Contactez moi</p>
+        <a href="mailto:dalsbaekines@gmail.com" class="footer__el"
+          >dalsbaekines@gmail.com</a
+        >
+      </div>
+      <div class="footer__centre">
+        <a href="#" class="footer__el">Crédits</a>
+        <div class="footer__credits hidden">
+          <div class="footer__credits-content">
+            <div class="footer__credits-services">
+              <h3 class="footer__credits-titre">Services<span> ✶</span></h3>
+              <ul class="footer__credits-el">
+                <li>
+                  <p>
+                    Fonts utilisées:
+                    <a
+                      href="https://www.fontshare.com/fonts/satoshi"
+                      target="_blank"
+                      class="footer__el"
+                      >Satoshi</a
+                    >,
+                    <a
+                      href="https://www.fontshare.com/?q=Clash%20Display"
+                      target="_blank"
+                      class="footer__el"
+                      >Clash Display</a
+                    >,
+                    <a
+                      href="https://fonts.google.com/specimen/Spline+Sans+Mono"
+                      target="_blank"
+                      class="footer__el"
+                      >Spline Sans Mono</a
+                    >.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    Pages créées sur
+                    <a
+                      href="https://www.figma.com/fr-fr/"
+                      target="_blank"
+                      class="footer__el"
+                      >Figma</a
+                    >
+                    et développées sur
+                    <a
+                      href="https://code.visualstudio.com/"
+                      target="_blank"
+                      class="footer__el"
+                      >Visual Studio Code</a
+                    >.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    Aide en ligne:
+                    <a
+                      href="https://chatgpt.com/auth/login"
+                      target="_blank"
+                      class="footer__el"
+                      >ChatGPT</a
+                    >,
+                    <a
+                      href="https://developer.mozilla.org/fr/"
+                      target="_blank"
+                      class="footer__el"
+                      >MDN</a
+                    >,
+                    <a
+                      href="https://gsap.com/"
+                      target="_blank"
+                      class="footer__el"
+                      >GSAP</a
+                    >,
+                    <a
+                      href="https://validator.w3.org/"
+                      target="_blank"
+                      class="footer__el"
+                      >W3 °C Validator</a
+                    >,
+                    <a
+                      href="https://webaim.org/resources/contrastchecker/"
+                      target="_blank"
+                      class="footer__el"
+                      >Contrast Checker</a
+                    >.
+                  </p>
+                </li>
               </ul>
-            </li>
-            <li class="slider__btn">
-              <button class="btn__next">
-                <img class="btn-img" src="assets/images/décoration/slider-right.svg" alt="icône de tête de flèche qui pointe vers la droite.">
-              </button>
-            </li>
-          </ul>
+            </div>
+            <div class="footer__credits-merci">
+              <h3 class="footer__credits-titre">
+                Remerciements<span> ✶</span>
+              </h3>
+              <ul class="footer__credits-el">
+                <li>
+                  Merci à Chloé pour son aide lors des essais en sérigraphie.
+                </li>
+              </ul>
+            </div>
+            <div class="footer__credits_contact">
+              <h3 class="footer__credits-titre">Votre avis<span> ✶</span></h3>
+              <ul class="footer__credits-el">
+                <li>
+                  <p>
+                    Si vous avez des avis ou des questions sur mon portfolio
+                    et mes travaux, n’hésitez pas à
+                    <a href="mailto:dalsbaekines@gmail.com" class="footer__el"
+                      >me contacter</a
+                    >.
+                  </p>
+                </li>
+                <li><p>À bientôt!</p></li>
+              </ul>
+            </div>
+          </div>
+          <button class="footer__credits-btn" id="closeCredits">Fermer</button>
         </div>
+        <small>© Ines Dalsbaek 2024</small>
       </div>
-    </section>
-  </div>
-
-  <footer class="footer">
-    <div class="footer__contact">
-      <p class="footer__texte">Contactez moi</p>
-      <a href="mailto:dalsbaekines@gmail.com" class="footer__el">dalsbaekines@gmail.com</a>
-    </div>
-    <div class="footer__centre">
-      <a href="#" class="footer__el">Crédits</a>
-      <div class="footer__credits hidden">
-        <div class="footer__credits-content">
-          <div class="footer__credits-services">
-            <h3 class="footer__credits-titre">Services<span> ✶</span></h3>
-            <ul class="footer__credits-el">
-              <li>
-                <p>Fonts utilisées: <a href="https://www.fontshare.com/fonts/satoshi" target="_blank" class="footer__el">Satoshi</a>,
-                <a href="https://www.fontshare.com/?q=Clash%20Display" target="_blank" class="footer__el">Clash Display</a>,
-                <a href="https://fonts.google.com/specimen/Spline+Sans+Mono" target="_blank" class="footer__el">Spline Sans Mono</a>.</p>
-              </li>
-              <li>
-                <p>Pages créées sur <a href="https://www.figma.com/fr-fr/" target="_blank" class="footer__el">Figma</a>
-                et développées sur <a href="https://code.visualstudio.com/" target="_blank" class="footer__el">Visual Studio Code</a>.</p>
-              </li>
-              <li>
-                <p>Aide en ligne: <a href="https://chatgpt.com/auth/login" target="_blank" class="footer__el">ChatGPT</a>,
-                <a href="https://developer.mozilla.org/fr/" target="_blank" class="footer__el">MDN</a>,
-                <a href="https://gsap.com/" target="_blank" class="footer__el">GSAP</a>,
-                <a href="https://validator.w3.org/" target="_blank" class="footer__el">W3 °C Validator</a>,
-                <a href="https://webaim.org/resources/contrastchecker/" target="_blank" class="footer__el">Contrast Checker</a>.</p>
-              </li>
-            </ul>
-          </div>
-          <div class="footer__credits-merci">
-            <h3 class="footer__credits-titre">Remerciements<span> ✶</span></h3>
-            <ul class="footer__credits-el">
-              <li>Merci à Chloé pour son aide lors des essais en sérigraphie.</li>
-            </ul>
-          </div>
-          <div class="footer__credits_contact">
-            <h3 class="footer__credits-titre">Votre avis<span> ✶</span></h3>
-            <ul class="footer__credits-el">
-              <li><p>Si vous avez des avis ou des questions sur mon portfolio et mes travaux, n’hésitez pas à <a href="mailto:dalsbaekines@gmail.com" class="footer__el">me contacter</a>.</p></li>
-              <li><p>À bientôt!</p></li>
-            </ul>
-          </div>
-        </div>
-        <button class="footer__credits-btn" id="closeCredits">Fermer</button>
+      <div class="footer__follow">
+        <p class="footer__texte">Suivez moi</p>
+        <ul class="footer__socials">
+          <li>
+            <a
+              href="https://www.instagram.com/idk_dwt/"
+              target="_blank"
+              class="footer__el"
+              >Instagram</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://github.com/idkDW"
+              target="_blank"
+              class="footer__el"
+              >Github</a
+            >
+          </li>
+        </ul>
       </div>
-      <small>© Ines Dalsbaek 2024</small>
-    </div>
-  <div class="footer__follow">
-    <p class="footer__texte">Suivez moi</p>
-    <ul class="footer__socials">
-      <li><a href="https://www.instagram.com/idk_dwt/" target="_blank" class="footer__el">Instagram</a></li>
-      <li><a href="https://github.com/idkDW" target="_blank" class="footer__el">Github</a></li>
-    </ul>
-  </div>
-  <div class="overlay hidden"></div>
-</footer>
-
-</body>
+      <div class="overlay hidden"></div>
+    </footer>
+  </body>
 </html>

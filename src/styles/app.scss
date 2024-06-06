@@ -1,18 +1,16 @@
-@import 'utils/variables';
-@import 'components/header';
-@import 'components/footer';
-@import 'components/sections';
-@import 'components/font';
-@import 'components/projets';
-
+@import "utils/variables";
+@import "components/header";
+@import "components/footer";
+@import "components/sections";
+@import "components/font";
+@import "components/projets";
 
 html {
   scroll-behavior: smooth;
-  }
-
+}
 
 body {
-  background-color: #FAFAF9;
+  background-color: #fafaf9;
   font-family: "Satoshi", sans-serif;
   color: #333;
   font-size: 16px;
@@ -20,4 +18,3 @@ body {
   margin: 0;
   padding: 0;
 }
-

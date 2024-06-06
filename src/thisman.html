@@ -1,198 +1,424 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-  <title>This man</title>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <head>
+    <title>This man</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-  <meta name="description" content="">
-  <!-- Meta Partage -->
-  <link rel="shortcut icon" href="assets/images/décoration/iconeok.ico">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="" />
+    <!-- Meta Partage -->
+    <link rel="shortcut icon" href="assets/images/décoration/iconeok.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <link rel="stylesheet" href="../styles/app.css">
-  <script src="../scripts/app.js" defer></script>
+    <link rel="stylesheet" href="../styles/app.css" />
+    <script src="../scripts/app.js" defer></script>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Jura:wght@300..700&display=swap" rel="stylesheet">
-  <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
-</head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jura:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
+  </head>
 
-<body class="projet-body">
-
-  <header class="projets-header">
-    <div class="header__intro">
-      <div class="header__content">
-        <p class="header__texte">portfolio 2024</p>
-        <a href="./index.html" class="header__icone">
-          <img src="../assets/images/contenu/intro/grosnez.svg" alt="dessin de tête de personnage">
-        </a>
+  <body class="projet-body">
+    <header class="projets-header">
+      <div class="header__intro">
+        <div class="header__content">
+          <p class="header__texte">portfolio 2024</p>
+          <a href="./index.html" class="header__icone">
+            <img
+              src="../assets/images/contenu/intro/grosnez.svg"
+              alt="dessin de tête de personnage"
+            />
+          </a>
+        </div>
       </div>
-    </div>
-  </header>
+    </header>
 
-  <div class="main">
-    <section class="travaux">
-      <div class="travaux__top">
-        <h1 class="travaux__titre">this man <span class="travaux__date">2024</span></h1>
-        <ul class="travaux__skills">
-          <li class="travaux__skills-texte">HTML</li>
-          <li class="travaux__skills-texte">CSS</li>
-          <li class="travaux__skills-texte">JavaScript</li>
-        </ul>
-
-        <p class="travaux__texte travaux__texte--visible">
-          Avez-vous déjà vu cet homme? L’avez-vous vu en rêve? Certaines personnes disent l’avoir vu dans leurs rêves. Beaucoup de gens en réalité. Aidez-nous à reconstituer son identité en apportant votre témoignage à cette enquête.
-        </p>
-        <p class="travaux__texte travaux__texte--hidden">
-            L’histoire de « This man » est connue comme une légende urbaine, une creepypasta qui serait apparue sur Internet avec l’image de cet homme étrange accompagnée de témoignages de personnes assurant l’avoir vu dans leurs rêves. Au fur et à mesure du temps, les témoignages sont devenus de plus en plus nombreux, provenant de divers endroits de la planète avec comme point commun ce visage apparaissant dans les rêves. Mais qu’en est-il réellement? Ces témoignages sont-ils le produit d’un phénomène psychologique poussant les gens à rêver de cet homme, ou alors sont-ils tout simplement faux? Et si This man existait bel et bien, visitant les rêves et amplifiant les mystère autour de lui?
-        </p>
-        <p class="travaux__texte travaux__texte--hidden">
-            J’ai réalisé ce site web avec <a href="https://salwa-bachetti.be/" target="_blank" class="footer__el">Salwa Bachetti</a>. Nous nous sommes intéressées à l’histoire de This man, très présente et sourcée de témoignages et visuels sur Internet. Nous avons voulu créer une petite expérience interactive avec une esthétque étrange et une immersion des visiteur.euses à travers un storytelling. Ce site est inspiré du <a href="https://www.thisman.org/" target="_blank" class="footer__el">site web original</a> de l’histoire de This man.
-        </p>
-
-        <button id="showButton" class="travaux__texte-btn show-button">
-          <img class="btn-img" src="assets/images/décoration/arrow-bottom.svg" alt="icône de tête de flèche qui pointe vers le bas.">
-        </button>
-        <button id="hideButton" class="travaux__texte-btn hide-button hidden">
-          <img class="btn-img" src="assets/images/décoration/arrow-top.svg" alt="icône de tête de flèche qui pointe vers le haut.">
-        </button>
-      </div>
-
-      <div class="slider">
-        <div class="travaux__mid">
-          <ul class="slider__list">
-            <li class="slider__el slider__el--show">
-              <img class="slider__img slider__img--grande" src="assets/images/pages-projet/thisman/thisman1.jpg" srcset="assets/images/pages-projet/thisman/retina/thisman1@2x.jpg" alt="photographie en noir et blanc du visage d'un homme étrange.">
-              <p>Avez-vous déjà rêvé de cet homme?</p>
-            </li>
-            <li class="slider__el">
-              <img class="slider__img" src="assets/images/pages-projet/thisman/thisman2.jpg" srcset="assets/images/pages-projet/thisman/retina/thisman2@2x.jpg" alt="capture d'écran du site web This Man sur la page de dessin avec un visage dessiné de manière stylisée et simpliste.">
-              <p>Capture d’écran du paint du site This man.</p>
-            </li>
-            <li class="slider__el">
-              <img class="slider__img" src="assets/images/pages-projet/thisman/thisman3.jpg" srcset="assets/images/pages-projet/thisman/retina/thisman3@2x.jpg" alt="capture d'écran du site web This Man sur une page de rapport avec des informations textuelles, dessinées et imagées.">
-              <p>Capture d’écran du rapport du site This man.</p>
-            </li>
-            <li class="slider__el">
-              <img class="slider__img" src="assets/images/pages-projet/thisman/thisman4.jpg" srcset="assets/images/pages-projet/thisman/retina/thisman4@2x.jpg" alt="capture d'écran du site web This Man sur une page d'informations avec du contenu texte sur la gauche et une phtographie d'un homme étrange en noir et blanc sur la droite.">
-              <p>Le site This man approuve l’existence de ce dernier.</p>
-            </li>
-            <li class="slider__el">
-              <img class="slider__img slider__img--grande" src="assets/images/pages-projet/thisman/thisman5.jpg" srcset="assets/images/pages-projet/thisman/retina/thisman5@2x.jpg" alt="schéma présentant des petites images reliées à des textes pointants vers la photographie d'un homme étrange en noir et blanc.">
-              <p>Schéma de l’enquête à la recherche de This man.</p>
-            </li>
+    <div class="main">
+      <section class="travaux">
+        <div class="travaux__top">
+          <h1 class="travaux__titre">
+            this man <span class="travaux__date">2024</span>
+          </h1>
+          <ul class="travaux__skills">
+            <li class="travaux__skills-texte">HTML</li>
+            <li class="travaux__skills-texte">CSS</li>
+            <li class="travaux__skills-texte">JavaScript</li>
           </ul>
+
+          <p class="travaux__texte travaux__texte--visible">
+            Avez-vous déjà vu cet homme? L’avez-vous vu en rêve? Certaines
+            personnes disent l’avoir vu dans leurs rêves. Beaucoup de gens
+            en réalité. Aidez-nous à reconstituer son identité en apportant
+            votre témoignage à cette enquête.
+          </p>
+          <p class="travaux__texte travaux__texte--hidden">
+            L’histoire de « This man » est connue comme une légende urbaine, une
+            creepypasta qui serait apparue sur Internet avec l’image de cet
+            homme étrange accompagnée de témoignages de personnes assurant
+            l’avoir vu dans leurs rêves. Au fur et à mesure du temps, les
+            témoignages sont devenus de plus en plus nombreux, provenant
+            de divers endroits de la planète avec comme point commun ce visage
+            apparaissant dans les rêves. Mais qu’en est-il réellement? Ces
+            témoignages sont-ils le produit d’un phénomène psychologique
+            poussant les gens à rêver de cet homme, ou alors sont-ils tout
+            simplement faux? Et si This man existait bel et bien, visitant les
+            rêves et amplifiant les mystère autour de lui?
+          </p>
+          <p class="travaux__texte travaux__texte--hidden">
+            J’ai réalisé ce site web avec
+            <a
+              href="https://salwa-bachetti.be/"
+              target="_blank"
+              class="footer__el"
+              >Salwa Bachetti</a
+            >. Nous nous sommes intéressées à l’histoire de This man, très
+            présente et sourcée de témoignages et visuels sur Internet. Nous
+            avons voulu créer une petite expérience interactive avec une
+            esthétque étrange et une immersion des visiteur.euses à travers
+            un storytelling. Ce site est inspiré du
+            <a
+              href="https://www.thisman.org/"
+              target="_blank"
+              class="footer__el"
+              >site web original</a
+            >
+            de l’histoire de This man.
+          </p>
+
+          <button id="showButton" class="travaux__texte-btn show-button">
+            <img
+              class="btn-img"
+              src="assets/images/décoration/arrow-bottom.svg"
+              alt="icône de tête de flèche qui pointe vers le bas."
+            />
+          </button>
+          <button id="hideButton" class="travaux__texte-btn hide-button hidden">
+            <img
+              class="btn-img"
+              src="assets/images/décoration/arrow-top.svg"
+              alt="icône de tête de flèche qui pointe vers le haut."
+            />
+          </button>
         </div>
 
-        <div class="travaux__bottom">
-          <ul class="slider__images">
-            <li class="slider__images-el slider__images-el--active">
-              <img class="slider__images-img" src="assets/images/pages-projet/thisman/thisman1.jpg" srcset="assets/images/pages-projet/thisman/retina/thisman1@2x.jpg" alt="photographie en noir et blanc du visage d'un homme étrange.">
-            </li>
-            <li class="slider__images-el">
-              <img class="slider__images-img" src="assets/images/pages-projet/thisman/thisman2.jpg" srcset="assets/images/pages-projet/thisman/retina/thisman2@2x.jpg" alt="capture d'écran du site web Thi sMan sur la page de dessin avec un visage dessiné de manière stylisée et simpliste.">
-            </li>
-            <li class="slider__images-el">
-              <img class="slider__images-img" src="assets/images/pages-projet/thisman/thisman3.jpg" srcset="assets/images/pages-projet/thisman/retina/thisman3@2x.jpg" alt="capture d'écran du site web This Man sur une page de rapport avec des informations textuelles, dessinées et imagées.">
-            </li>
-            <li class="slider__images-el">
-              <img class="slider__images-img" src="assets/images/pages-projet/thisman/thisman4.jpg" srcset="assets/images/pages-projet/thisman/retina/thisman4@2x.jpg" alt="capture d'écran du site web This Man sur une page d'informations avec du contenu texte sur la gauche et une phtographie d'un homme étrange en noir et blanc sur la droite.">
-            </li>
-            <li class="slider__images-el">
-              <img class="slider__images-img" src="assets/images/pages-projet/thisman/thisman5.jpg" srcset="assets/images/pages-projet/thisman/retina/thisman5@2x.jpg" alt="schéma présentant des petites images reliées à des textes pointants vers la photographie d'un homme étrange en noir et blanc.">
-            </li>
-          </ul>
+        <div class="slider">
+          <div class="travaux__mid">
+            <ul class="slider__list">
+              <li class="slider__el slider__el--show">
+                <img
+                  class="slider__img slider__img--grande"
+                  src="assets/images/pages-projet/thisman/thisman1.jpg"
+                  srcset="
+                    assets/images/pages-projet/thisman/retina/thisman1@2x.jpg
+                  "
+                  alt="photographie en noir et blanc du visage d'un homme étrange."
+                />
+                <p>Avez-vous déjà rêvé de cet homme?</p>
+              </li>
+              <li class="slider__el">
+                <img
+                  class="slider__img"
+                  src="assets/images/pages-projet/thisman/thisman2.jpg"
+                  srcset="
+                    assets/images/pages-projet/thisman/retina/thisman2@2x.jpg
+                  "
+                  alt="capture d'écran du site web This Man sur la page de dessin avec un visage dessiné de manière stylisée et simpliste."
+                />
+                <p>Capture d’écran du paint du site This man.</p>
+              </li>
+              <li class="slider__el">
+                <img
+                  class="slider__img"
+                  src="assets/images/pages-projet/thisman/thisman3.jpg"
+                  srcset="
+                    assets/images/pages-projet/thisman/retina/thisman3@2x.jpg
+                  "
+                  alt="capture d'écran du site web This Man sur une page de rapport avec des informations textuelles, dessinées et imagées."
+                />
+                <p>Capture d’écran du rapport du site This man.</p>
+              </li>
+              <li class="slider__el">
+                <img
+                  class="slider__img"
+                  src="assets/images/pages-projet/thisman/thisman4.jpg"
+                  srcset="
+                    assets/images/pages-projet/thisman/retina/thisman4@2x.jpg
+                  "
+                  alt="capture d'écran du site web This Man sur une page d'informations avec du contenu texte sur la gauche et une phtographie d'un homme étrange en noir et blanc sur la droite."
+                />
+                <p>Le site This man approuve l’existence de ce dernier.</p>
+              </li>
+              <li class="slider__el">
+                <img
+                  class="slider__img slider__img--grande"
+                  src="assets/images/pages-projet/thisman/thisman5.jpg"
+                  srcset="
+                    assets/images/pages-projet/thisman/retina/thisman5@2x.jpg
+                  "
+                  alt="schéma présentant des petites images reliées à des textes pointants vers la photographie d'un homme étrange en noir et blanc."
+                />
+                <p>Schéma de l’enquête à la recherche de This man.</p>
+              </li>
+            </ul>
+          </div>
 
-          <ul class="slider__controls">
-            <li class="slider__btn">
-              <button class="btn__prev">
-                <img class="btn-img" src="assets/images/décoration/slider-left.svg" alt="icône de tête de flèche qui pointe vers la gauche.">
-              </button>
-            </li>
-            <li class="slider__indicateurs-wrapper">
-              <ul class="slider__indicateurs">
-                <li class="slider__indicateurs-el slider__indicateurs-el--active"></li>
-                <li class="slider__indicateurs-el"></li>
-                <li class="slider__indicateurs-el"></li>
-                <li class="slider__indicateurs-el"></li>
-                <li class="slider__indicateurs-el"></li>
+          <div class="travaux__bottom">
+            <ul class="slider__images">
+              <li class="slider__images-el slider__images-el--active">
+                <img
+                  class="slider__images-img"
+                  src="assets/images/pages-projet/thisman/thisman1.jpg"
+                  srcset="
+                    assets/images/pages-projet/thisman/retina/thisman1@2x.jpg
+                  "
+                  alt="photographie en noir et blanc du visage d'un homme étrange."
+                />
+              </li>
+              <li class="slider__images-el">
+                <img
+                  class="slider__images-img"
+                  src="assets/images/pages-projet/thisman/thisman2.jpg"
+                  srcset="
+                    assets/images/pages-projet/thisman/retina/thisman2@2x.jpg
+                  "
+                  alt="capture d'écran du site web Thi sMan sur la page de dessin avec un visage dessiné de manière stylisée et simpliste."
+                />
+              </li>
+              <li class="slider__images-el">
+                <img
+                  class="slider__images-img"
+                  src="assets/images/pages-projet/thisman/thisman3.jpg"
+                  srcset="
+                    assets/images/pages-projet/thisman/retina/thisman3@2x.jpg
+                  "
+                  alt="capture d'écran du site web This Man sur une page de rapport avec des informations textuelles, dessinées et imagées."
+                />
+              </li>
+              <li class="slider__images-el">
+                <img
+                  class="slider__images-img"
+                  src="assets/images/pages-projet/thisman/thisman4.jpg"
+                  srcset="
+                    assets/images/pages-projet/thisman/retina/thisman4@2x.jpg
+                  "
+                  alt="capture d'écran du site web This Man sur une page d'informations avec du contenu texte sur la gauche et une phtographie d'un homme étrange en noir et blanc sur la droite."
+                />
+              </li>
+              <li class="slider__images-el">
+                <img
+                  class="slider__images-img"
+                  src="assets/images/pages-projet/thisman/thisman5.jpg"
+                  srcset="
+                    assets/images/pages-projet/thisman/retina/thisman5@2x.jpg
+                  "
+                  alt="schéma présentant des petites images reliées à des textes pointants vers la photographie d'un homme étrange en noir et blanc."
+                />
+              </li>
+            </ul>
+
+            <ul class="slider__controls">
+              <li class="slider__btn">
+                <button class="btn__prev">
+                  <img
+                    class="btn-img"
+                    src="assets/images/décoration/slider-left.svg"
+                    alt="icône de tête de flèche qui pointe vers la gauche."
+                  />
+                </button>
+              </li>
+              <li class="slider__indicateurs-wrapper">
+                <ul class="slider__indicateurs">
+                  <li
+                    class="slider__indicateurs-el slider__indicateurs-el--active"
+                  ></li>
+                  <li class="slider__indicateurs-el"></li>
+                  <li class="slider__indicateurs-el"></li>
+                  <li class="slider__indicateurs-el"></li>
+                  <li class="slider__indicateurs-el"></li>
+                </ul>
+              </li>
+              <li class="slider__btn">
+                <button class="btn__next">
+                  <img
+                    class="btn-img"
+                    src="assets/images/décoration/slider-right.svg"
+                    alt="icône de tête de flèche qui pointe vers la droite."
+                  />
+                </button>
+              </li>
+            </ul>
+            <ul class="slider__acces">
+              <li class="slider__acces-list">
+                <a
+                  href="https://ines-dalsbaek.be/projets/readimade/"
+                  target="_blank"
+                  class="slider__acces-el"
+                  >Accéder au projet</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <footer class="footer">
+      <div class="footer__contact">
+        <p class="footer__texte">Contactez moi</p>
+        <a href="mailto:dalsbaekines@gmail.com" class="footer__el"
+          >dalsbaekines@gmail.com</a
+        >
+      </div>
+      <div class="footer__centre">
+        <a href="#" class="footer__el">Crédits</a>
+        <div class="footer__credits hidden">
+          <div class="footer__credits-content">
+            <div class="footer__credits-services">
+              <h3 class="footer__credits-titre">Services<span> ✶</span></h3>
+              <ul class="footer__credits-el">
+                <li>
+                  <p>
+                    Fonts utilisées:
+                    <a
+                      href="https://www.fontshare.com/fonts/satoshi"
+                      target="_blank"
+                      class="footer__el"
+                      >Satoshi</a
+                    >,
+                    <a
+                      href="https://www.fontshare.com/?q=Clash%20Display"
+                      target="_blank"
+                      class="footer__el"
+                      >Clash Display</a
+                    >,
+                    <a
+                      href="https://fonts.google.com/specimen/Spline+Sans+Mono"
+                      target="_blank"
+                      class="footer__el"
+                      >Spline Sans Mono</a
+                    >.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    Pages créées sur
+                    <a
+                      href="https://www.figma.com/fr-fr/"
+                      target="_blank"
+                      class="footer__el"
+                      >Figma</a
+                    >
+                    et développées sur
+                    <a
+                      href="https://code.visualstudio.com/"
+                      target="_blank"
+                      class="footer__el"
+                      >Visual Studio Code</a
+                    >.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    Aide en ligne:
+                    <a
+                      href="https://chatgpt.com/auth/login"
+                      target="_blank"
+                      class="footer__el"
+                      >ChatGPT</a
+                    >,
+                    <a
+                      href="https://developer.mozilla.org/fr/"
+                      target="_blank"
+                      class="footer__el"
+                      >MDN</a
+                    >,
+                    <a
+                      href="https://gsap.com/"
+                      target="_blank"
+                      class="footer__el"
+                      >GSAP</a
+                    >,
+                    <a
+                      href="https://validator.w3.org/"
+                      target="_blank"
+                      class="footer__el"
+                      >W3 °C Validator</a
+                    >,
+                    <a
+                      href="https://webaim.org/resources/contrastchecker/"
+                      target="_blank"
+                      class="footer__el"
+                      >Contrast Checker</a
+                    >.
+                  </p>
+                </li>
               </ul>
-            </li>
-            <li class="slider__btn">
-              <button class="btn__next">
-                <img class="btn-img" src="assets/images/décoration/slider-right.svg" alt="icône de tête de flèche qui pointe vers la droite.">
-              </button>
-            </li>
-          </ul>
-          <ul class="slider__acces">
-            <li class="slider__acces-list">
-              <a href="https://ines-dalsbaek.be/projets/readimade/" target="_blank" class="slider__acces-el">Accéder au projet</a>
-            </li>
-          </ul>
+            </div>
+            <div class="footer__credits-merci">
+              <h3 class="footer__credits-titre">
+                Remerciements<span> ✶</span>
+              </h3>
+              <ul class="footer__credits-el">
+                <li>
+                  <p>
+                    Merci à
+                    <a
+                      href="https://salwa-bachetti.be/"
+                      target="_blank"
+                      class="footer__el"
+                      >Salwa</a
+                    >
+                    avec qui j’ai réalisé ce projet.
+                  </p>
+                </li>
+              </ul>
+            </div>
+            <div class="footer__credits_contact">
+              <h3 class="footer__credits-titre">Votre avis<span> ✶</span></h3>
+              <ul class="footer__credits-el">
+                <li>
+                  <p>
+                    Si vous avez des avis ou des questions sur mon portfolio
+                    et mes travaux, n’hésitez pas à
+                    <a href="mailto:dalsbaekines@gmail.com" class="footer__el"
+                      >me contacter</a
+                    >.
+                  </p>
+                </li>
+                <li><p>À bientôt!</p></li>
+              </ul>
+            </div>
+          </div>
+          <button class="footer__credits-btn" id="closeCredits">Fermer</button>
         </div>
+        <small>© Ines Dalsbaek 2024</small>
       </div>
-    </section>
-  </div>
-
-  <footer class="footer">
-    <div class="footer__contact">
-      <p class="footer__texte">Contactez moi</p>
-      <a href="mailto:dalsbaekines@gmail.com" class="footer__el">dalsbaekines@gmail.com</a>
-    </div>
-    <div class="footer__centre">
-      <a href="#" class="footer__el">Crédits</a>
-      <div class="footer__credits hidden">
-        <div class="footer__credits-content">
-          <div class="footer__credits-services">
-            <h3 class="footer__credits-titre">Services<span> ✶</span></h3>
-            <ul class="footer__credits-el">
-              <li>
-                <p>Fonts utilisées: <a href="https://www.fontshare.com/fonts/satoshi" target="_blank" class="footer__el">Satoshi</a>,
-                <a href="https://www.fontshare.com/?q=Clash%20Display" target="_blank" class="footer__el">Clash Display</a>,
-                <a href="https://fonts.google.com/specimen/Spline+Sans+Mono" target="_blank" class="footer__el">Spline Sans Mono</a>.</p>
-              </li>
-              <li>
-                <p>Pages créées sur <a href="https://www.figma.com/fr-fr/" target="_blank" class="footer__el">Figma</a>
-                et développées sur <a href="https://code.visualstudio.com/" target="_blank" class="footer__el">Visual Studio Code</a>.</p>
-              </li>
-              <li>
-                <p>Aide en ligne: <a href="https://chatgpt.com/auth/login" target="_blank" class="footer__el">ChatGPT</a>,
-                <a href="https://developer.mozilla.org/fr/" target="_blank" class="footer__el">MDN</a>,
-                <a href="https://gsap.com/" target="_blank" class="footer__el">GSAP</a>,
-                <a href="https://validator.w3.org/" target="_blank" class="footer__el">W3 °C Validator</a>,
-                <a href="https://webaim.org/resources/contrastchecker/" target="_blank" class="footer__el">Contrast Checker</a>.</p>
-              </li>
-            </ul>
-          </div>
-          <div class="footer__credits-merci">
-            <h3 class="footer__credits-titre">Remerciements<span> ✶</span></h3>
-            <ul class="footer__credits-el">
-              <li><p>Merci à <a href="https://salwa-bachetti.be/" target="_blank" class="footer__el">Salwa</a> avec qui j’ai réalisé ce projet.</p></li>
-            </ul>
-          </div>
-          <div class="footer__credits_contact">
-            <h3 class="footer__credits-titre">Votre avis<span> ✶</span></h3>
-            <ul class="footer__credits-el">
-              <li><p>Si vous avez des avis ou des questions sur mon portfolio et mes travaux, n’hésitez pas à <a href="mailto:dalsbaekines@gmail.com" class="footer__el">me contacter</a>.</p></li>
-              <li><p>À bientôt!</p></li>
-            </ul>
-          </div>
-        </div>
-        <button class="footer__credits-btn" id="closeCredits">Fermer</button>
+      <div class="footer__follow">
+        <p class="footer__texte">Suivez moi</p>
+        <ul class="footer__socials">
+          <li>
+            <a
+              href="https://www.instagram.com/idk_dwt/"
+              target="_blank"
+              class="footer__el"
+              >Instagram</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://github.com/idkDW"
+              target="_blank"
+              class="footer__el"
+              >Github</a
+            >
+          </li>
+        </ul>
       </div>
-      <small>© Ines Dalsbaek 2024</small>
-    </div>
-  <div class="footer__follow">
-    <p class="footer__texte">Suivez moi</p>
-    <ul class="footer__socials">
-      <li><a href="https://www.instagram.com/idk_dwt/" target="_blank" class="footer__el">Instagram</a></li>
-      <li><a href="https://github.com/idkDW" target="_blank" class="footer__el">Github</a></li>
-    </ul>
-  </div>
-  <div class="overlay hidden"></div>
-</footer>
-
-</body>
+      <div class="overlay hidden"></div>
+    </footer>
+  </body>
 </html>

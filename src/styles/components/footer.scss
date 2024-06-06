@@ -21,7 +21,7 @@
     font-weight: 700;
 
     &::before {
-      content: '';
+      content: "";
       position: absolute;
       top: 100%;
       left: 0;
@@ -47,7 +47,7 @@
 
   &__credits {
     font-size: 12px;
-    background-color: #FAFAF9;
+    background-color: #fafaf9;
     border: 1px solid #ccc;
     margin: 20px;
     padding: 20px;
@@ -77,7 +77,8 @@
     transition: opacity 0.5s ease-in-out;
   }
 
-  &__credits.visible, .overlay.visible {
+  &__credits.visible,
+  .overlay.visible {
     opacity: 1;
   }
 
@@ -101,7 +102,8 @@
     background-color: transparent;
     color: #333;
     text-decoration: none;
-    transition: background-color 0.3s, color 0.3s, border-color 0.3s, transform 0.3s;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s,
+      transform 0.3s;
     cursor: pointer;
 
     &:hover {
@@ -170,7 +172,7 @@
     &__credits {
       font-size: 20px;
     }
-    &__credits-titre{
+    &__credits-titre {
       font-size: 27px;
     }
     &__credits-btn {

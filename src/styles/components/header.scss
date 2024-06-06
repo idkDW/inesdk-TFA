@@ -30,14 +30,12 @@
     img {
       width: 35px;
       transition: transform 0.3s;
-  
+
       &:hover {
         transform: scale(1.1);
       }
     }
   }
-
-  
 
   .navigation {
     &__list {
@@ -59,7 +57,7 @@
       transition: transform 0.3s;
 
       &::before {
-        content: '';
+        content: "";
         position: absolute;
         top: 100%;
         left: 0;
@@ -82,7 +80,7 @@
     transform-origin: top;
     position: absolute;
     left: 0;
-    z-index: 0; 
+    z-index: 0;
   }
 
   &__texte-petit {
@@ -104,18 +102,17 @@
     font-family: "ClashDisplay", sans-serif;
     font-size: 63px;
     font-weight: 200;
-    color: #FAFAF9;
+    color: #fafaf9;
     line-height: 120%;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -100%);
-    text-align: center; 
+    text-align: center;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     z-index: 10;
   }
 }
-
 
 @media (min-width: 0px) {
   .main {
@@ -125,7 +122,7 @@
 }
 
 @media (min-width: 600px) {
-  .header{
+  .header {
     &__texte-petit {
       font-size: 20px;
     }
@@ -150,7 +147,7 @@
 }
 
 @media (min-width: 1000px) {
-  .header{
+  .header {
     &__texte-petit {
       font-size: 27px;
     }
@@ -167,7 +164,7 @@
 }
 
 @media (min-width: 1600px) {
-  .header{
+  .header {
     &__texte-petit {
       font-size: 36px;
     }
