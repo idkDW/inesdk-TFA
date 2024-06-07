@@ -19,17 +19,3 @@ body {
   padding: 0;
   overflow-x: hidden;
 }
-
-@mixin disable-hover {
-  &:hover {
-    background-color: initial !important;
-    color: initial !important;
-    transform: initial !important;
-  }
-}
-
-@media (hover: none) and (pointer: coarse) {
-  * {
-    @include disable-hover;
-  }
-}

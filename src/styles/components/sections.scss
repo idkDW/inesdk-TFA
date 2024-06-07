@@ -93,33 +93,14 @@
     color: #333;
     text-decoration: none;
     transition: background-color 0.3s, color 0.3s, border-color 0.3s,
-      ransform 0.3s;
+      transform 0.3s;
     cursor: pointer;
-
-    &:hover {
-      background-color: #415351;
-      color: #fff;
-      border-color: #fff;
-      transform: scale(1.1);
-    }
-  }
-
-  &__container {
-    &.hovered {
-      background-color: rgb(244, 244, 244);
-      border-radius: 11px;
-    }
   }
 
   &__img-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-
-    &.hovered {
-      background-color: rgb(244, 244, 244);
-      border-radius: 11px;
-    }
   }
 }
 
@@ -127,24 +108,12 @@
   position: relative;
   margin-top: 120px;
 
-  &__container {
-    &.hovered {
-      background-color: rgb(244, 244, 244);
-      border-radius: 11px;
-    }
-  }
-
   &__categories {
     list-style-type: none;
     margin-bottom: 20px;
     padding: 0;
     display: flex;
     flex-direction: column;
-
-    &.hovered {
-      background-color: rgb(244, 244, 244);
-      border-radius: 11px;
-    }
   }
 
   &__btn {
@@ -163,11 +132,6 @@
     position: relative;
     transition: transform 0.3s;
 
-    &:hover {
-      transform: scale(1.1);
-      font-weight: 500;
-    }
-
     &.active {
       color: #333;
       font-weight: 500;
@@ -181,11 +145,6 @@
     flex-wrap: wrap;
     list-style: none;
     padding: 0;
-
-    &.hovered {
-      background-color: rgb(244, 244, 244);
-      border-radius: 11px;
-    }
   }
 
   &__boutons {
@@ -203,13 +162,6 @@
       transform 0.3s;
     cursor: pointer;
 
-    &:hover {
-      background-color: #415351;
-      color: #fff;
-      border-color: #fff;
-      transform: scale(1.1);
-    }
-
     &.active {
       background-color: #333;
       color: #fff;
@@ -220,11 +172,6 @@
   &__contenu {
     margin: 0;
     padding: 0;
-
-    &.hovered {
-      background-color: rgb(244, 244, 244);
-      border-radius: 11px;
-    }
   }
 
   &__titre {
@@ -258,11 +205,6 @@
       width: 100px;
     }
 
-    &.hovered {
-      background-color: rgb(244, 244, 244);
-      border-radius: 11px;
-    }
-
     a {
       text-decoration: none;
       color: #333;
@@ -275,31 +217,7 @@
     position: relative;
 
     .hover-grid {
-      position: absolute;
-      top: -18px;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      opacity: 0;
-      transition: opacity 0.3s ease;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-
-      &__img {
-        width: 170px;
-        height: auto;
-        object-fit: cover;
-      }
-    }
-
-    &:hover .hover-grid {
-      opacity: 1;
-    }
-
-    &.hovered {
-      background-color: rgb(244, 244, 244);
-      border-radius: 11px;
+      display: none;
     }
   }
 
@@ -519,11 +437,69 @@
       width: 170px;
       height: 217px;
     }
+    &__btn {
+      &:hover {
+        background-color: #415351;
+        color: #fff;
+        border-color: #fff;
+        transform: scale(1.1);
+      }
+    }
+    &__container {
+      &.hovered {
+        background-color: rgb(244, 244, 244);
+        border-radius: 11px;
+      }
+    }
+    &__img-container {
+      &.hovered {
+        background-color: rgb(244, 244, 244);
+        border-radius: 11px;
+      }
+    }
   }
 
   .projets {
+    &__container {
+      &.hovered {
+        background-color: rgb(244, 244, 244);
+        border-radius: 11px;
+      }
+    }
+    &__categories {
+      &.hovered {
+        background-color: rgb(244, 244, 244);
+        border-radius: 11px;
+      }
+    }
+    &__btn {
+      &:hover {
+        transform: scale(1.1);
+        font-weight: 500;
+      }
+    }
+    &__type-btn,
+    &__theme-btn {
+      &.hovered {
+        background-color: rgb(244, 244, 244);
+        border-radius: 11px;
+      }
+    }
     &__boutons {
       font-size: 16px;
+
+      &:hover {
+        background-color: #415351;
+        color: #fff;
+        border-color: #fff;
+        transform: scale(1.1);
+      }
+    }
+    &__contenu {
+      &.hovered {
+        background-color: rgb(244, 244, 244);
+        border-radius: 11px;
+      }
     }
     &__texte {
       width: 60%;
@@ -531,6 +507,10 @@
     &__grid {
       img {
         width: 150px;
+      }
+      &.hovered {
+        background-color: rgb(244, 244, 244);
+        border-radius: 11px;
       }
     }
     &__grid-item {
@@ -555,6 +535,11 @@
 
       &:hover .hover-grid {
         opacity: 1;
+      }
+
+      &.hovered {
+        background-color: rgb(244, 244, 244);
+        border-radius: 11px;
       }
     }
   }
