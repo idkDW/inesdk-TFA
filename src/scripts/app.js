@@ -7,9 +7,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 if (document.body.classList.contains("index-body")) {
   //CLASSE ACTIVE
-
   document.addEventListener("DOMContentLoaded", function () {
-    // Sélectionner les boutons
     const projetsCategoriesButtons = document.querySelectorAll(
       ".projets__categories button"
     );
@@ -17,7 +15,6 @@ if (document.body.classList.contains("index-body")) {
       ".projets__type-btn button, .projets__theme-btn button"
     );
 
-    // Ajouter la classe active au bouton "tous" par défaut
     const defaultButton = document.querySelector(
       ".projets__el-tous .projets__btn"
     );
@@ -25,24 +22,20 @@ if (document.body.classList.contains("index-body")) {
       defaultButton.classList.add("active");
     }
 
-    // Ajouter un gestionnaire d'événements pour les boutons de catégories
     projetsCategoriesButtons.forEach((button) => {
       button.addEventListener("click", function () {
-        // Supprimer la classe active de tous les boutons de catégories
         projetsCategoriesButtons.forEach((btn) =>
           btn.classList.remove("active")
         );
-        // Ajouter la classe active au bouton cliqué
+
         this.classList.add("active");
       });
     });
 
-    // Ajouter un gestionnaire d'événements pour les boutons de type et de thème
     projetsTypeButtons.forEach((button) => {
       button.addEventListener("click", function () {
-        // Supprimer la classe active des boutons de type et de thème
         projetsTypeButtons.forEach((btn) => btn.classList.remove("active"));
-        // Ajouter la classe active au bouton cliqué
+
         this.classList.add("active");
       });
     });
@@ -52,9 +45,8 @@ if (document.body.classList.contains("index-body")) {
 
   document.addEventListener("DOMContentLoaded", function () {
     var currentImageIndex = 1;
-    var totalImages = 4; // Total number of images
+    var totalImages = 4;
 
-    // Fonction pour changer l'image séquentiellement
     function changeImage() {
       var avatar = document.querySelector(".a-propos__img");
       if (avatar) {
@@ -62,7 +54,7 @@ if (document.body.classList.contains("index-body")) {
         if (currentImageIndex > totalImages) {
           currentImageIndex = 1;
         }
-        // Ne modifiez que l'attribut src, pas srcset
+
         avatar.setAttribute(
           "src",
           "assets/images/contenu/intro/ines-tête" + currentImageIndex + ".png"
@@ -74,15 +66,11 @@ if (document.body.classList.contains("index-body")) {
       }
     }
 
-    // Encapsuler le code du bouton dans une fonction anonyme auto-invoquée
     (function () {
-      // Sélectionnez le bouton
       var btnAvatar = document.querySelector(".a-propos__btn");
 
-      // Ajoutez un gestionnaire d'événements pour le clic
       if (btnAvatar) {
         btnAvatar.addEventListener("click", function () {
-          // Appelez la fonction changeImage pour changer l'image d'avatar
           changeImage();
         });
       } else {
@@ -147,7 +135,6 @@ if (document.body.classList.contains("index-body")) {
         const targetClasses = img.getAttribute("data-target").split(" ");
 
         if (classe === "tous") {
-          // Réinitialise les classes si "tous" est cliqué
           item.classList.remove("scaling", "reduced");
         } else if (targetClasses.includes(classe)) {
           item.classList.add("scaling");
@@ -168,7 +155,7 @@ if (document.body.classList.contains("index-body")) {
         item.style.transform = "scale(1)";
         item.classList.remove("scaling", "reduced");
       });
-      ajusterTailleImages("tous"); // Ajuste les tailles des images
+      ajusterTailleImages("tous");
     });
 
     // Clic sur le bouton "Types"
@@ -240,25 +227,22 @@ if (document.body.classList.contains("index-body")) {
       creditsModal.classList.remove("hidden");
       overlay.classList.remove("hidden");
 
-      // Trigger the fade-in
       setTimeout(() => {
         creditsModal.classList.add("visible");
         overlay.classList.add("visible");
-      }, 10); // small timeout to ensure the class removal is processed
+      }, 10);
     });
 
     closeCreditsBtn.addEventListener("click", function (e) {
       e.preventDefault();
 
-      // Trigger the fade-out
       creditsModal.classList.remove("visible");
       overlay.classList.remove("visible");
 
-      // Wait for the transition to end before hiding the elements
       setTimeout(() => {
         creditsModal.classList.add("hidden");
         overlay.classList.add("hidden");
-      }, 500); // Duration of the fade-out transition
+      }, 500);
     });
   });
 
@@ -272,7 +256,6 @@ if (document.body.classList.contains("index-body")) {
   const notesTexte = document.querySelector(".notes__texte");
   const notesImages = document.querySelector(".notes__images");
   const notesClic = document.querySelector(".notes__clic");
-
   const aProposContainer = document.querySelector(".a-propos__container");
   const aProposImageContainer = document.querySelector(
     ".a-propos__img-container"
@@ -356,31 +339,6 @@ if (document.body.classList.contains("index-body")) {
   });
 
   //ANIMATION IMAGE INTRO
-
-  /*
-gsap.timeline({
-    scrollTrigger: {
-        scrub: 1,
-        trigger: ".header",
-        start: "top top",
-        end: "bottom+=100vh top",
-        pin: true,
-        onUpdate: self => {
-        const progress = self.progress; // Progression du défilement (valeur entre 0 et 1)
-        const opacity = 1 - progress; // Opacité inversement proportionnelle à la progression
-        
-        gsap.to(".header__texte-img", { opacity: opacity, ease: "none" }); 
-        gsap.to(".header__texte-petit", { opacity: opacity, ease: "none" }); // Ajout de l'animation pour le paragraphe ".header__texte-petit"
-        }
-    }
-    })
-    .fromTo(".header__image",
-    { scale: 1, borderRadius: "5px" },
-    { scale: 0.8, ease: "none" }
-    )
-    .to(".header__image",
-    { borderRadius: "20px", ease: "none" }, 0);*/
-
   gsap
     .timeline({
       scrollTrigger: {
@@ -390,11 +348,11 @@ gsap.timeline({
         end: "bottom+=100vh top",
         pin: true,
         onUpdate: (self) => {
-          const progress = self.progress; // Progression du défilement (valeur entre 0 et 1)
-          const opacity = 1 - progress; // Opacité inversement proportionnelle à la progression
+          const progress = self.progress;
+          const opacity = 1 - progress;
 
           gsap.to(".header__texte-img", { opacity: opacity, ease: "none" });
-          gsap.to(".header__texte-petit", { opacity: opacity, ease: "none" }); // Ajout de l'animation pour le paragraphe ".header__texte-petit"
+          gsap.to(".header__texte-petit", { opacity: opacity, ease: "none" });
         },
       },
     })
@@ -403,7 +361,7 @@ gsap.timeline({
       {
         scale: 1,
         borderRadius: "0px",
-        y: 0, // Ajout de la propriété y pour déplacer l'image verticalement
+        y: 0,
       },
       {
         scale: 0.8,
@@ -442,31 +400,6 @@ gsap.timeline({
       duration: 0.8,
     });
   });
-
-  //ANIMATION SCROLL  GRILLE
-
-  document.addEventListener("DOMContentLoaded", () => {
-    const images = document.querySelectorAll(".projets__grid-item img");
-
-    // Cacher les images initialement
-    gsap.set(images, { opacity: 0, scale: 0.9 });
-
-    // Créer une animation pour chaque image
-    images.forEach((image) => {
-      gsap.to(image, {
-        opacity: 1,
-        scale: 1,
-        duration: 0.3,
-        ease: "power2.out",
-        scrollTrigger: {
-          trigger: image,
-          start: "top 80%",
-          end: "top 20%",
-          once: true,
-        },
-      });
-    });
-  });
 }
 
 if (document.body.classList.contains("projet-body")) {
@@ -498,8 +431,6 @@ if (document.body.classList.contains("projet-body")) {
     });
   });
 
-  //SLIDER AVEC TROIS MANIERES DE NAVIGUER POUR AFFICHER LES IMAGES
-
   // SLIDER AVEC TROIS MANIERES DE NAVIGUER POUR AFFICHER LES IMAGES
 
   let prevButton = document.querySelector(".btn__prev");
@@ -519,7 +450,6 @@ if (document.body.classList.contains("projet-body")) {
     updateIndicators();
   });
 
-  /* Navigation au clavier */
   document.addEventListener("keydown", keyboardListener);
 
   function keyboardListener(event) {
@@ -560,7 +490,6 @@ if (document.body.classList.contains("projet-body")) {
     updateIndicators();
   }
 
-  // Nouvelle fonctionnalité : navigation en cliquant sur les images dans slider__images
   let miniatureImages = document.querySelectorAll(".slider__images-img");
 
   miniatureImages.forEach((img, index) => {
@@ -590,18 +519,15 @@ if (document.body.classList.contains("projet-body")) {
     let thumbnails = document.querySelectorAll(".slider__images-el");
     let activeThumbnail = thumbnails[index];
 
-    // Retirer la classe active de tous les thumbnails
     thumbnails.forEach((thumbnail) =>
       thumbnail.classList.remove("slider__images-el--active")
     );
 
-    // Ajouter la classe active au thumbnail actif
     activeThumbnail.classList.add("slider__images-el--active");
 
     let thumbnailContainerWidth = thumbnailSlider.offsetWidth;
     let activeThumbnailWidth = activeThumbnail.offsetWidth;
 
-    // Centrer le thumbnail actif dans le conteneur
     let scrollAmount =
       activeThumbnail.offsetLeft -
       thumbnailContainerWidth / 2 +
@@ -613,7 +539,6 @@ if (document.body.classList.contains("projet-body")) {
     });
   }
 
-  // Nouvelle fonctionnalité : navigation en cliquant sur les indicateurs
   let indicators = document.querySelectorAll(".slider__indicateurs-el");
 
   indicators.forEach((indicator, index) => {
@@ -641,7 +566,6 @@ if (document.body.classList.contains("projet-body")) {
     });
   }
 
-  // Nouvelle fonctionnalité : arrêter tous les audios
   function stopAllAudio() {
     let audioElements = document.querySelectorAll(".slider__audio");
     audioElements.forEach((audio) => {
@@ -665,25 +589,22 @@ if (document.body.classList.contains("projet-body")) {
       creditsModal.classList.remove("hidden");
       overlay.classList.remove("hidden");
 
-      // Trigger the fade-in
       setTimeout(() => {
         creditsModal.classList.add("visible");
         overlay.classList.add("visible");
-      }, 10); // small timeout to ensure the class removal is processed
+      }, 10);
     });
 
     closeCreditsBtn.addEventListener("click", function (e) {
       e.preventDefault();
 
-      // Trigger the fade-out
       creditsModal.classList.remove("visible");
       overlay.classList.remove("visible");
 
-      // Wait for the transition to end before hiding the elements
       setTimeout(() => {
         creditsModal.classList.add("hidden");
         overlay.classList.add("hidden");
-      }, 500); // Duration of the fade-out transition
+      }, 500);
     });
   });
 }
